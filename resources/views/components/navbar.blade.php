@@ -15,17 +15,34 @@
           <li class="nav-item">
             <a class="nav-link" href="#">Pricing</a>
           </li>
-          <li class="nav-item dropdown">
+
+            <li class="nav-item dropdown">
+          @auth
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown link
+              Benvenuto {{Auth::user()->name}}
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              {{-- <li><a class="dropdown-item" href="{{}}"></a></li> --}}
+              <li><a class="dropdown-item" href="#" onclick="event.preventDefault(); document.querySelector('#logout').submit();">Logout</a>
+                <form action="{{route('logout')}}" method="POST" id="logout">
+                @csrf
+                </form>
+            </li>
             </ul>
+          @endauth
+          @guest
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Ciao Ospite
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="{{route('register')}}">Registrati</a></li>
+                <li><a class="dropdown-item" href="{{route('login')}}">Accedi</a></li>
+            </ul>
+          @endguest
+
           </li>
+
         </ul>
       </div>
     </div>
-  </nav>
+</nav>
