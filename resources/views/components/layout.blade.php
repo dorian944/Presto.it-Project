@@ -11,6 +11,8 @@
 </head>
 <body>
     <x-navbar/>
+    <x-header />
+    
         <div class="min-vh-10">
             {{ $slot }}
         </div>

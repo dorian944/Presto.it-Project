@@ -16,8 +16,8 @@
             <a class="nav-link" href="#">Pricing</a>
           </li>
 
-            <li class="nav-item dropdown">
           @auth
+        
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Benvenuto {{Auth::user()->name}}
             </a>
