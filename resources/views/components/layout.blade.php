@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>D^3F Solutions</title>
+    <title>{{$titolo ?? 'D^3F Solutions'}}</title>
+    
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    
 </head>
 <body>
-
-    <div class="min-vh-10">
-        {{ $slot }}
-    </div>
-
+    <x-navbar/>
+        <div class="min-vh-10">
+            {{ $slot }}
+        </div>
+    <x-footer/>
 </body>
 </html>

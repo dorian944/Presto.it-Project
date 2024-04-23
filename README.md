@@ -1,3 +1,9 @@
+<p>Progetto finale Presto.it by D^3F Solutions</p>
+<p>Link trello https://trello.com/invite/b/JpKXWiKx/ATTI5f232e5d1381a76d6136bc36dbdd4c1007E4F5B4/presto-1 </p>
+
+
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
