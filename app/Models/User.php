@@ -42,4 +42,8 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+    //un utente può inserire più annunci
+    public function announcements(){
+        return $this->hasMany(Announcement::class);
+    }
 }

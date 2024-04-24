@@ -14,4 +14,9 @@ class Announcement extends Model
     public function category(){
         return $this->belongsTo(category::class);
     }
+
+    //un annuncio appartiene ad un solo utente
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
 }
