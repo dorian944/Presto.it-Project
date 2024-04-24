@@ -9,4 +9,9 @@ class Announcement extends Model
 {
     use HasFactory;
     protected $fillable = ['title','body','price'];
+
+    //un annuncio ha una sola categoria
+    public function category(){
+        return $this->belongsTo(category::class);
+    }
 }
