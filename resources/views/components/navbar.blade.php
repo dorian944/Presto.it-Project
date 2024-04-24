@@ -23,7 +23,7 @@
             <ul class="dropdown-menu">
               {{-- <li><a class="dropdown-item" href="{{}}"></a></li> --}}
               <li class="nav-item">
-                <a class="nav-link" href="#">Inserisci annuncio</a>
+                <a class="nav-link" href="{{route('announcements.create')}}">Inserisci annuncio</a>
               </li>
               <li><a class="dropdown-item" href="#" onclick="event.preventDefault(); document.querySelector('#logout').submit();">Logout</a>
                 <form action="{{route('logout')}}" method="POST" id="logout">

@@ -6,7 +6,7 @@
         @auth
         <div class="col-12 m-3 ">
             <button>
-                 <a href="" class="text-decoration-none text-white">Inserisci annuncio</a>
+                 <a href="{{route('announcements.create')}}" class="text-decoration-none text-white">Inserisci annuncio</a>
             </button>
         </div>
         @endauth

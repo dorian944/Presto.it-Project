@@ -6,36 +6,36 @@
         <h2>Inserisci annuncio</h2>
         <form class="shadow p-5 bg-grigio-light" wire:submit="store">
             
-            {{-- @if (session('AnnouncementCreated'))
+            @if (session('AnnouncementCreated'))
             <div class="alert alert-success">
                 {{ session('AnnouncementCreated') }}
             </div>
-            @endif --}}
+            @endif
             
             {{-- action sostituito da wire:submit="store" --}}
             {{-- il @csrf token non serve più --}}
             <div class="mb-3">
                 <label for="title" class="form-label">Title</label>
                 <input type="text" class="form-control" id="title" wire:model.live="title">
-                {{-- @error('title')
+                @error('title')
                 <span class="text-danger">{{$message}}</span>
-                @enderror --}}
+                @enderror
             </div>
             
             <div class="mb-3">
                 <label for="body" class="form-label">Descrizione</label>
                 <input type="text" class="form-control" id="body" wire:model.live="body">
-                {{-- @error('body')
+                @error('body')
                 <span class="text-danger">{{$message}}</span>
-                @enderror --}}
+                @enderror
             </div>
             
             <div class="mb-3 ">
                 <label for="price" class="form-label">Prezzo</label>
                 <input type="number" class="form-control" id="price" wire:model.live="price">
-                {{-- @error('price')
+                @error('price')
                 <span class="text-danger">{{$message}}</span>
-                @enderror --}}
+                @enderror
             </div>
             
             {{-- categoria  --}}
