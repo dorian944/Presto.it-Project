@@ -38,7 +38,7 @@
                 @enderror
             </div>
             
-            {{-- categoria  --}}
+            {{-- categorie  --}}
             {{-- <div class="mb-3">
                 <label class="form-label">Categoria</label>
                 <select class="form-select" wire:model="category_id">
@@ -46,11 +46,11 @@
                     @foreach ($categories as $category)
                     <option value="{{$category->id}}">{{ $category->name }}</option>
                     @endforeach
-                </select>
-                @error('category_id')
+                </select> --}}
+                {{-- @error('category_id')
                 <span class="text-danger">{{$message}}</span>
-                @enderror
-            </div> --}}
+                @enderror --}}
+            {{-- </div> --}}
             
             
             
