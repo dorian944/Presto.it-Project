@@ -1,10 +1,10 @@
 <x-layout>
 
-    <div class="container-fluid ">
+    <div class="container-fluid my-5">
         <div class="row vh-100">
-           
+
             <div class="col-12 d-flex justify-content-center align-items-center">
-                <div class="container">
+                <div class="container-form">
                     <div class="heading">Registrati</div>
                     <form action="{{route('register')}}"  method="POST" class="form">
                      @csrf
@@ -14,7 +14,7 @@
                       <input required="" class="input" type="password" name="password_confirmation" id="password_confirmation" placeholder="Ripeti password">
                       <span class="forgot-password"><a href="#">Forgot Password ?</a></span>
                       <input class="login-button" type="submit" value="Registrati">
-                      
+
                     </form>
                     <div class="social-account-container">
                         <span class="title">Or Sign in with</span>
@@ -39,5 +39,5 @@
             </div>
         </div>
     </div>
-    
+
     </x-layout>

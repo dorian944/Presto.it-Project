@@ -1,10 +1,10 @@
 <x-layout>
 
-    <div class="container-fluid ">
-        <div class="row vh-100">
+    <div class="container-fluid my-5">
+        <div class="row ">
 
             <div class="col-12 d-flex justify-content-center align-items-center">
-                <div class="container">
+                <div class="container-form">
                     <div class="heading">Accedi</div>
                     <form action="{{ route('login') }}" method="POST" class="form">
                         @csrf
@@ -16,7 +16,7 @@
                         <div class="mb-3 mt-2 ms-2 form-check">
                             <input type="checkbox" name="remember" class="form-check-input" id="exampleCheck1">
                             <label class="form-check-label" for="exampleCheck1">Ricordami</label>
-                            
+
                         </div>
                         <input class="login-button" type="submit" value="Accedi">
 

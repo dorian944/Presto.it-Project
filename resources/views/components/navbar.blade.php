@@ -7,7 +7,7 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="{{route('homepage')}}">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Features</a>
@@ -37,8 +37,9 @@
               Ciao Ospite
             </a>
             <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="{{route('register')}}">Registrati</a></li>
                 <li><a class="dropdown-item" href="{{route('login')}}">Accedi</a></li>
+                <hr>
+                <li><a class="dropdown-item" href="{{route('register')}}">Registrati</a></li>
             </ul>
           @endguest
 
