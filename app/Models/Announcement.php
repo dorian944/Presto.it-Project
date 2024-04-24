@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Announcement extends Model
 {
     use HasFactory;
-    protected $fillable = ['title','body','price'];
+    protected $fillable = ['title','body','price','category_id'];
 
     //un annuncio ha una sola categoria
     public function category(){

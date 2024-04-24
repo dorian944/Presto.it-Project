@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::table('announcements', function (Blueprint $table) {
             //
             $table->unsignedBigInteger('category_id')->nullable();
-            $table->foreign('category_id')->referencies('id')->on('categories')->onDelete('SET NULL');
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('SET NULL');
         });
     }
 
