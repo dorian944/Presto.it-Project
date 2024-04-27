@@ -19,3 +19,4 @@ use App\Http\Controllers\AnnouncementController;
 Route::get('/',[PublicController::class, 'homepage'])->name('homepage');
 
 Route::get('/nuovo/annuncio',[AnnouncementController::class, 'createAnnouncement'])->name('announcements.create');
+Route::get('/annuncio/show/{announcement}', [AnnouncementController::class, 'showAnnouncement'])->name('announcements.show');

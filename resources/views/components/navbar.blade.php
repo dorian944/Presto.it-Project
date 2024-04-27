@@ -18,7 +18,7 @@
           </li>
         </ul>
 
-        <a class="navbar-brand" href="#">Presto.it</a>
+        <a class="navbar-brand" href="{{route('homepage')}}">Presto.it</a>
 
 
           <div class="nav-item dropdown mx-5">
