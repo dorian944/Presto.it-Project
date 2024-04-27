@@ -1,10 +1,12 @@
 <x-layout>
 
-    <div class="container-fluid my-5">
+    <div class="container-fluid my-4">
         <div class="row vh-100">
 
             <div class="col-12 d-flex justify-content-center align-items-center">
                 <div class="container-form">
+                  <img src="{{ asset('svg/signup.svg') }}" width="240" height="130" alt="login logo">
+
                     <div class="heading">Registrati</div>
                     <form action="{{route('register')}}"  method="POST" class="form">
                      @csrf

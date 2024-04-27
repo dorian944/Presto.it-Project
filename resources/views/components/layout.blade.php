@@ -9,7 +9,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
 </head>
-<body>
+<body >
     <x-navbar/>
 
         <div class="min-vh-10">

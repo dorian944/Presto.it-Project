@@ -5,6 +5,9 @@
 
             <div class="col-12 d-flex justify-content-center align-items-center">
                 <div class="container-form">
+
+                    <img src="{{ asset('svg/login.svg') }}" width="280" height="150" alt="login logo">
+
                     <div class="heading">Accedi</div>
                     <form action="{{ route('login') }}" method="POST" class="form">
                         @csrf

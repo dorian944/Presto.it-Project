@@ -9,24 +9,77 @@ button {
     font-size: 17px;
     padding: 0.6em 1.5em;
    }
-   
+
    button:hover {
     background-position: right center;
     background-size: 200% auto;
     -webkit-animation: pulse 2s infinite;
     animation: pulse512 1.5s infinite;
    }
-   
+
    @keyframes pulse512 {
     0% {
      box-shadow: 0 0 0 0 #05bada66;
     }
-   
+
     70% {
      box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
     }
-   
+
     100% {
      box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
     }
    }
+
+/* fine bottone home page */
+
+/* header */
+.animated-text-from-right {
+    position: relative;
+    right: -100%;
+    animation: slideFromRightToCenter 3s forwards;
+  }
+
+  .animated-text-from-left {
+    position: relative;
+    left: -100%;
+    animation: slideFromLeftToCenter 3s forwards;
+  }
+
+  @keyframes slideFromRightToCenter {
+    0% {
+      right: -100%;
+    }
+    100% {
+      right: 0;
+    }
+  }
+
+  @keyframes slideFromLeftToCenter {
+    0% {
+      left: -100%;
+    }
+    100% {
+      left: 0;
+    }
+  }
+
+
+
+
+
+/* colori nav e footer */
+:root {
+    --verdePastello : #d9ed92a9;
+    --acqua: radial-gradient(circle, rgba(159,189,204,1) 16%, rgba(82,182,154,1) 100%);;
+}
+
+
+
+nav {
+    background-color: var(--acqua);
+}
+
+footer {
+    background-color: var(--acqua);
+}
