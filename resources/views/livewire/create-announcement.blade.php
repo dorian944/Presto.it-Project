@@ -16,7 +16,7 @@
             {{-- il @csrf token non serve più --}}
             <div class="mb-3">
                 <label for="title" class="form-label">Title</label>
-                <input type="text" class="form-control" id="title" wire:model.live="title">
+                <input type="text"  id="title" wire:model.live="title" class="form-control @error('title') is-invalid @enderror">
                 @error('title')
                 <span class="text-danger">{{$message}}</span>
                 @enderror
@@ -24,7 +24,7 @@
             
             <div class="mb-3">
                 <label for="body" class="form-label">Descrizione</label>
-                <input type="text" class="form-control" id="body" wire:model.live="body">
+                <input type="text"  id="body" wire:model.live="body" class="form-control @error('body') is-invalid @enderror">
                 @error('body')
                 <span class="text-danger">{{$message}}</span>
                 @enderror
@@ -32,7 +32,7 @@
             
             <div class="mb-3 ">
                 <label for="price" class="form-label">Prezzo</label>
-                <input type="number" class="form-control" id="price" wire:model.live="price">
+                <input type="number"  id="price" wire:model.live="price" class="form-control @error('price') is-invalid @enderror">
                 @error('price')
                 <span class="text-danger">{{$message}}</span>
                 @enderror
@@ -43,13 +43,10 @@
                 <label class="form-label">Categoria</label>
                 <select class="form-select" wire:model="category_id">
                     <option selected hidden >Seleziona una categoria</option>
-                    @foreach ($categories as $category)
-                    <option value="{{$category->id}}">{{ $category->name }}</option>
-                    @endforeach
+                        @foreach ($categories as $category)
+                            <option value="{{$category->id}}">{{ $category->name }}</option>
+                        @endforeach
                 </select>
-                {{-- @error('category_id')
-                <span class="text-danger">{{$message}}</span>
-                @enderror --}}
             </div>
             
             

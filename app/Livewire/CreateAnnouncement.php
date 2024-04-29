@@ -13,7 +13,7 @@ class CreateAnnouncement extends Component
     #[Validate('required|min:3|max:50')] 
     public $title;
 
-    #[Validate('required|min:3|max:50')] 
+    #[Validate('required|min:10|max:50')] 
     public $body;
 
     #[Validate('required|numeric')] 
