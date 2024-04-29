@@ -1,73 +1,92 @@
 <nav class="navbar navbar-expand-lg ">
-    <div class="container-fluid">
-
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-around m-2" id="navbarNavDropdown">
-
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{{route('homepage')}}">Home</a>
-          </li>
-          {{-- sezione categorie --}}
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Categorie
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
-              @foreach ($categories as $category )
-                <li>
-                  <a href="{{route('categoryShow', compact('category'))}}" class="dropdown-item">
-                  {{$category->name}}
-                  </a>
-                </li>
-                <li> <hr class="dropdown-divider"></li>
-              @endforeach
-            </ul>
-          </li>
-          {{-- fine sezione categorie --}}
-
-          <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
-          </li>
-        </ul>
-
-        <a class="navbar-brand" href="{{route('homepage')}}">Presto.it</a>
-
-
-          <div class="nav-item dropdown mx-5">
-          @auth
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Benvenuto {{Auth::user()->name}}
-            </a>
-            <ul class="dropdown-menu">
-              {{-- <li><a class="dropdown-item" href="{{}}"></a></li> --}}
-              <li class="nav-item">
-                <a class="nav-link" href="{{route('announcements.create')}}">Inserisci annuncio</a>
-              </li>
-              <li><a class="dropdown-item" href="#" onclick="event.preventDefault(); document.querySelector('#logout').submit();">Logout</a>
-                <form action="{{route('logout')}}" method="POST" id="logout">
-                @csrf
-                </form>
+  <div class="container-fluid">
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-around m-2" id="navbarNavDropdown">
+      
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{{route('homepage')}}">Home</a>
+        </li>
+        {{-- sezione categorie --}}
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Categorie
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
+            @foreach ($categories as $category )
+            <li>
+              <a href="{{route('categoryShow', compact('category'))}}" class="dropdown-item">
+                {{$category->name}}
+              </a>
             </li>
-            </ul>
-          @endauth
-          @guest
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Ciao Ospite
+            <li> <hr class="dropdown-divider"></li>
+            @endforeach
+          </ul>
+        </li>
+        {{-- fine sezione categorie --}}
+        
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+      </ul>
+      
+      <a class="navbar-brand" href="{{route('homepage')}}">Presto.it</a>
+      
+      
+      <div class="nav-item dropdown mx-5">
+        <div class="d-flex">
+          @auth
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Benvenuto {{Auth::user()->name}}
+          </a>
+          
+          <ul class="dropdown-menu">
+            {{-- <li><a class="dropdown-item" href="{{}}"></a></li> --}}
+            <li class="nav-item">
+              <a class="nav-link" href="{{route('announcements.create')}}">Inserisci annuncio</a>
+            </li>
+            <li><a class="dropdown-item" href="#" onclick="event.preventDefault(); document.querySelector('#logout').submit();">Logout</a>
+              <form action="{{route('logout')}}" method="POST" id="logout">
+                @csrf
+              </form>
+            </li>
+          </ul>
+          
+          {{-- zona revisore --}}
+          
+          @if (Auth::user()->is_revisor)
+          <li class="nav-item">
+            <a class="nav-link btn btn-outline-success btn-sm position-relative " aria-current="page"  href="{{route('revisor.index')}}">
+              Zona revisore
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                {{App\Models\Announcement::toBeRevisionedCount()}}
+                <span class="visually-hidden">unread messages </span>
+              </span>
             </a>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="{{route('login')}}">Accedi</a></li>
-                <hr>
-                <li><a class="dropdown-item" href="{{route('register')}}">Registrati</a></li>
-            </ul>
-          @endguest
-
-          </div>
-
-
-
+          </li>
+          @endif  
+        </div>
+        
+        @endauth
+        
+        @guest
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Ciao Ospite
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="{{route('login')}}">Accedi</a></li>
+          <hr>
+          <li><a class="dropdown-item" href="{{route('register')}}">Registrati</a></li>
+        </ul>
+        @endguest
+        
       </div>
+      
+      
+      
     </div>
+  </div>
 </nav>
