@@ -20,26 +20,28 @@ class CreateAnnouncement extends Component
     public $price;
 
     #[Validate('required')]
-    public $category_id;
+    public $category;
+    // public $category_id;
+
 
     //per customizzare i messaggi di validazione
     protected $messages = [
         'required' => 'Campo richiesto',
         'min' => 'Il campo deve essere di :min caratteri',
         'max' => 'Il campo deve essere di :max caratteri',
-        'numeric'=>'Il campo deve essere un numero con massimo due decimali'
+        'numeric'=>'Il campo deve essere numerico con massimo due decimali'
         ];
 
     public function store(){
         $this->validate(); 
-        // dd($this->category_id); 
-        $announcement = Announcement::create([
-            'title'=>$this->title,
-            'body'=>$this->body,
-            'price'=>$this->price,
-            'category_id'=>$this->category_id,
-
-        ]);
+       
+        $category = Category::find($this->category);
+        $announcement = $category->announcements()->create([
+                'title'=>$this->title,
+                'body'=>$this->body,
+                'price'=>$this->price,
+            ]);
+    
         Auth::user()->announcements()->save($announcement);
         
         session()->flash('AnnouncementCreated', 'Annuncio '. $this->title . ' creato con successo');

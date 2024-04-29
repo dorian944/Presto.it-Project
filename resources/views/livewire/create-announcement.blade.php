@@ -40,8 +40,13 @@
             
             {{-- categorie  --}}
             <div class="mb-3">
-                <label class="form-label">Categoria</label>
-                <select class="form-select" wire:model="category_id">
+                {{-- <label class="form-label">Categoria</label> --}}
+                <label class="form-label" for="category">Categoria</label>
+
+                {{-- <select class="form-select" wire:model="category_id"> --}}
+                    {{-- defer per far si che le select non vadano in conflitto col caricamento della pagina --}}
+                <select class="form-select" wire:model.defer="category" id="category">
+
                     <option selected hidden >Seleziona una categoria</option>
                         @foreach ($categories as $category)
                             <option value="{{$category->id}}">{{ $category->name }}</option>
