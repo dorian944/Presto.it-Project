@@ -54,6 +54,7 @@ class CreateAnnouncement extends Component
 
     public function render()
     {
+        //passaggio di categorie per creare un nuovo annuncio
         $categories = Category::all();
         return view('livewire.create-announcement', compact('categories'));
     }
