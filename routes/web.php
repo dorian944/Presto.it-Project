@@ -34,4 +34,3 @@ Route::patch('/accetta/annuncio/{announcement}',[RevisorController::class, 'acce
 
 //rifiuta annuncio
 Route::patch('/rifiuta/annuncio/{announcement}',[RevisorController::class, 'rejectAnnouncement'])->name('revisor.reject_announcement');
-

@@ -8,13 +8,13 @@ use Illuminate\Http\Request;
 
 class PublicController extends Controller
 {
-    public function homepage() 
+    public function homepage()
     {
-        $announcements = Announcement::orderBy('created_at', 'desc')->take(5)->get();
+        $announcements = Announcement::where('is_accepted', true)->take(5)->get()->sortByDesc('created_at');
         return view('homepage',compact('announcements'));
     }
 
-    public function categoryShow(Category $category) 
+    public function categoryShow(Category $category)
     {
          return view('categoryShow', compact('category'));
     }
