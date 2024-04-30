@@ -40,3 +40,7 @@ Route::get('/richiesta/revisore', [RevisorController::class, 'becomeRevisor'])->
 
 //rendi utente revisore
 Route::get('/rendi/revisore/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
+
+//rotta per la mail 
+
+Route::post('/richiesta/revisore/mail', [RevisorController::class, 'revisorSubmit'])->name('revisor.submit');
