@@ -37,7 +37,7 @@ class RevisorController extends Controller
         return view('revisor.formMail');
     }
 
-    public function revisorSubmit(){
+    public function revisorSubmit(Request $request){
 
         $name = $request->name;
         $email = $request->email;
