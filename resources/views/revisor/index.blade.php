@@ -1,20 +1,20 @@
 <x-layout>
-<div class="container-fluid p-5 bg-gradient bg-success shadow mb-4">
-    <div class="row">
-        <div class="col-12 p-5">
-            <h1 class="display-2 text-center">
-                {{$announcement_to_check ? 'Da revisionare' : 'Non ci sono annunci da revisionare'}}
-            </h1>
+    <div class="container-fluid p-5 bg-gradient bg-success shadow mb-4">
+        <div class="row">
+            <div class="col-12 p-5">
+                <h1 class="display-2 text-center">
+                    {{$announcement_to_check ? 'Da revisionare' : 'Non ci sono annunci da revisionare'}}
+                </h1>
+            </div>
         </div>
     </div>
-</div>
-
-@if($announcement_to_check)
+    
+    @if($announcement_to_check)
     {{-- carosello --}}
     <div class="container">
         <div class="row">
             <div class="col-12">
-
+                
                 {{-- carosello dettaglio --}}
                 <div class="row align-items-center">
                     <div class="col-12 col-md-6">
@@ -40,58 +40,63 @@
                                 <span class="visually-hidden">Next</span>
                             </button>
                         </div>
-                    </div>
-                        {{-- fine carosello --}}
-                        {{-- dettagli --}}
-                        <div class="col-12 col-md-6 text-center">
-                            <h5 class="card-title">Titolo: {{$announcement_to_check->title}}</h5>
-                            <p class="card-text">{{$announcement_to_check->body}}</p>
-                            <p class="card-footer">Pubblicato il: {{$announcement_to_check->created_at->format('d/m/Y')}}</p>
-                            <p>Categoria: {{$announcement_to_check->category->name}}</p>
 
+                        {{-- sezione accetta e rifiuta --}}
+                        <div class="row my-2">
+                            {{-- pulsante accetta --}}
+                            <div class="col-12 col-md-6">
+                                <form action="{{route('revisor.accept_announcement', ['announcement'=>$announcement_to_check])}}" method="POST">
+                                    @csrf
+                                    @method('PATCH')
+                                    <button type="submit" class="btn btn-success shadow">Accetta</button>
+                                </form>
+                            </div>
+
+                            {{-- pulsante rifiuta --}}
+                            <div class="col-12 col-md-6 text-end">
+                                <form action="{{route('revisor.reject_announcement', ['announcement'=>$announcement_to_check])}}" method="POST">
+                                    @csrf
+                                    @method('PATCH')
+                                    <button type="submit" class="btn btn-danger shadow">Rifiuta</button>
+                                </form>
+                            </div>
+                            
+                            {{-- chiusura row e col --}}
                         </div>
+
+                    </div>
+                    {{-- fine carosello --}}
+                    {{-- dettagli --}}
+                    <div class="col-12 col-md-6 text-center">
+                        <h5 class="card-title">Titolo: {{$announcement_to_check->title}}</h5>
+                        <p class="card-text">{{$announcement_to_check->body}}</p>
+                        <p class="card-footer">Pubblicato il: {{$announcement_to_check->created_at->format('d/m/Y')}}</p>
+                        <p>Categoria: {{$announcement_to_check->category->name}}</p>
+                        
+                    </div>
                 </div>
-            <div class="row">
-                {{-- pulsante accetta --}}
-                 <div class="col-12 col-md-6">
-                    <form action="{{route('revisor.accept_announcement', ['announcement'=>$announcement_to_check])}}" method="POST">
-                        @csrf
-                        @method('PATCH')
-                            <button type="submit" class="btn btn-success shadow">Accetta</button>
-                    </form>
-                </div>
-
-
-                <div class="col-12 col-md-6">
-                {{-- pulsante annulla ultima operazione --}}
-                    <form action="{{ route('back.step') }}" method="POST">
-                        @csrf
-                        @method('PATCH')
-                        <button type="submit">Annulla ultima revisione</button>
-                    </form>
-                </div>
-
-
-
-                {{-- pulsante rifiuta --}}
-                <div class="col-12 col-md-6 text-end">
-                    <form action="{{route('revisor.reject_announcement', ['announcement'=>$announcement_to_check])}}" method="POST">
-                        @csrf
-                        @method('PATCH')
-                            <button type="submit" class="btn btn-danger shadow">Rifiuta</button>
-                    </form>
-                </div>
-
-                {{-- chiusura row e col --}}
-                </div>
+                
             </div>
 
-
-
-
+            {{-- pulsante annulla ultima revisione --}}
+            <div class="row">
+                <div class="col-12">
+                    <div class="col-12 col-md-6">
+                        <form action="{{ route('back.step') }}" method="POST">
+                            @csrf
+                            @method('PATCH')
+                            <button type="submit" class="btn shadow btn-warning">Annulla ultima revisione</button>
+                        </form>
+                    </div>
+                    
+                    
+                    
+                </div>
             </div>
         </div>
-    </div>
+       
+    </div>  {{-- fine container --}}
+
 
 
 @endif

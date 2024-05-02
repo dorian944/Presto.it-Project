@@ -77,7 +77,7 @@ class RevisorController extends Controller
         // Verifica se è stata trovata una revisione
         if ($lastRevision) {
             // Annulla la revisione
-            $lastRevision->update(['is_accepted' => null]);
+            $lastRevision->setAccepted(null);
 
             return redirect('/')->with('message', 'Ultima revisione annullata con successo');
         } else {
