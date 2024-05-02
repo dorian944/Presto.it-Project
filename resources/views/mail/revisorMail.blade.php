@@ -15,9 +15,7 @@
             <p>Email: {{$user->email}}</p>
             <p>Messaggio utente: {{$user_message}}</p>
             <p>Per renderlo revisore clicca qui:</p>
-            {{-- compact user.... error perchè noi abbiamo non i dati dell'utente loggato come nel video, ma i dati dell'utente del form--}}
-            {{-- compact ('email') non lo prende quindi solo mail ok lo prende ma dà error nel presto:MakeUserRevisor--}}
-            {{-- <a href="{{route('make.revisor', 'email')}}">Rendi revisore</a> --}}
+           
 
             <a href="{{route('make.revisor', compact('user'))}}">Rendi revisore</a>
 

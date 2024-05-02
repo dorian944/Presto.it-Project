@@ -13,13 +13,13 @@ use Illuminate\Support\Facades\Artisan;
 
 class RevisorController extends Controller
 {
-    // public function __construct(){
-        //tutte le funzioni possono essere usate da utenti revisori tranne becomeRevisor che può essere usato da utenti autenticati
-        // $this->middleware('isRevisor')->except('becomeRevisor');
-      
+    public function __construct(){
+        // tutte le funzioni possono essere usate da utenti revisori tranne becomeRevisor che può essere usato da utenti autenticati
+        $this->middleware('isRevisor')->except('becomeRevisor','revisorSubmit','makeRevisor');
+      $this->middleware('auth')->only('becomeRevisor','revisorSubmit');
         
         
-    // }
+    }
 
 
     public function index(){
@@ -64,6 +64,11 @@ class RevisorController extends Controller
         return redirect('/')->with('message', 'L\'utente è diventato revisore');
     }
 
+      //traccia extra
+      //l'utente clicca su un bottone per tornare indietro e si attiva una funzione che annulla l'ultima revisione confermata o rifiuta. quindi dobbiamo portare indietro a null is_accepted
+    // public function backStep(){
+      
+    // }
    
     
 

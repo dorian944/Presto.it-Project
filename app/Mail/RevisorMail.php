@@ -27,6 +27,7 @@ class RevisorMail extends Mailable
     {
         $this->user = $user;
         $this->name = $name;
+        // la mail non deve essere modificata dall'utente altrimenti non corrisponde nel database e da errore
         // $this->email = $email;
         $this->user_message = $user_message;
     }
