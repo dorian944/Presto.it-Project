@@ -24,11 +24,11 @@
                     @csrf
                     <div class="mb-3">
                         <label for="name" class="form-label">Nome dell'utente</label>
-                        <input name="name" type="text" class="form-control" id="name">
+                        <input name="name" type="text" class="form-control" id="name" value="{{Auth::user()->name}}">
                     </div>
                     <div class="mb-3">
                         <label for="email" class="form-label">Mail dell'utente</label>
-                        <input name="email" type="email" class="form-control" id="email" value="{{Auth::user()->email}}">
+                        <input name="email" type="email" readonly="text" class="form-control" id="email" value="{{Auth::user()->email}}">
                     </div>
                     <div class="mb-3">
                         <label for="user_message" class="form-label">Messaggio dell'utente</label>
