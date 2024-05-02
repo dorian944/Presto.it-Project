@@ -35,6 +35,10 @@ Route::patch('/accetta/annuncio/{announcement}',[RevisorController::class, 'acce
 //rifiuta annuncio - middleware revisore
 Route::patch('/rifiuta/annuncio/{announcement}',[RevisorController::class, 'rejectAnnouncement'])->name('revisor.reject_announcement');
 
+// annulla ultima revisione
+Route::patch('/annulla/revisione', [RevisorController::class, 'backStep'] )->name('back.step');
+
+
 //diventare revisori - middleware auth
 Route::get('/richiesta/revisore', [RevisorController::class, 'becomeRevisor'])->name('become.revisor');
 
@@ -44,9 +48,5 @@ Route::get('/rendi/revisore/{user}', [RevisorController::class, 'makeRevisor'])-
 //rotta submit per inviare la mail - middleware auth
 Route::post('/richiesta/revisore/mail', [RevisorController::class, 'revisorSubmit'])->name('revisor.submit');
 
-//rotta per visualizzare l'index annunci 
+//rotta per visualizzare l'index annunci
 Route::get('/index/annunci', [AnnouncementController::class, 'indexAnnouncement'])->name('announcements.index');
-
-
-
-

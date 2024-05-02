@@ -17,8 +17,8 @@ class RevisorController extends Controller
         // tutte le funzioni possono essere usate da utenti revisori tranne becomeRevisor che può essere usato da utenti autenticati
         $this->middleware('isRevisor')->except('becomeRevisor','revisorSubmit','makeRevisor');
       $this->middleware('auth')->only('becomeRevisor','revisorSubmit');
-        
-        
+
+
     }
 
 
@@ -37,26 +37,26 @@ class RevisorController extends Controller
         return redirect()->back()->with('message', 'Complimenti hai rifiutato l\'annuncio');
     }
 
-    
+
     public function becomeRevisor()
     {
         return view('revisor.formMail');
     }
 
     public function revisorSubmit(Request $request){
-        // la email non deve essere modificata dall'utente altrimenti non corrisponde nel database e da errore 
+        // la email non deve essere modificata dall'utente altrimenti non corrisponde nel database e da errore
 
         $name = $request->name;
         $user_message = $request->user_message;
-       
+
 
         try{
-            Mail::to(Auth::user()->email)->send(new RevisorMail(Auth::user(),$name, $user_message)); 
+            Mail::to(Auth::user()->email)->send(new RevisorMail(Auth::user(),$name, $user_message));
         } catch(Exception $error){
             return redirect(route('become.revisor'))->with('emailError', 'Richiesta fallita. Ci scusiamo per il disagio. Riprova più tardi');
         }
         return redirect(route('become.revisor'))->with('emailSent', 'Abbiamo ricevuto la tua mail. Ti contatteremo il prima possibile.');
-        
+
     }//fine revisorSubmit
 
     public function makeRevisor(User $user){
@@ -67,9 +67,25 @@ class RevisorController extends Controller
       //traccia extra
       //l'utente clicca su un bottone per tornare indietro e si attiva una funzione che annulla l'ultima revisione confermata o rifiuta. quindi dobbiamo portare indietro a null is_accepted
     // public function backStep(){
-      
+
     // }
-   
-    
+    public function backStep()
+    {
+        // Recupera l'ultima revisione confermata o rifiutata
+        $lastRevision = Announcement::whereNotNull('is_accepted')->latest()->first();
+
+        // Verifica se è stata trovata una revisione
+        if ($lastRevision) {
+            // Annulla la revisione
+            $lastRevision->update(['is_accepted' => null]);
+
+            return redirect('/')->with('message', 'Ultima revisione annullata con successo');
+        } else {
+            return redirect('/')->with('message', 'Nessuna revisione da annullare');
+        }
+    }
+
+
+
 
 }
