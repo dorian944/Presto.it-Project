@@ -23,11 +23,11 @@ class RevisorMail extends Mailable
     /**
      * Create a new message instance.
      */
-    public function __construct(User $user,$name, $email, $user_message)
+    public function __construct(User $user,$name,  $user_message)
     {
         $this->user = $user;
         $this->name = $name;
-        $this->email = $email;
+        // $this->email = $email;
         $this->user_message = $user_message;
     }
 

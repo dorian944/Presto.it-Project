@@ -11,7 +11,8 @@
         <div>
             <h1>Richiesta utente per diventare revisore</h1>
             <p>Nome: {{$name}}</p>
-            <p>Email: {{$email}}</p>
+            {{-- la mail non deve essere modificata dall'utente altrimenti non corrisponde nel database e da errore --}}
+            <p>Email: {{$user->email}}</p>
             <p>Messaggio utente: {{$user_message}}</p>
             <p>Per renderlo revisore clicca qui:</p>
             {{-- compact user.... error perchè noi abbiamo non i dati dell'utente loggato come nel video, ma i dati dell'utente del form--}}

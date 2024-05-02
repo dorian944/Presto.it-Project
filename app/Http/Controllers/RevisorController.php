@@ -44,14 +44,14 @@ class RevisorController extends Controller
     }
 
     public function revisorSubmit(Request $request){
+        // la email non deve essere modificata dall'utente altrimenti non corrisponde nel database e da errore 
 
         $name = $request->name;
-        $email = $request->email;
         $user_message = $request->user_message;
        
 
         try{
-            Mail::to($email)->send(new RevisorMail(Auth::user(),$name, $email, $user_message)); 
+            Mail::to(Auth::user()->email)->send(new RevisorMail(Auth::user(),$name, $user_message)); 
         } catch(Exception $error){
             return redirect(route('become.revisor'))->with('emailError', 'Richiesta fallita. Ci scusiamo per il disagio. Riprova più tardi');
         }
