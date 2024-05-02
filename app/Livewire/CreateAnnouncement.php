@@ -21,14 +21,14 @@ class CreateAnnouncement extends Component
 
     #[Validate('required')]
     public $category;
-    // public $category_id;
+   
 
 
     //per customizzare i messaggi di validazione
     protected $messages = [
         'required' => 'Campo richiesto',
-        'min' => 'Il campo deve essere di :min caratteri',
-        'max' => 'Il campo deve essere di :max caratteri',
+        'min' => 'Il campo deve essere minimo di :min caratteri',
+        'max' => 'Il campo deve essere massimo di :max caratteri',
         'numeric'=>'Il campo deve essere numerico con massimo due decimali'
         ];
 

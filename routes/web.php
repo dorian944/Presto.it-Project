@@ -22,12 +22,12 @@ Route::get('/categoria/{category}',[PublicController::class, 'categoryShow'])->n
 
 
 Route::get('/nuovo/annuncio',[AnnouncementController::class, 'createAnnouncement'])->name('announcements.create');
-Route::get('/annuncio/show/{announcement}', [AnnouncementController::class, 'showAnnouncement'])->name('announcements.show');
+Route::get('/annuncio/dettaglio/{announcement}', [AnnouncementController::class, 'showAnnouncement'])->name('announcements.show');
 
 
 // sezione revisore
 // home revisore
-Route::get('/revisor/home',[RevisorController::class, 'index'])->name('revisor.index');
+Route::get('/revisore/home',[RevisorController::class, 'index'])->name('revisor.index');
 
 //accetta annuncio
 Route::patch('/accetta/annuncio/{announcement}',[RevisorController::class, 'acceptAnnouncement'])->name('revisor.accept_announcement');
