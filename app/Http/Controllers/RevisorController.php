@@ -6,8 +6,10 @@ use Exception;
 use App\Mail\RevisorMail;
 use App\Models\Announcement;
 use Illuminate\Http\Request;
+use Illuminate\Foundation\Auth\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Artisan;
 
 class RevisorController extends Controller
 {
@@ -55,7 +57,17 @@ class RevisorController extends Controller
         }
         return redirect(route('become.revisor'))->with('emailSent', 'Abbiamo ricevuto la tua mail. Ti contatteremo il prima possibile.');
         
+    }//fine revisorSubmit
+
+    public function makeRevisor(User $user){
+        Artisan::call('presto:makeUserRevisor' , ["email"=>$user->email]);
+        return redirect('/')->with('message', 'L\'utente è diventato revisore');
     }
+
+    // public function makeRevisor(Mail $email){
+    //     Artisan::call('presto:makeUserRevisor' , ["email"=>$email]);
+    //     return redirect('/')->with('message', 'L\'utente è diventato revisore');
+    // }
     
 
 }
