@@ -85,7 +85,7 @@
                         <form action="{{ route('back.step') }}" method="POST">
                             @csrf
                             @method('PATCH')
-                            <button type="submit" class="btn shadow btn-warning">Annulla ultima revisione</button>
+                            <button type="submit" class="btn btn-warning text-white shadow ">Annulla ultima revisione</button>
                         </form>
                     </div>
                     
