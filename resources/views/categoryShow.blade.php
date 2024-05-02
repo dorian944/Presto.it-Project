@@ -19,6 +19,7 @@
                                 <h5 class="card-title">{{$announcement->title}}</h5>
                                 <p class="card-title">{{$announcement->body}}</p>
                                 <a href="{{route('announcements.show', compact('announcement'))}}" class="btn btn-primary shadow">Visualizza </a>
+                                <a href="#" class="btn btn-primary my-2">Categoria: {{$announcement->category->name}}</a>
                                 <p class="card-footer my-2">Pubblicato il:
                                     {{$announcement->created_at->format('d/m/Y')}} 
                                     - Autore: {{$announcement->user->name ?? ''}}
