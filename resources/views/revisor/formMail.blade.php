@@ -1,11 +1,11 @@
 <x-layout>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 text-center mt-5 mb-5">
                 <h1>Invia una richiesta per diventare revisore: </h1>
             </div>
 
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-6 m-auto">
                 <form action="{{route('revisor.submit')}}" method="POST">
 
                                 {{-- messaggio insuccesso invio mail --}}
@@ -34,7 +34,7 @@
                         <label for="user_message" class="form-label">Messaggio dell'utente</label>
                         <textarea name="user_message" id="user_message" cols="30" rows="7" class="form-control"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Invia richiesta</button>
+                    <button type="submit" class="btn btn-primary mb-5">Invia richiesta</button>
                 </form>
             </div>
         </div>

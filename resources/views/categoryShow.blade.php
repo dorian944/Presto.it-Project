@@ -1,7 +1,7 @@
 <x-layout>
 <div class="container-fluid p-5 bg-gradient bg-success shadow mb-4">
     <div class="row">
-        <div class="col-12 p-5">
+        <div class="col-12 p-5 text-center">
             <h1 class="display-2"> Esplora la categoria {{$category->name}}</h1>
         </div>
     </div>
@@ -13,7 +13,7 @@
             <div class="row">
                 @forelse ($category->announcements as $announcement )
                     <div class="col-12 col-md-4 my-2">
-                        <div class="card shadow" style="width: 18rem;">
+                        {{-- <div class="card shadow" style="width: 18rem;">
                             <img src="https:picsum.photos/200" class="card-img-top p-3 rounded" alt="Categoria {{$category->name}}">
                             <div class="card-body">
                                 <h5 class="card-title">{{$announcement->title}}</h5>
@@ -25,7 +25,9 @@
                                     - Autore: {{$announcement->user->name ?? ''}}
                                 </p>
                             </div>
-                         </div>
+                         </div> --}}
+
+                         <x-card :announcement="$announcement" />
                     </div>
                     
                 @empty

@@ -29,14 +29,14 @@
         {{-- fine sezione categorie --}}
         
         <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
+          <a class="nav-link" href="{{route('announcements.index')}}">Lista annunci</a>
         </li>
       </ul>
       
       <a class="navbar-brand" href="{{route('homepage')}}">Presto.it</a>
       
       
-      <div class="nav-item dropdown mx-5">
+      <div class="nav-item dropdown ">
         <div class="d-flex">
           @auth
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -58,10 +58,10 @@
           {{-- zona revisore --}}
           
           @if (Auth::user()->is_revisor)
-          <li class="nav-item">
-            <a class="nav-link btn btn-outline-success btn-sm position-relative " aria-current="page"  href="{{route('revisor.index')}}">
+          <li class="nav-item d-flex align-items-center">
+            <a class="nav-link btn btn-outline-success btn-sm position-relative zona-revisore-custom ms-3" aria-current="page"  href="{{route('revisor.index')}}">
               Zona revisore
-              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+              <span class="position-absolute top-1 start-100 translate-middle badge rounded-pill bg-danger">
                 {{App\Models\Announcement::toBeRevisionedCount()}}
                 <span class="visually-hidden">unread messages </span>
               </span>

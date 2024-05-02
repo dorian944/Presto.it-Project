@@ -2,7 +2,7 @@
 <div class="container-fluid p-5 bg-gradient bg-success shadow mb-4">
     <div class="row">
         <div class="col-12 p-5">
-            <h1 class="display-2">
+            <h1 class="display-2 text-center">
                 {{$announcement_to_check ? 'Da revisionare' : 'Non ci sono annunci da revisionare'}}
             </h1>
         </div>
