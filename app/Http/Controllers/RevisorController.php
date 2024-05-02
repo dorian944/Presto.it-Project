@@ -64,10 +64,7 @@ class RevisorController extends Controller
         return redirect('/')->with('message', 'L\'utente è diventato revisore');
     }
 
-    // public function makeRevisor(Mail $email){
-    //     Artisan::call('presto:makeUserRevisor' , ["email"=>$email]);
-    //     return redirect('/')->with('message', 'L\'utente è diventato revisore');
-    // }
+   
     
 
 }
