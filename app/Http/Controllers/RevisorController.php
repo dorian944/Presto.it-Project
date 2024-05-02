@@ -47,19 +47,13 @@ class RevisorController extends Controller
         $email = $request->email;
         $user_message = $request->user_message;
        
+
         try{
             Mail::to($email)->send(new RevisorMail($name, $email, $user_message)); 
         } catch(Exception $error){
-            return redirect()->back()->with('emailError', 'Richiesta fallita. Ci scusiamo per il disagio. Riprova più tardi');
+            return redirect(route('become.revisor'))->with('emailError', 'Richiesta fallita. Ci scusiamo per il disagio. Riprova più tardi');
         }
-        return redirect(route('homepage'))->with('emailSent', 'Abbiamo ricevuto la tua mail. Ti contatteremo il prima possibile.');
-
-        // try{
-        //     Mail::to($email)->send(new RevisorMail($name, $email, $user_message)); 
-        // } catch(Exception $error){
-        //     return redirect(route('become.revisor'))->with('emailError', 'Richiesta fallita. Ci scusiamo per il disagio. Riprova più tardi');
-        // }
-        // return redirect(route('become.revisor'))->with('emailSent', 'Abbiamo ricevuto la tua mail. Ti contatteremo il prima possibile.');
+        return redirect(route('become.revisor'))->with('emailSent', 'Abbiamo ricevuto la tua mail. Ti contatteremo il prima possibile.');
         
     }
     
