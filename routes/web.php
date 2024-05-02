@@ -26,21 +26,20 @@ Route::get('/annuncio/dettaglio/{announcement}', [AnnouncementController::class,
 
 
 // sezione revisore
-// home revisore
+// home revisore - middleware revisore
 Route::get('/revisore/home',[RevisorController::class, 'index'])->name('revisor.index');
 
-//accetta annuncio
+//accetta annuncio - middleware revisore
 Route::patch('/accetta/annuncio/{announcement}',[RevisorController::class, 'acceptAnnouncement'])->name('revisor.accept_announcement');
 
-//rifiuta annuncio
+//rifiuta annuncio - middleware revisore
 Route::patch('/rifiuta/annuncio/{announcement}',[RevisorController::class, 'rejectAnnouncement'])->name('revisor.reject_announcement');
 
-//diventari revisori
+//diventare revisori - middleware auth
 Route::get('/richiesta/revisore', [RevisorController::class, 'becomeRevisor'])->name('become.revisor');
 
 //rendi utente revisore
 Route::get('/rendi/revisore/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
 
-//rotta per la mail 
-
+//rotta submit per inviare la mail - middleware auth
 Route::post('/richiesta/revisore/mail', [RevisorController::class, 'revisorSubmit'])->name('revisor.submit');

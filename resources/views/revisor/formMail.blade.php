@@ -6,7 +6,7 @@
             </div>
 
             <div class="col-12 col-md-6">
-                <form action="{{ route('revisor.submit') }}" method="POST">
+                <form action="{{route('revisor.submit')}}" method="POST">
 
                                 {{-- messaggio insuccesso invio mail --}}
                     @if (session('emailError'))

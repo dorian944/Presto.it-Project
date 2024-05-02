@@ -11,9 +11,13 @@ use Illuminate\Support\Facades\Mail;
 
 class RevisorController extends Controller
 {
-    public function __construct(){
-        $this->middleware('isRevisor')->except('becomeRevisor');
-    }
+    // public function __construct(){
+        //tutte le funzioni possono essere usate da utenti revisori tranne becomeRevisor che può essere usato da utenti autenticati
+        // $this->middleware('isRevisor')->except('becomeRevisor');
+      
+        
+        
+    // }
 
 
     public function index(){
@@ -49,6 +53,14 @@ class RevisorController extends Controller
             return redirect()->back()->with('emailError', 'Richiesta fallita. Ci scusiamo per il disagio. Riprova più tardi');
         }
         return redirect(route('homepage'))->with('emailSent', 'Abbiamo ricevuto la tua mail. Ti contatteremo il prima possibile.');
+
+        // try{
+        //     Mail::to($email)->send(new RevisorMail($name, $email, $user_message)); 
+        // } catch(Exception $error){
+        //     return redirect(route('become.revisor'))->with('emailError', 'Richiesta fallita. Ci scusiamo per il disagio. Riprova più tardi');
+        // }
+        // return redirect(route('become.revisor'))->with('emailSent', 'Abbiamo ricevuto la tua mail. Ti contatteremo il prima possibile.');
+        
     }
     
 
