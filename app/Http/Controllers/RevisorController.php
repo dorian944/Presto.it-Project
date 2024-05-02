@@ -51,7 +51,7 @@ class RevisorController extends Controller
        
 
         try{
-            Mail::to($email)->send(new RevisorMail($name, $email, $user_message)); 
+            Mail::to($email)->send(new RevisorMail(Auth::user(),$name, $email, $user_message)); 
         } catch(Exception $error){
             return redirect(route('become.revisor'))->with('emailError', 'Richiesta fallita. Ci scusiamo per il disagio. Riprova più tardi');
         }

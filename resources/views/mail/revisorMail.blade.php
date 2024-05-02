@@ -18,7 +18,7 @@
             {{-- compact ('email') non lo prende quindi solo mail ok lo prende ma dà error nel presto:MakeUserRevisor--}}
             {{-- <a href="{{route('make.revisor', 'email')}}">Rendi revisore</a> --}}
 
-            {{-- <a href="{{route('make.revisor', compact('user'))}}">Rendi revisore</a> --}}
+            <a href="{{route('make.revisor', compact('user'))}}">Rendi revisore</a>
 
 
         </div>

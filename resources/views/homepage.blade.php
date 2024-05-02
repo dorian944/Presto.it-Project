@@ -1,6 +1,16 @@
 <x-layout>
-    {{-- <x-slot name ='title'> Homepage Presto.it </x-slot> --}}
+    <x-slot name='title'> Homepage Presto.it </x-slot>
+
+    {{-- messaggio per comunicare all'amministratore che un utente è diventato revisore dopo che l'amministratore ha cliccato sul link nella mail --}}
+    @if (session('message'))  
+    <div class="alert alert-success">
+    {{ session('message') }}
+    </div>
+    @endif
+
     <x-header />
+
+
 <div class="container" >
     <div class="row">
         @foreach ($announcements as $announcement)

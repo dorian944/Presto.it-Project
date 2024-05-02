@@ -2,8 +2,10 @@
 
 namespace App\Mail;
 
+use App\Models\User;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
+// use Illuminate\Foundation\Auth\User;
 use Illuminate\Mail\Mailables\Address;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Queue\SerializesModels;
@@ -14,14 +16,16 @@ class RevisorMail extends Mailable
 {
     use Queueable, SerializesModels;
 
+    public $user;
     public $name;
     public $email;
     public $user_message;
     /**
      * Create a new message instance.
      */
-    public function __construct($name, $email, $user_message)
+    public function __construct(User $user,$name, $email, $user_message)
     {
+        $this->user = $user;
         $this->name = $name;
         $this->email = $email;
         $this->user_message = $user_message;
