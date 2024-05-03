@@ -49,21 +49,32 @@ button {
   @keyframes slideFromRightToCenter {
     0% {
       right: -100%;
+      overflow-x: hidden;
+      overflow-y: hidden;
     }
     100% {
       right: 0;
+      overflow-x: hidden;
+      overflow-y: hidden;
     }
   }
 
   @keyframes slideFromLeftToCenter {
     0% {
       left: -100%;
+      overflow-x: hidden;
+      overflow-y: hidden;
     }
     100% {
       left: 0;
+      overflow-x: hidden;
+      overflow-y: hidden;
     }
   }
 
+  .overflow-custom{
+    overflow-x: hidden;
+  }
 
 
 

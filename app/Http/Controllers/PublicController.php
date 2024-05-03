@@ -10,12 +10,13 @@ class PublicController extends Controller
 {
     public function homepage()
     {
-        $announcements = Announcement::where('is_accepted', true)->take(5)->get()->sortByDesc('created_at');
+        $announcements = Announcement::where('is_accepted', true)->orderBy('created_at','desc')->take(5)->get();
         return view('homepage',compact('announcements'));
     }
 
     public function categoryShow(Category $category)
     {
-         return view('categoryShow', compact('category'));
+        $announcements = $category->announcements()->where('is_accepted', true)->orderBy('created_at','desc')->get();
+         return view('categoryShow', compact('category', 'announcements'));
     }
 }

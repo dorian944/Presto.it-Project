@@ -9,7 +9,7 @@ class AnnouncementController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth')->except('indexAnnouncement');
+        $this->middleware('auth')->except('indexAnnouncement', 'showAnnouncement');
     }
 
     public function createAnnouncement(){
@@ -21,7 +21,7 @@ class AnnouncementController extends Controller
     }
 
     public function indexAnnouncement(){
-        $announcements = Announcement::where('is_accepted', true)->paginate(5);
+        $announcements = Announcement::where('is_accepted', true)->paginate(5)->sortByDesc('created_at');
         return view('announcements.index', compact('announcements'));
     }
 }

@@ -11,22 +11,8 @@
     <div class="row">
         <div class="col-12">
             <div class="row">
-                @forelse ($category->announcements as $announcement )
+                @forelse ($announcements as $announcement )
                     <div class="col-12 col-md-4 my-2">
-                        {{-- <div class="card shadow" style="width: 18rem;">
-                            <img src="https:picsum.photos/200" class="card-img-top p-3 rounded" alt="Categoria {{$category->name}}">
-                            <div class="card-body">
-                                <h5 class="card-title">{{$announcement->title}}</h5>
-                                <p class="card-title">{{$announcement->body}}</p>
-                                <a href="{{route('announcements.show', compact('announcement'))}}" class="btn btn-primary shadow">Visualizza </a>
-                                <a href="#" class="btn btn-primary my-2">Categoria: {{$announcement->category->name}}</a>
-                                <p class="card-footer my-2">Pubblicato il:
-                                    {{$announcement->created_at->format('d/m/Y')}} 
-                                    - Autore: {{$announcement->user->name ?? ''}}
-                                </p>
-                            </div>
-                         </div> --}}
-
                          <x-card :announcement="$announcement" />
                     </div>
                     

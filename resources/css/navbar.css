@@ -2,3 +2,19 @@
     list-style-type: none;
     text-decoration: none;
 }
+
+.navbar .dropdown-menu {
+    padding: 0;
+}
+
+.navbar .dropdown-item {
+    padding: 1rem 1rem;
+}
+
+.p-custom-title-presto{
+    padding-right: 90px;
+}
+
+.p-custom-logged-presto{
+    padding-left: 65px;
+}
