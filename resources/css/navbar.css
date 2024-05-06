@@ -1,3 +1,17 @@
+:root {
+    --verde_grigio: #186049;
+    --verde_chiaro: #e4d5c7;
+}
+
+nav {
+    background-color: var(--verde_grigio);
+}
+footer {
+    background-color: var(--verde_grigio);
+}
+body {
+    background-color: var(--verde_chiaro) ;
+}
 .zona-revisore-custom{
     list-style-type: none;
     text-decoration: none;
@@ -12,9 +26,10 @@
 }
 
 .p-custom-title-presto{
-    padding-right: 90px;
+    text-align: center;
 }
 
 .p-custom-logged-presto{
-    padding-left: 65px;
+    text-align: center;
+
 }

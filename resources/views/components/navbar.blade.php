@@ -8,7 +8,7 @@
         <div class="collapse navbar-collapse justify-content-around m-2" id="navbarNavDropdown">
 
             <ul class="navbar-nav">
-            
+
                 {{-- sezione categorie --}}
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button"
@@ -23,7 +23,7 @@
                                 </a>
                                 <hr class="dropdown-divider m-0">
                             </li>
-                           
+
                         @endforeach
                     </ul>
                 </li>
@@ -34,20 +34,20 @@
                 </li>
             </ul>
 
-            
+
           @guest
             <div class="p-custom-title-presto">
                 <a class="navbar-brand " href="{{ route('homepage') }}">Presto.it</a>
             </div>
           @endguest
-          
+
           @auth
-          <div class="p-custom-logged-presto">
+          <div class="p-custom-logged-presto text-center">
               <a class="navbar-brand " href="{{ route('homepage') }}">Presto.it</a>
           </div>
           @endauth
-              
-            
+
+
             <div class="nav-item dropdown ">
                 <div class="d-flex">
                     @auth

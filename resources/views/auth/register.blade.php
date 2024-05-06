@@ -1,7 +1,7 @@
 <x-layout>
 
     <div class="container-fluid my-4">
-        <div class="row vh-100">
+        <div class="row ">
 
             <div class="col-12 d-flex justify-content-center align-items-center">
                 <div class="container-form">
@@ -42,4 +42,4 @@
         </div>
     </div>
 
-    </x-layout>
+</x-layout>

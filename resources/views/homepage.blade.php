@@ -18,8 +18,7 @@
 
 
 <div class="container" >
-    <div class="row justify-content-around
-    ">
+    <div class="row justify-content-around">
         @foreach ($announcements as $announcement)
         <div class="col-12 col-md-3 m-3">
             <x-card :announcement="$announcement" />

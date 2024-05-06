@@ -67,7 +67,7 @@
     <!-- Grid container -->
 
     <!-- Copyright -->
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+    <div class="text-center p-3" style="background-color: rgb(39, 131, 103);">
       <a href="{{route('become.revisor')}}" class="text-body">Diventa revisore</a>
     </div>
     <!-- Copyright -->
