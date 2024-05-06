@@ -99,7 +99,13 @@
                         <li><a class="dropdown-item" href="{{ route('register') }}">Registrati</a></li>
                     </ul>
                 @endguest
-
+                    <ul>
+                        <li class="nav-item">
+                            <x-_locale lang="it" />
+                            <x-_locale lang="en" />
+                            <x-_locale lang="es" />
+                        </li>
+                    </ul>
             </div>
 
 
