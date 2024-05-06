@@ -81,9 +81,9 @@
         <!-- Section: CTA -->
         <section class="">
           <p class="d-flex justify-content-center align-items-center">
-            <span class="me-3">Diventa revisore: </span>
+            <span class="me-3">{{__("ui.diventa_revisore")}} </span>
             <button data-mdb-ripple-init type="button" class="btn btn-outline-light btn-rounded">
-              <a class="link-footer" href="{{route('become.revisor')}}">Revisore</a>
+              <a class="link-footer" href="{{route('become.revisor')}}">{{__("ui.button_revisore")}}</a>
             </button>
           </p>
         </section>

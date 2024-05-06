@@ -2,7 +2,7 @@
     <div class="container-fluid ">
         <div class="row ">
             <div class="col-12 mt-4 mb-4">
-                <h1 class="text-center">I nostri annunci</h1>
+                <h1 class="text-center">{{__("ui.index_annunci")}}</h1>
             </div>
         </div>
 

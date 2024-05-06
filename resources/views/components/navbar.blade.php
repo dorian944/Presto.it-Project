@@ -13,7 +13,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
-                        Categorie
+                        {{__("ui.Categorie")}}
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
                         @foreach ($categories as $category)
@@ -30,7 +30,7 @@
                 {{-- fine sezione categorie --}}
 
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('announcements.index') }}">Lista annunci</a>
+                    <a class="nav-link" href="{{ route('announcements.index') }}">{{__("ui.lista_annunci")}}</a>
                 </li>
             </ul>
 
@@ -53,7 +53,7 @@
                     @auth
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
-                            Benvenuto {{ Auth::user()->name }}
+                            {{__('ui.welcome_login')}} {{ Auth::user()->name }}
                         </a>
 
                         <ul class="dropdown-menu">
@@ -76,7 +76,7 @@
                             <li class="nav-item d-flex align-items-center">
                                 <a class="nav-link btn btn-outline-success btn-sm position-relative zona-revisore-custom ms-3"
                                     aria-current="page" href="{{ route('revisor.index') }}">
-                                    Zona revisore
+                                    {{__("ui.zona_revisore")}}
                                     <span
                                         class="position-absolute top-1 start-100 translate-middle badge rounded-pill bg-danger">
                                         {{ App\Models\Announcement::toBeRevisionedCount() }}
