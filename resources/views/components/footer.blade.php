@@ -1,4 +1,4 @@
-<footer class="text-center  my-3">
+{{-- <footer class="text-center  my-3">
     <!-- Grid container -->
     <div class="container pt-4">
       <!-- Section: Social media -->
@@ -71,4 +71,32 @@
       <a href="{{route('become.revisor')}}" class="text-body">Diventa revisore</a>
     </div>
     <!-- Copyright -->
-  </footer>
+  </footer> --}}
+
+  <section class="">
+    <!-- Footer -->
+    <footer class="text-center text-white" style="background-color: #247158;">
+      <!-- Grid container -->
+      <div class="container p-4 pb-0">
+        <!-- Section: CTA -->
+        <section class="">
+          <p class="d-flex justify-content-center align-items-center">
+            <span class="me-3">Diventa revisore: </span>
+            <button data-mdb-ripple-init type="button" class="btn btn-outline-light btn-rounded">
+              <a class="link-footer" href="{{route('become.revisor')}}">Revisore</a>
+            </button>
+          </p>
+        </section>
+        <!-- Section: CTA -->
+      </div>
+      <!-- Grid container -->
+  
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2024 Copyright:
+        <a class="text-white" href="#">Presto.it</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+  </section>
