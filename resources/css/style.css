@@ -33,64 +33,95 @@ button {
 
 /* fine bottone home page */
 
-/* header */
-.animated-text-from-right {
-    position: relative;
-    right: -100%;
-    animation: slideFromRightToCenter 3s forwards;
-  }
-
-  .animated-text-from-left {
-    position: relative;
-    left: -100%;
-    animation: slideFromLeftToCenter 3s forwards;
-  }
-
-  @keyframes slideFromRightToCenter {
-    0% {
+ /* header */
+  .animated-text-from-right {
+      position: relative;
       right: -100%;
-      overflow-x: hidden;
-      overflow-y: hidden;
+      animation: slideFromRightToCenter 3s forwards;
     }
-    100% {
-      right: 0;
-      overflow-x: hidden;
-      overflow-y: hidden;
-    }
-  }
 
-  @keyframes slideFromLeftToCenter {
-    0% {
+    .animated-text-from-left {
+      position: relative;
       left: -100%;
-      overflow-x: hidden;
-      overflow-y: hidden;
+      animation: slideFromLeftToCenter 3s forwards;
     }
-    100% {
+
+    @keyframes slideFromRightToCenter {
+      0% {
+        right: -100%;
+        overflow-x: hidden;
+        overflow-y: hidden;
+      }
+      100% {
+        right: 0;
+        overflow-x: hidden;
+        overflow-y: hidden;
+      }
+    }
+
+    @keyframes slideFromLeftToCenter {
+      0% {
+        left: -100%;
+        overflow-x: hidden;
+        overflow-y: hidden;
+      }
+      100% {
+        left: 0;
+        overflow-x: hidden;
+        overflow-y: hidden;
+      }
+    }
+
+    .overflow-custom{
+      overflow-x: hidden;
+    }
+/* fine header */
+
+/* card-public - le card che compaiono con annunci sulla homepage */
+    .card-public {
+      position: relative;
+      width: 18rem;
+      height: 390px;
+      margin: 10px;
+      float: left;
+      overflow: hidden;
+      border-radius: 15px;
+      border: 1px solid #ddd;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Stile per l'immagine */
+    .card-public img {
+      width: 100%;
+      height: auto;
+      transition: opacity 0.5s ease;
+      opacity: 1;
+    }
+
+    /* Stile per sovrapporre il testo sull'immagine */
+    .card-public .card-body {
+      position: absolute;
+      bottom: -100%;
       left: 0;
-      overflow-x: hidden;
-      overflow-y: hidden;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.6);
+      padding: 10px;
+      box-sizing: border-box;
+      transition: bottom 0.5s ease, opacity 0.5s ease, background-color 0.5s ease;
+      opacity: 0;
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
     }
-  }
 
-  .overflow-custom{
-    overflow-x: hidden;
-  }
+    /* Mostra il testo e regola l'opacità dell'immagine quando il mouse si avvicina alla card */
+    .card-public:hover .card-body {
+      bottom: 0;
+      opacity: 1;
+      background-color: rgba(203, 243, 143, 0.6);
+    }
 
-
-
-
-/* colori nav e footer */
-:root {
-    --verdePastello : #d9ed92a9;
-    --acqua: radial-gradient(circle, rgba(159,189,204,1) 16%, rgba(82,182,154,1) 100%);;
-}
-
-
-
-nav {
-    background-color: var(--acqua);
-}
-
-footer {
-    background-color: var(--acqua);
-}
+    .card-public:hover img {
+      opacity: 0.2;
+    }
+/*fine card-public - le card che compaiono con annunci sulla homepage */

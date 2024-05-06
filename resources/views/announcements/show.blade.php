@@ -6,11 +6,11 @@
             </div>
         </div>
     </div>
-    
+
     <div class="container">
         <div class="row">
             <div class="col-12">
-                
+
                 {{-- carosello dettaglio --}}
                 <div class="row align-items-center">
                     <div class="col-12 col-md-6">
@@ -37,14 +37,14 @@
                             </button>
                         </div>
                     </div>
-                    
-                    
-                    
+
+
+
                     {{-- <div class="col-12 col-md-6 d-flex justify-content-center">
                         <img src="https://picsum.photos/600" class="img-fluid rounded-3" alt="foto">
                     </div> --}}
                     {{-- fine carosello --}}
-                    
+
                     <div class="col-12 col-md-6 text-center">
                         <h2>{{$announcement->title}}</h2>
                         <p>{{$announcement->body}}</p>
@@ -56,5 +56,5 @@
             </div>
         </div>
     </div>
-    
+
 </x-layout>
