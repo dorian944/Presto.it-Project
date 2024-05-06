@@ -19,4 +19,11 @@ class PublicController extends Controller
         $announcements = $category->announcements()->where('is_accepted', true)->orderBy('created_at','desc')->get();
          return view('categoryShow', compact('category', 'announcements'));
     }
+
+    public function setLanguage($lang) 
+     {
+        
+        session()->put('locale', $lang);
+        return redirect()->back();
+    }
 }

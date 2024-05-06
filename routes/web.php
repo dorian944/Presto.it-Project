@@ -50,3 +50,7 @@ Route::post('/richiesta/revisore/mail', [RevisorController::class, 'revisorSubmi
 
 //rotta per visualizzare l'index annunci
 Route::get('/index/annunci', [AnnouncementController::class, 'indexAnnouncement'])->name('announcements.index');
+
+
+//Cambio lingua
+Route::post('/lingua/{lang}', [PublicController::class, 'setLanguage'])->name('setLocale');

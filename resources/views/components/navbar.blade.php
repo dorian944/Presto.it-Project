@@ -101,8 +101,8 @@
                 @endguest
                     <ul>
                         <li class="nav-item">
-                            <x-_locale lang="it" />
-                            <x-_locale lang="en" />
+                            <x-_locale lang="it"  />
+                            <x-_locale lang="en"  />
                             <x-_locale lang="es" />
                         </li>
                     </ul>
