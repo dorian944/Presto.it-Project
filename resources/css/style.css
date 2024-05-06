@@ -146,3 +146,17 @@
 
     }
 /*fine card-public - le card che compaiono con annunci sulla homepage */
+
+/* altezza delle pagine */
+.h-custom{
+  height: 100%;
+}
+
+.link-footer{
+  text-decoration: none;
+  color: white;
+}
+
+.h-index-custom{
+  height: 100vh;
+}

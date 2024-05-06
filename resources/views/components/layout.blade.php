@@ -9,10 +9,10 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
 </head>
-<body class="overflow-custom">
+<body class="overflow-custom h-custom">
     <x-navbar/>
 
-        <div class="min-vh-10">
+        <div class="h-custom">
             {{ $slot }}
         </div>
     <x-footer/>

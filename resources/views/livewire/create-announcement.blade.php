@@ -3,7 +3,7 @@
     
     {{-- form inserimento dati: usando livewire al posto di name inseriremi wire:model --}}
     <div class=" p-5">
-        <h2>Inserisci annuncio</h2>
+        <h2 class="mb-5 text-center">Inserisci annuncio</h2>
         <form class="shadow p-5 bg-grigio-light" wire:submit="store">
             
             @if (session('AnnouncementCreated'))
