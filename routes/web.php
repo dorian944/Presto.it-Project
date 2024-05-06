@@ -49,7 +49,7 @@ Route::get('/rendi/revisore/{user}', [RevisorController::class, 'makeRevisor'])-
 Route::post('/richiesta/revisore/mail', [RevisorController::class, 'revisorSubmit'])->name('revisor.submit');
 
 //rotta per visualizzare l'index annunci
-Route::get('/index/annunci', [AnnouncementController::class, 'indexAnnouncement'])->name('announcements.index');
+Route::get('/lista/annunci', [AnnouncementController::class, 'indexAnnouncement'])->name('announcements.index');
 
 
 //Cambio lingua

@@ -16,7 +16,7 @@
 
     <x-header />
 
-{{-- <p> {{__('ui.allAnnouncements')}}</p> --}}
+
 <div class="container" >
     <div class="row justify-content-around">
         @foreach ($announcements as $announcement)

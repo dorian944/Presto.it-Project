@@ -15,7 +15,7 @@
             {{-- action sostituito da wire:submit="store" --}}
             {{-- il @csrf token non serve più --}}
             <div class="mb-3">
-                <label for="title" class="form-label">Title</label>
+                <label for="title" class="form-label">Titolo</label>
                 <input type="text"  id="title" wire:model.live="title" class="form-control @error('title') is-invalid @enderror">
                 @error('title')
                 <span class="text-danger">{{$message}}</span>
@@ -59,7 +59,7 @@
             
             
             
-            <button type="submit" class="btn btn-custom">Insert</button>
+            <button type="submit" class="btn btn-custom">Inserisci</button>
         </form>
     </div>
     {{-- chiusura div component --}}
