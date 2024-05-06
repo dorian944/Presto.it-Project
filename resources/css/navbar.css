@@ -26,10 +26,9 @@ body {
 }
 
 .p-custom-title-presto{
-    text-align: center;
+    padding-right: 90px;
 }
 
 .p-custom-logged-presto{
-    text-align: center;
-
+    padding-left: 65px;
 }
