@@ -38,3 +38,11 @@ body {
     background-color: var(--verde_grigio);
 }
 
+.zona-revisore-custom {
+    margin-left: 10px; /* Aggiungi spazio a sinistra per separare dalla sezione precedente */
+}
+
+/* Stile per le bandiere di lingua */
+.navbar-nav .nav-link {
+    padding: 0.5rem 1rem;
+}
