@@ -1,7 +1,7 @@
 <x-layout>
 
-    <div class="h-index-custom">
-        <div class="container-fluid p-5 bg-gradient bg-success shadow mb-4">
+    <div class="h-index-custom-revisor">
+        <div class="container-fluid p-5  bg-custom-categorie shadow mb-4">
             <div class="row ">
                 <div class="col-12 p-3">
                     <h1 class="display-2 text-center">
@@ -14,21 +14,15 @@
         @if($announcement_to_check)
         <div class="row mx-1">
 
-                <div class="col-12 text-end">
-                    <form action="{{ route('back.step') }}" method="POST">
-                        @csrf
-                        @method('PATCH')
-                        <button type="submit" class="btn btn-warning  shadow ">{{__('ui.annulla_revisione')}} </button>
-                    </form>
-                </div>
+               
 
 
 
 
         </div>
         {{-- carosello --}}
-        <div class="container ">
-            <div class="row h-index-custom my-5">
+        <div class="container  ">
+            <div class="row  my-5">
                 <div class="col-12">
 
                     {{-- carosello dettaglio --}}
@@ -58,9 +52,9 @@
                             </div>
 
                             {{-- sezione accetta e rifiuta --}}
-                            <div class="row my-2">
+                            <div class="row justify-content-between my-2">
                                 {{-- pulsante accetta --}}
-                                <div class="col-12 col-md-6">
+                                <div class="col-12 col-md-3">
                                     <form action="{{route('revisor.accept_announcement', ['announcement'=>$announcement_to_check])}}" method="POST">
                                         @csrf
                                         @method('PATCH')
@@ -68,8 +62,16 @@
                                     </form>
                                 </div>
 
+                                <div class="col-12 col-md-5 text-end">
+                                    <form action="{{ route('back.step') }}" method="POST">
+                                        @csrf
+                                        @method('PATCH')
+                                        <button type="submit" class="btn btn-warning me-4 shadow ">{{__('ui.annulla_revisione')}} </button>
+                                    </form>
+                                </div>
+
                                 {{-- pulsante rifiuta --}}
-                                <div class="col-12 col-md-6 text-end">
+                                <div class="col-12 col-md-3 text-end">
                                     <form action="{{route('revisor.reject_announcement', ['announcement'=>$announcement_to_check])}}" method="POST">
                                         @csrf
                                         @method('PATCH')

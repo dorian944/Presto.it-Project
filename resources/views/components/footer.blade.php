@@ -73,7 +73,7 @@
     <!-- Copyright -->
   </footer> --}}
 
-  <section class="">
+
     <!-- Footer -->
     <footer class="text-center text-white" style="background-color: #247158;">
       <!-- Grid container -->
@@ -99,4 +99,3 @@
       <!-- Copyright -->
     </footer>
     <!-- Footer -->
-  </section>

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg ">
+<nav class="navbar navbar-expand-lg d-flex align-items-center">
     <div class="container-fluid">
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
@@ -51,11 +51,11 @@
           @endauth
 
 
-            <div class="nav-item dropdown ">
+            <div class="nav-item dropdown d-flex align-items-center">
                 <div class="d-flex">
 
                     @auth
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        <a class="nav-link dropdown-toggle padding-custom-linguaggi" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             {{__('ui.welcome_login')}} {{ Auth::user()->name }}
                         </a>
@@ -73,6 +73,8 @@
                             </li>
                         </ul>
                     @endauth
+
+                   
 
                         {{-- zona revisore --}}
                     @auth
@@ -92,8 +94,17 @@
                     </div>
                      @endauth
 
+                     <ul>
+                        <div class="pt-3" >
+                            <x-_locale lang="it"  />
+                            <x-_locale lang="en"  />
+                            <x-_locale lang="es" />
+                        </div>
+                    </ul>
+                
+
                 @guest
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    <a class="nav-link dropdown-toggle pt-4 ps-2" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         {{__('ui.guest')}}
                     </a>
@@ -103,13 +114,7 @@
                         <li><a class="dropdown-item" href="{{ route('register') }}">{{__('ui.registrati')}} </a></li>
                     </ul>
                 @endguest
-                    <ul>
-                        <div>
-                            <x-_locale lang="it"  />
-                            <x-_locale lang="en"  />
-                            <x-_locale lang="es" />
-                        </div>
-                    </ul>
+                    
             </div>
 
 

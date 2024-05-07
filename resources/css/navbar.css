@@ -1,10 +1,11 @@
 :root {
     --verde_grigio: #186049;
-    --verde_chiaro: #e4d5c7;
+    --verde_chiaro: #D2B39B;
 }
 
 nav {
     background-color: var(--verde_grigio);
+    border-bottom: 1px solid black;
 }
 footer {
     background-color: var(--verde_grigio);
@@ -26,9 +27,14 @@ body {
 }
 
 .p-custom-title-presto{
-    padding-right: 90px;
+    padding-left: 130px;
 }
 
 .p-custom-logged-presto{
-    padding-left: 65px;
+    padding-left: 270px;
 }
+
+.bg-custom-categorie{
+    background-color: var(--verde_grigio);
+}
+
