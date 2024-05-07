@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container-fluid">
+    <div class="container-fluid mt-3 ">
         <div class="row">
             <div class="col-12 text-center mt-4 mb-5">
                 <h1>{{__('ui.dettaglio_relativo')}} {{$announcement->title}}</h1>
@@ -8,11 +8,11 @@
     </div>
 
     <div class="container">
-        <div class="row">
+        <div class="row mb-5">
             <div class="col-12">
 
                 {{-- carosello dettaglio --}}
-                <div class="row align-items-center">
+                <div class="row align-items-center ">
                     <div class="col-12 col-md-6">
                         {{-- carosello --}}
                         <div id="carouselExample" class="carousel slide">

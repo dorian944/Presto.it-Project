@@ -1,42 +1,4 @@
-/* bottone homepage */
-  /*
-  #247158 verde erba
-  #
-  */
-  button {
-    border: none;
-    color: #fff;
-    background-image: linear-gradient(30deg, #247158, #6ab29b);
-    border-radius: 20px;
-    background-size: 100% auto;
-    font-family: inherit;
-    font-size: 17px;
-    padding: 0.6em 1.5em;
-   }
 
-
-   button:hover {
-    background-position: right center;
-    background-size: 200% auto;
-    -webkit-animation: pulse 2s infinite;
-    animation: pulse512 1.5s infinite;
-   }
-
-   @keyframes pulse512 {
-    0% {
-     box-shadow: 0 0 0 0 #24715965;
-    }
-
-    70% {
-     box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
-    }
-
-    100% {
-     box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
-    }
-   }
-
-/* fine bottone home page */
 
 /* bottone costumizzato */
 .button-custom {
@@ -96,53 +58,41 @@
     }
 /* fine header */
 
-/* card-public - le card che compaiono con annunci sulla homepage */
-    .card-public {
-      position: relative;
-      width: 18rem;
-      height: 390px;
-      margin: 10px;
-      float: left;
-      overflow: hidden;
-      border-radius: 15px;
-      border: 1px solid #ddd;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
+/* immagine header */
+.img-header {
+  position: relative;
+  overflow: hidden;
+}
 
-    /* Stile per l'immagine */
-    .card-public img {
-      width: 100%;
-      height: auto;
-      transition: opacity 0.5s ease;
-      opacity: 1;
-    }
+.img-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/public/img/cover.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5;
+  z-index: -1;
+}
 
-    /* Stile per sovrapporre il testo sull'immagine */
-    .card-public .card-body {
-      position: absolute;
-      bottom: -100%;
-      left: 0;
-      width: 100%;
-      height: 85%;
-      background-color: rgba(255, 255, 255, 0.6);
-      padding: 10px;
-      box-sizing: border-box;
-      transition: bottom 0.5s ease, opacity 0.5s ease, background-color 0.5s ease;
-      opacity: 0;
-      border-bottom-left-radius: 15px;
-      border-bottom-right-radius: 15px;
-      pointer-events: none;
-    }
 
-    /* Mostra il testo e regola l'opacità dell'immagine quando il mouse si avvicina alla card */
-    .card-public:hover .card-body {
-      bottom: 0;
-      opacity: 1;
-      background-color: #e4d5c726;
-    }
 
-    .card-public:hover img {
-      opacity: 0.2;
+/* fine immagine header */
 
-    }
-/*fine card-public - le card che compaiono con annunci sulla homepage */
+/* modifiche card  */
+.card-container {
+  position: relative;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+  z-index: 1;
+}
+
+.card-img-top {
+  border-radius: 13%;
+}

@@ -3,7 +3,7 @@
     <div class="h-index-custom">
         <div class="container-fluid p-5 bg-gradient bg-success shadow mb-4">
             <div class="row ">
-                <div class="col-12 p-5">
+                <div class="col-12 p-3">
                     <h1 class="display-2 text-center">
                         {{$announcement_to_check ? 'Da revisionare' : 'Non ci sono annunci da revisionare'}}
                     </h1>
@@ -12,9 +12,23 @@
         </div>
 
         @if($announcement_to_check)
+        <div class="row mx-1">
+
+                <div class="col-12 text-end">
+                    <form action="{{ route('back.step') }}" method="POST">
+                        @csrf
+                        @method('PATCH')
+                        <button type="submit" class="btn btn-warning  shadow ">{{__('ui.annulla_revisione')}} </button>
+                    </form>
+                </div>
+
+
+
+
+        </div>
         {{-- carosello --}}
         <div class="container ">
-            <div class="row h-index-custom">
+            <div class="row h-index-custom my-5">
                 <div class="col-12">
 
                     {{-- carosello dettaglio --}}
@@ -81,20 +95,6 @@
                 </div>
 
                 {{-- pulsante annulla ultima revisione --}}
-                <div class="row">
-                    <div class="col-12">
-                        <div class="col-12 col-md-6">
-                            <form action="{{ route('back.step') }}" method="POST">
-                                @csrf
-                                @method('PATCH')
-                                <button type="submit" id="btn btn-warning text-white shadow ">{{__('ui.annulla_revisione')}} </button>
-                            </form>
-                        </div>
-
-
-
-                    </div>
-                </div>
             </div>
 
         </div>  {{-- fine container --}}

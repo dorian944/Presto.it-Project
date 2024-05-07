@@ -100,11 +100,11 @@
                     </ul>
                 @endguest
                     <ul>
-                        <li>
+                        <div>
                             <x-_locale lang="it"  />
                             <x-_locale lang="en"  />
                             <x-_locale lang="es" />
-                        </li>
+                        </div>
                     </ul>
             </div>
 

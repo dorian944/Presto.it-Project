@@ -39,7 +39,7 @@
                         <label for="user_message" class="form-label">{{__('ui.messaggio_utente')}} </label>
                         <textarea name="user_message" id="user_message" cols="30" rows="7" class="form-control"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary mb-5">{{__('ui.richiesta')}} </button>
+                    <button type="submit" class="button-custom mb-5">{{__('ui.richiesta')}} </button>
                 </form>
             </div>
 
