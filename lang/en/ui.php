@@ -58,4 +58,16 @@ return [
 "rendi_visibile" => "To make them a reviewer, click here:",
 "rendi_revisore"=> "Make reviewer",
 // FIne Rendi revisore Mail
+
+//categorie navbar
+"Arredamento" => "Furniture",
+"Oggettistica" => "Objects",
+"Libri" => "Books",
+"Musica" => "Music",
+"Elettrodomestici" => "Home appliances",
+"Giochi" => "Games",
+"Sport" => "Sport",
+"Hi-tech" => "Hi-tech",
+"Motori" => "Vehicles",
+"Abbigliamento" => "Clothing"
 ];

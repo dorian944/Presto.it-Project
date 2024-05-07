@@ -61,4 +61,16 @@ return [
 
 // FIne Rendi revisore Mail
 
+//categorie navbar
+"Arredamento" => "Mobiliario",
+"Oggettistica" => "Objetos",
+"Libri" => "Libros",
+"Musica" => "Musica",
+"Elettrodomestici" => "Electrodomesticos",
+"Giochi" => "Juegos",
+"Sport" => "Sport",
+"Hi-tech" => "Hi-tech",
+"Motori" => "Motores",
+"Abbigliamento" => "Ropa"
+
 ];

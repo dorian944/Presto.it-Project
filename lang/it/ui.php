@@ -60,4 +60,15 @@ return [
 "rendi_revisore"=> "Rendi revisore",
 
 // FIne Rendi revisore Mail
+
+"Arredamento" => "Arredamento",
+"Oggettistica" => "Oggettistica",
+"Libri" => "Libri",
+"Musica" => "Musica",
+"Elettrodomestici" => "Elettrodomestici",
+"Giochi" => "Giochi",
+"Sport" => "Sport",
+"Hi-tech" => "Hi-tech",
+"Motori" => "Motori",
+"Abbigliamento" => "Abbigliamento"
 ];
