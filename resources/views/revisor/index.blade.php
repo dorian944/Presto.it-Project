@@ -29,18 +29,28 @@
                     <div class="row align-items-center ">
                         <div class="col-12 col-md-6">
                             {{-- carosello --}}
-                            <div id="carouselExample" class="carousel slide">
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <img src="https://picsum.photos/id/26/1200/800" class="img-fluid rounded-3" alt="Prima foto">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="https://picsum.photos/id/27/1200/800" class="img-fluid rounded-3" alt="Seconda foto">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="https://picsum.photos/id/28/1200/800" class="img-fluid rounded-3" alt="Terza foto">
-                                    </div>
-                                </div>
+                            <div id="carouselExample" class="carousel slide" >
+                                @if($announcement_to_check->images)
+                                    <div class="carousel-inner">
+                                        @foreach ( $announcement_to_check->images as $image )
+                                            <div class="carousel-item @if($loop->first) active @endif">
+                                                <img src="{{Storage::url($image->path)}}" class="img-fluid p-3 rounded" alt="img user">
+                                            </div>    
+                                        @endforeach
+                                    </div>   
+                                @else
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img src="https://picsum.photos/id/26/1200/800" class="img-fluid rounded-3" alt="Prima foto">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="https://picsum.photos/id/27/1200/800" class="img-fluid rounded-3" alt="Seconda foto">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="https://picsum.photos/id/28/1200/800" class="img-fluid rounded-3" alt="Terza foto">
+                                            </div>
+                                        </div>
+                                @endif
                                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                     <span class="visually-hidden">Previous</span>
