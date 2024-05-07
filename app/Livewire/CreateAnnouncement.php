@@ -29,6 +29,8 @@ class CreateAnnouncement extends Component
     public $image;
     public $temporary_images;
 
+    
+
     protected $rules = [
         'images.*'=>'image|max:1024',
         'temporary_images.*'=> 'image|max:1024',
@@ -57,9 +59,17 @@ class CreateAnnouncement extends Component
                 'price'=>$this->price,
             ]);
     
-        Auth::user()->announcements()->save($announcement);
         
-        session()->flash('AnnouncementCreated', 'Annuncio '. $this->title . ' creato con successo');
+
+        $announcement->user()->associate(Auth::user());
+        
+        if(count($this->images)){
+            foreach($this->images as $image) {
+                $announcement->images()->create(['path'=>$image->store('images','public')]);
+            }
+        }
+
+        session()->flash('AnnouncementCreated', 'Annuncio '. $this->title . ' creato con successo. Sarà pubblicato dopo la revisione');
         //flash(è come with)
         
         // $this→cleanForm(); fa le stesse cose del reset, ovvero dopo aver registrato il record, azzeriamo nel form i vari input
@@ -76,6 +86,15 @@ class CreateAnnouncement extends Component
             $this->images[]=$image;
         }
     }
+
+    public function removeImage($key)
+    {
+        if (in_array($key, array_keys($this->images))){
+            unset($this->images[$key]);
+        }
+    }
+
+   
 
     public function render()
     {
