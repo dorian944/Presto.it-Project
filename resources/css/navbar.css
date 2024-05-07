@@ -3,10 +3,24 @@
     --verde_chiaro: #D2B39B;
 }
 
-nav {
+nav{
     background-color: var(--verde_grigio);
     border-bottom: 1px solid black;
 }
+
+.dropdown-item{
+    color: black !important;
+}
+
+.nav-link, .navbar-brand{
+    color: white !important;
+}
+
+.nav-link-custom{
+    text-decoration: none;
+    color: black;
+}
+
 footer {
     background-color: var(--verde_grigio);
 }
