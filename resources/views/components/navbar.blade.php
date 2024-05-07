@@ -42,7 +42,7 @@
           @endguest
 
           @auth
-          <div class="p-custom-logged-presto text-center">
+          <div class="p-custom-logged-presto ">
               <a class="navbar-brand " href="{{ route('homepage') }}">Presto.it</a>
           </div>
           @endauth
@@ -50,6 +50,7 @@
 
             <div class="nav-item dropdown ">
                 <div class="d-flex">
+
                     @auth
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
