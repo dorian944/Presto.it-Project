@@ -83,14 +83,14 @@
           <p class="d-flex justify-content-center align-items-center">
             <span class="me-3">{{__("ui.diventa_revisore")}} </span>
             <button data-mdb-ripple-init type="button" class="btn btn-outline-light btn-rounded">
-              <a class="link-footer" href="{{route('become.revisor')}}">{{__("ui.button_revisore")}}</a>
+              <a class="link-footer " href="{{route('become.revisor')}}">{{__("ui.button_revisore")}}</a>
             </button>
           </p>
         </section>
         <!-- Section: CTA -->
       </div>
       <!-- Grid container -->
-  
+
       <!-- Copyright -->
       <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
         © 2024 Copyright:

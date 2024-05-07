@@ -8,7 +8,7 @@
             </div>
         </div>
     </div>
-    
+
     <div class="container">
         <div class="row ">
             <div class="col-12">
@@ -17,13 +17,13 @@
                         <div class="col-12 col-md-4 my-2">
                              <x-card :announcement="$announcement" />
                         </div>
-                        
+
                     @empty
                         <div class="col-12">
                             <p class="h1 text-center mt-5">{{__("ui.no_annunci")}}</p>
-                            <p class="h2 text-center">Pubblicane uno: 
+                            <p class="h2 text-center"> {{__('ui.pubblica_annuncio')}}
                                 <a href="{{route('announcements.create')}}" class="btn btn-success shadow">
-                                 Nuovo annuncio
+                                 {{__('ui.btn_nuovo_annuncio')}}
                                 </a>
                             </p>
                         </div>

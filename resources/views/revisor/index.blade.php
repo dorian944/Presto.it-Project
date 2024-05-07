@@ -10,13 +10,13 @@
                 </div>
             </div>
         </div>
-        
+
         @if($announcement_to_check)
         {{-- carosello --}}
         <div class="container ">
             <div class="row h-index-custom">
                 <div class="col-12">
-                    
+
                     {{-- carosello dettaglio --}}
                     <div class="row align-items-center ">
                         <div class="col-12 col-md-6">
@@ -42,7 +42,7 @@
                                     <span class="visually-hidden">Next</span>
                                 </button>
                             </div>
-    
+
                             {{-- sezione accetta e rifiuta --}}
                             <div class="row my-2">
                                 {{-- pulsante accetta --}}
@@ -50,36 +50,36 @@
                                     <form action="{{route('revisor.accept_announcement', ['announcement'=>$announcement_to_check])}}" method="POST">
                                         @csrf
                                         @method('PATCH')
-                                        <button type="submit" class="btn btn-success shadow">Accetta</button>
+                                        <button type="submit" class="btn btn-success shadow">{{__('ui.accetta_annuncio')}} </button>
                                     </form>
                                 </div>
-    
+
                                 {{-- pulsante rifiuta --}}
                                 <div class="col-12 col-md-6 text-end">
                                     <form action="{{route('revisor.reject_announcement', ['announcement'=>$announcement_to_check])}}" method="POST">
                                         @csrf
                                         @method('PATCH')
-                                        <button type="submit" class="btn btn-danger shadow">Rifiuta</button>
+                                        <button type="submit" class="btn btn-danger shadow">{{__('ui.rifiuta_annuncio')}} </button>
                                     </form>
                                 </div>
-                                
+
                                 {{-- chiusura row e col --}}
                             </div>
-    
+
                         </div>
                         {{-- fine carosello --}}
                         {{-- dettagli --}}
                         <div class="col-12 col-md-6 text-center">
-                            <h5 class="card-title">Titolo: {{$announcement_to_check->title}}</h5>
+                            <h5 class="card-title">{{__('ui.titolo')}}: {{$announcement_to_check->title}}</h5>
                             <p class="card-text">{{$announcement_to_check->body}}</p>
-                            <p class="card-footer">Pubblicato il: {{$announcement_to_check->created_at->format('d/m/Y')}}</p>
-                            <p>Categoria: {{$announcement_to_check->category->name}}</p>
-                            
+                            <p class="card-footer">{{__('ui.pubblicato_il')}}  {{$announcement_to_check->created_at->format('d/m/Y')}}</p>
+                            <p>{{__('ui.Categorie')}}: {{$announcement_to_check->category->name}}</p>
+
                         </div>
                     </div>
-                    
+
                 </div>
-    
+
                 {{-- pulsante annulla ultima revisione --}}
                 <div class="row">
                     <div class="col-12">
@@ -87,22 +87,22 @@
                             <form action="{{ route('back.step') }}" method="POST">
                                 @csrf
                                 @method('PATCH')
-                                <button type="submit" class="btn btn-warning text-white shadow ">Annulla ultima revisione</button>
+                                <button type="submit" id="btn btn-warning text-white shadow ">{{__('ui.annulla_revisione')}} </button>
                             </form>
                         </div>
-                        
-                        
-                        
+
+
+
                     </div>
                 </div>
             </div>
-           
+
         </div>  {{-- fine container --}}
-    
-    
-    
+
+
+
      @endif
     </div>
-    
+
 
 </x-layout>

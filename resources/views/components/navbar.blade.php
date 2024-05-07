@@ -59,7 +59,7 @@
                         <ul class="dropdown-menu">
                             {{-- <li><a class="dropdown-item" href="{{}}"></a></li> --}}
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('announcements.create') }}">Inserisci annuncio</a>
+                                <a class="nav-link" href="{{ route('announcements.create') }}"> {{__('ui.button_header')}} </a>
                             </li>
                             <li><a class="dropdown-item" href="#"
                                     onclick="event.preventDefault(); document.querySelector('#logout').submit();">Logout</a>
@@ -91,12 +91,12 @@
                 @guest
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
-                        Ciao Ospite
+                        {{__('ui.guest')}}
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{{ route('login') }}">Accedi</a></li>
+                        <li><a class="dropdown-item" href="{{ route('login') }}">{{__('ui.login')}} </a></li>
                         <hr>
-                        <li><a class="dropdown-item" href="{{ route('register') }}">Registrati</a></li>
+                        <li><a class="dropdown-item" href="{{ route('register') }}">{{__('ui.registrati')}} </a></li>
                     </ul>
                 @endguest
                     <ul>

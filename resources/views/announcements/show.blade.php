@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 text-center mt-4 mb-5">
-                <h1>Dettaglio relativo a : {{$announcement->title}}</h1>
+                <h1>{{__('ui.dettaglio_relativo')}} {{$announcement->title}}</h1>
             </div>
         </div>
     </div>
@@ -49,8 +49,8 @@
                         <h2>{{$announcement->title}}</h2>
                         <p>{{$announcement->body}}</p>
                         <p>{{$announcement->price}}</p>
-                        <p>Categoria: {{$announcement->category->name}}</p>
-                        <p>Pubblicato il: {{$announcement->created_at->format('d/m/Y')}}</p>
+                        <p>{{__('ui.categoria')}}:{{$announcement->category->name}}</p>
+                        <p>{{__('ui.pubblicato_il')}}{{$announcement->created_at->format('d/m/Y')}}</p>
                     </div>
                 </div>
             </div>

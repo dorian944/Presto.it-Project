@@ -12,7 +12,7 @@
                     <x-card :announcement="$announcement" />
             </div>
             @endforeach
-            
+
             {{-- aggiunge la barra di navigazione tra le pagine es: <|1|2|3|> --}}
            {{$announcements->links()}}
         </div>

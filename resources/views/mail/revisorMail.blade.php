@@ -9,15 +9,15 @@
     </head>
     <body>
         <div>
-            <h1>Richiesta utente per diventare revisore</h1>
-            <p>Nome: {{$name}}</p>
+            <h1>{{__('ui.richiesta_revisore')}} </h1>
+            <p>Name: {{$name}}</p>
             {{-- la mail non deve essere modificata dall'utente altrimenti non corrisponde nel database e da errore --}}
             <p>Email: {{$user->email}}</p>
-            <p>Messaggio utente: {{$user_message}}</p>
-            <p>Per renderlo revisore clicca qui:</p>
-           
+            <p>{{__('ui.messaggio_utente')}}: {{$user_message}}</p>
+            <p>{{__('ui.rendi_visibile')}} </p>
 
-            <a href="{{route('make.revisor', compact('user'))}}">Rendi revisore</a>
+
+            <a href="{{route('make.revisor', compact('user'))}}"> {{__('ui.rendi_revisore')}} </a>
 
 
         </div>

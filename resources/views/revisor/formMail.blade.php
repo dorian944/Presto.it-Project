@@ -2,7 +2,7 @@
     <div class="container-fluid h-index-custom">
         <div class="row ">
             <div class="col-12 text-center mt-5 ">
-                <h1 class="mb-5">Invia una richiesta per diventare revisore: </h1>
+                <h1 class="mb-5">{{__('ui.titolo_revisore')}} </h1>
             </div>
 
         </div>
@@ -26,20 +26,20 @@
 
                     @csrf
                     <div class="mb-3">
-                        <label for="name" class="form-label">Nome dell'utente</label>
+                        <label for="name" class="form-label">{{__('ui.nome_utente')}} </label>
                         <input name="name" type="text" class="form-control" id="name"
                             value="{{ Auth::user()->name }}">
                     </div>
                     <div class="mb-3">
-                        <label for="email" class="form-label">Mail dell'utente</label>
+                        <label for="email" class="form-label">e-mail</label>
                         <input name="email" type="email" readonly="text" class="form-control" id="email"
                             value="{{ Auth::user()->email }}">
                     </div>
                     <div class="mb-3">
-                        <label for="user_message" class="form-label">Messaggio dell'utente</label>
+                        <label for="user_message" class="form-label">{{__('ui.messaggio_utente')}} </label>
                         <textarea name="user_message" id="user_message" cols="30" rows="7" class="form-control"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary mb-5">Invia richiesta</button>
+                    <button type="submit" class="btn btn-primary mb-5">{{__('ui.richiesta')}} </button>
                 </form>
             </div>
 
