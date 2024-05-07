@@ -121,3 +121,12 @@
   background-size: cover;
   background-position: center;
 }
+
+.btn-footer-custom{
+  text-decoration: none;
+  color: white;
+}
+
+.btn-footer-custom:hover{
+ color: black;
+}
