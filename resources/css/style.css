@@ -96,3 +96,11 @@
 .card-img-top {
   border-radius: 13%;
 }
+
+/* img-preview-custom anteprima immagini inserimento annunci */
+.img-preview-custom{
+  width: 180px;
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+}
