@@ -4,32 +4,34 @@ namespace App\Livewire;
 
 use Livewire\Component;
 use App\Models\Category;
+use App\Jobs\ResizeImage;
 use App\Models\Announcement;
-use Illuminate\Support\Facades\Auth;
-use Livewire\Attributes\Validate;
 use Livewire\WithFileUploads;
+use Livewire\Attributes\Validate;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
 
 class CreateAnnouncement extends Component
 {
     use WithFileUploads;
 
-    #[Validate('required|min:3|max:50')] 
+    #[Validate('required|min:3|max:50')]
     public $title;
 
-    #[Validate('required|min:10|max:50')] 
+    #[Validate('required|min:10|max:50')]
     public $body;
 
-    #[Validate('required|numeric')] 
+    #[Validate('required|numeric')]
     public $price;
 
     #[Validate('required')]
     public $category;
-   
+
     public $images = [];
     public $image;
     public $temporary_images;
 
-    
+
 
     protected $rules = [
         'images.*'=>'image|max:1024',
@@ -50,28 +52,34 @@ class CreateAnnouncement extends Component
         ];
 
     public function store(){
-        $this->validate(); 
-       
+        $this->validate();
+
         $category = Category::find($this->category);
         $announcement = $category->announcements()->create([
                 'title'=>$this->title,
                 'body'=>$this->body,
                 'price'=>$this->price,
             ]);
-    
-        
+
+
 
         $announcement->user()->associate(Auth::user());
-        
+
         if(count($this->images)){
             foreach($this->images as $image) {
-                $announcement->images()->create(['path'=>$image->store('images','public')]);
+                // $announcement->images()->create(['path'=>$image->store('images','public')]);
+                $newFileName = "announcements/{$announcement->id}";
+                $newImage = $announcement->images()->create(['path'=>$image->store($newFileName,'public')]);
+
+                dispatch(new ResizeImage($newImage->path, 400, 300));
             }
+
+            File::deleteDirectory(storage_path('/app/livewire-tmp'));
         }
 
         session()->flash('AnnouncementCreated', 'Annuncio '. $this->title . ' creato con successo. Sarà pubblicato dopo la revisione');
         //flash(è come with)
-        
+
         // $this→cleanForm(); fa le stesse cose del reset, ovvero dopo aver registrato il record, azzeriamo nel form i vari input
         $this->reset();
         return redirect()->to(route('announcements.create'));
@@ -94,7 +102,7 @@ class CreateAnnouncement extends Component
         }
     }
 
-   
+
 
     public function render()
     {
