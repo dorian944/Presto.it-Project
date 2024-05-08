@@ -1,6 +1,6 @@
 <div class="card-container">
   <div class="card mb-4 rounded-5" style="width: 18rem;">
-      <img src="https://picsum.photos/200" class="card-img-top p-3" alt="...">
+      <img src="{{!$announcement->images()->get()->isEmpty() ? Storage::url($announcement->images()->first()->path) : 'https://picsum.photos/200'}}" class="card-img-top p-3 rounded" alt="...">
       <div class="card-body">
           <h5 class="card-title">{{$announcement->title}}</h5>
           <p class="card-text">{{$announcement->body}}</p>
