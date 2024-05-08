@@ -1,26 +1,26 @@
 <x-layout>
     <div class="container-fluid mt-3 ">
         <div class="row">
-            <div class="col-12 text-center mt-4 mb-5">
+            <div class="col-12 text-center mt-custom-dettaglio-title mb-5">
                 <h1>{{__('ui.dettaglio_relativo')}} {{$announcement->title}}</h1>
             </div>
         </div>
     </div>
 
-    <div class="container">
-        <div class="row mb-5">
+    <div class="container h-index-custom d-flex align-items-center ">
+        <div class="row ">
             <div class="col-12">
 
                 {{-- carosello dettaglio --}}
                 <div class="row align-items-center ">
-                    <div class="col-12 col-md-6">
+                    <div class="col-12 col-md-6 mb-5">
                         {{-- carosello --}}
                         <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
                             @if($announcement->images)
                                     <div class="carousel-inner">
                                         @foreach ( $announcement->images as $image )
                                             <div class="carousel-item @if($loop->first) active @endif">
-                                                <img src="{{Storage::url($image->path)}}" class="img-fluid p-3 rounded" alt="img user">
+                                                <img src="{{Storage::url($image->path)}}" class="img-fluid  rounded-4" alt="img user">
                                             </div>
                                         @endforeach
                                     </div>

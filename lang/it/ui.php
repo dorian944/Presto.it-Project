@@ -18,6 +18,7 @@ return [
 "button_inserisci"=> "Inserisci",
 "pubblica_annuncio" => "Pubblicane uno:",
 "btn_nuovo_annuncio" => " Nuovo annuncio",
+"label_immagine" => "Immagine: ",
 
 // fine inserisci annunci
 

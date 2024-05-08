@@ -18,6 +18,7 @@ return [
 "button_inserisci"=> "Insert",
 "pubblica_annuncio" => "Poste one:",
 "btn_nuovo_annuncio" => "New announcement",
+"label_immagine" => "Image: ",
 //fine inserisci annunci
 
 "diventa_revisore" => "Become revisor",

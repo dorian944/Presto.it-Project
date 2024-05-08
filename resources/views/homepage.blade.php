@@ -17,7 +17,7 @@
     <x-header />
 
 
-<div class="container" >
+<div class="container mt-5 mb-5" >
     <div class="row justify-content-around">
         @foreach ($announcements as $announcement)
         <div class="col-12 col-md-3 m-3">

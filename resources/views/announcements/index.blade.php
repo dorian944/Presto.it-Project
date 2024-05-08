@@ -1,7 +1,7 @@
 <x-layout>
     <div class="container-fluid">
         <div class="row ">
-            <div class="col-12 mt-4 mb-4">
+            <div class="col-12 mt-5 mb-5">
                 <h1 class="text-center">{{__("ui.index_annunci")}}</h1>
             </div>
         </div>
@@ -19,7 +19,7 @@
        
     </div>
 
-    <div class="d-flex justify-content-around">
+    <div class="d-flex justify-content-around mt-4 mb-4">
         {{$announcements->links()}}
     </div>
 </x-layout>

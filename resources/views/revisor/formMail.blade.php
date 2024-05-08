@@ -9,7 +9,7 @@
 
         <div class="row">
             <div class="col-12 col-md-6 m-auto">
-                <form class="shadow p-5 bg-grigio-light rounded-3" action="{{ route('revisor.submit') }}" method="POST">
+                <form class="shadow p-5 bg-grigio-light bg-white rounded-4" action="{{ route('revisor.submit') }}" method="POST">
 
                     {{-- messaggio insuccesso invio mail --}}
                     @if (session('emailError'))
