@@ -3,9 +3,11 @@
     --verde_chiaro: #D2B39B;
 }
 
-nav{
-    background-color: var(--verde_grigio);
+
+.colore-custom-navbar{
+    background: linear-gradient(90deg, rgba(36,113,88,1) 54%, rgba(106,178,155,1) 100%);
     border-bottom: 1px solid black;
+
 }
 
 .dropdown-item{
@@ -49,7 +51,7 @@ body {
 }
 
 .bg-custom-categorie{
-    background-color: var(--verde_grigio);
+    background: linear-gradient(90deg, rgba(36,113,88,1) 54%, rgba(106,178,155,1) 100%);
 }
 
 .zona-revisore-custom {
