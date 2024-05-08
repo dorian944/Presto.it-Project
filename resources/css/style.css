@@ -113,6 +113,10 @@
   height: 100vh;
 }
 
+.h-custom-form-annuncio{
+  height: 120vh;
+}
+
 
 /* img-preview-custom anteprima immagini inserimento annunci */
 .img-preview-custom{

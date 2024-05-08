@@ -4,7 +4,7 @@
     {{-- form inserimento dati: usando livewire al posto di name inseriremi wire:model --}}
     <div class=" p-5">
         <h2 class="mb-5 text-center"> {{__('ui.button_header')}} </h2>
-        <form class="shadow rounded-4 p-5 bg-grigio-light" wire:submit="store">
+        <form class="shadow rounded-4 p-5 bg-grigio-light " wire:submit="store">
 
             @if (session('AnnouncementCreated'))
             <div class="alert alert-success">
@@ -86,7 +86,7 @@
 
 
 
-            <button type="submit" class="button-custom">{{__('ui.button_inserisci')}} </button>
+            <button type="submit" class="button-custom ">{{__('ui.button_inserisci')}} </button>
         </form>
     </div>
     {{-- chiusura div component --}}
