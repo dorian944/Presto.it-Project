@@ -6,16 +6,17 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button"
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                <li class="nav-item dropdown ">
+                    <a class="nav-link dropdown-toggle " href="#" id="categoriesDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         {{__("ui.Categorie")}} 
                     </a>
-                    <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
+                    
+                    <ul class="dropdown-menu " aria-labelledby="categoriesDropdown">
                         @foreach ($categories as $category)
                             <li>
-                                <a href="{{ route('categoryShow', compact('category')) }}" class="dropdown-item ">
+                                <a href="{{ route('categoryShow', compact('category')) }}" class="dropdown-item">
                                     {{__("ui.".$category->name)}}
                                 </a>
                                 <hr class="dropdown-divider m-0">

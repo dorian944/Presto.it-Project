@@ -62,3 +62,31 @@ body {
 .navbar-nav .nav-link {
     padding: 0.5rem 1rem;
 }
+
+
+/* .ul-dinamico{
+    display:flex;
+    gap:1rem;
+    list-style: none;
+
+}
+
+.li-dinamico{
+color:#186049;
+display:grid;
+place-content: center;
+margin:0;
+}
+.menu-dinamico::before{
+content:"";
+position:absolute;
+width: 100%;
+height: 2px;
+background-color: black;
+border-radius: 5px;
+transform:scaleX(0);
+transition: all .5s ease;
+bottom: 0;
+left: 0;
+
+} */
