@@ -1,6 +1,8 @@
 <x-layout>
 
-<div class="h-index-custom">
+{{-- <div class="h-index-custom"> --}}
+<div >
+
     <div class="container-fluid p-5  bg-custom-categorie shadow mb-4">
         <div class="row">
             <div class="col-12 p-5 text-center">
@@ -10,7 +12,7 @@
     </div>
 
     <div class="container">
-        <div class="row ">
+        {{-- <div class="row "> --}}
             <div class="col-12">
                 <div class="row">
                     @forelse ($announcements as $announcement )
@@ -30,7 +32,7 @@
                     @endforelse
                 </div>
             </div>
-        </div>
+        {{-- </div> --}}
     </div>
 </div>
 

@@ -1,10 +1,10 @@
-<div>
+<div class="min-vh-100">
     {{-- Stop trying to control. --}}
 
     {{-- form inserimento dati: usando livewire al posto di name inseriremi wire:model --}}
     <div class=" p-5">
         <h2 class="mb-5 text-center"> {{__('ui.button_header')}} </h2>
-        <form class="shadow rounded-4 p-5 bg-grigio-light bg-white" wire:submit="store">
+        <form class="shadow rounded-4 p-5 bg-grigio-light bg-white " wire:submit="store">
 
             @if (session('AnnouncementCreated'))
             <div class="alert alert-success">
