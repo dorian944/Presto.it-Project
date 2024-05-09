@@ -54,3 +54,6 @@ Route::get('/lista/annunci', [AnnouncementController::class, 'indexAnnouncement'
 
 //Cambio lingua
 Route::post('/lingua/{lang}', [PublicController::class, 'setLanguage'])->name('setLocale');
+
+
+Route::get('/area/personale', [PublicController::class, 'personalArea'])->name('area.personale');

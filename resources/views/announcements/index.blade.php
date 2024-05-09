@@ -6,7 +6,7 @@
             </div>
         </div>
 
-        <div class="row justify-content-center m-custom-cards-index">
+        <div class="row justify-content-center ">
             @foreach($announcements as $announcement)
             <div class="col-12 col-md-3">
                     <x-card :announcement="$announcement" />

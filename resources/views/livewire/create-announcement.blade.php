@@ -56,7 +56,7 @@
             {{-- fine categorie --}}
             <div class="mb-3">
                 <label for="img">{{__("ui.label_immagine")}}</label>
-                <input wire:model="temporary_images" id="img" type="file" name="images" multiple class="form-control shadow @error('temporary_images.*') is-invalid @enderror" placeholder="Img" />
+                <input wire:model="temporary_images" required id="img" type="file" name="images" multiple class="form-control shadow @error('temporary_images.*') is-invalid @enderror" placeholder="Img" />
                     @error('temporary_images.*')
                     <p class="text-danger mt-2">{{$message}}</p>
                     @enderror

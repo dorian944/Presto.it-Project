@@ -15,7 +15,7 @@
                     <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
                         @foreach ($categories as $category)
                             <li>
-                                <a href="{{ route('categoryShow', compact('category')) }}" class="dropdown-item">
+                                <a href="{{ route('categoryShow', compact('category')) }}" class="dropdown-item ">
                                     {{__("ui.".$category->name)}}
                                 </a>
                                 <hr class="dropdown-divider m-0">
@@ -60,6 +60,12 @@
                                 <a class="nav-link-custom" href="{{ route('announcements.create') }}">{{__('ui.button_header')}}</a>
                             </li>
                             <li>
+                                <a class="dropdown-item" href="{{route('area.personale')}}">
+                                Area personale
+                                </a>
+
+
+
                                 <a class="dropdown-item" href="#"
                                     onclick="event.preventDefault(); document.querySelector('#logout').submit();">
                                     Logout

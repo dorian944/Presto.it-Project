@@ -1,5 +1,5 @@
 <div class="card-container">
-  <div class="card mb-4 rounded-5" style="width: 20rem; height: 100%;">
+  <div class="card mb-4 rounded-5" style="width: 20rem; ">
       <img src="{{!$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(400,300) : 'https://picsum.photos/200'}}" class="card-img-top p-3 img-fluid " alt="...">
       <div class="card-body">
           <h5 class="card-title">{{$announcement->title}}</h5>
