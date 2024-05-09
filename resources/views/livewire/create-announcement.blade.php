@@ -87,7 +87,7 @@
 
 
 
-            <button type="submit" class="button-custom ">{{__('ui.button_inserisci')}} </button>
+            <button type="submit" class="button-custom mt-3 ">{{__('ui.button_inserisci')}} </button>
         </form>
     </div>
     {{-- chiusura div component --}}
