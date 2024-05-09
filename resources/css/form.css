@@ -16,6 +16,12 @@
     color: #247158;
   }
 
+  @media (max-width: 500px) {
+    .col-12-sm {
+      width: 100% !important; /* Larghezza completa */
+    }
+  }
+
   .form {
     margin-top: 20px;
   }
