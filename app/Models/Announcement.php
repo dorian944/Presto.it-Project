@@ -35,4 +35,9 @@ class Announcement extends Model
     {
         return $this->hasMany(Image::class);
     }
+
+    public function returnTitle()
+    {
+        return $this->title;
+    }
 }

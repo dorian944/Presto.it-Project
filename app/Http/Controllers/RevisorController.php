@@ -76,7 +76,7 @@ class RevisorController extends Controller
             // Annulla la revisione
             $lastRevision->setAccepted(null);
             
-            return redirect('/')->with('message', 'Ultima revisione annullata con successo');
+            return redirect('/')->with('message', 'Ultima revisione '. $lastRevision->returnTitle() .' annullata con successo');
         } else {
             return redirect('/')->with('message', 'Nessuna revisione da annullare');
         }
