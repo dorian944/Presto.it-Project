@@ -11,6 +11,12 @@
             </div>
         </div>
 
+        @if (session('message'))
+        <div class="alert alert-danger">
+        {{ session('message') }}
+        </div>
+        @endif
+
         @if($announcement_to_check)
             <div class="row mx-1">
             </div>

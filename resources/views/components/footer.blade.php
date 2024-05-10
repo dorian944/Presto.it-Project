@@ -79,16 +79,18 @@
       <!-- Grid container -->
       <div class="container p-4 pb-0">
         <!-- Section: CTA -->
-        @guest
-        <section class="">
-          <p class="d-flex justify-content-center align-items-center">
-            <span class="me-3">{{__("ui.diventa_revisore")}} </span>
-            <button data-mdb-ripple-init type="button" class="btn btn-outline-light  btn-rounded">
-              <a class="btn-footer-custom" href="{{route('become.revisor')}}">{{__("ui.button_revisore")}}</a>
-            </button>
-          </p>
-        </section>
-        @endguest
+        @auth
+          @if (!Auth::user()->is_revisor)
+            <section class="">
+              <p class="d-flex justify-content-center align-items-center">
+                <span class="me-3">{{__("ui.diventa_revisore")}} </span>
+                <button data-mdb-ripple-init type="button" class="btn btn-outline-light  btn-rounded">
+                  <a class="btn-footer-custom" href="{{route('become.revisor')}}">{{__("ui.button_revisore")}}</a>
+                </button>
+              </p>
+            </section>
+        @endif
+        @endauth
         <!-- Section: CTA -->
       </div>
       <!-- Grid container -->
