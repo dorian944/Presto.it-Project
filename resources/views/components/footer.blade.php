@@ -79,6 +79,7 @@
       <!-- Grid container -->
       <div class="container p-4 pb-0">
         <!-- Section: CTA -->
+        @guest
         <section class="">
           <p class="d-flex justify-content-center align-items-center">
             <span class="me-3">{{__("ui.diventa_revisore")}} </span>
@@ -87,6 +88,7 @@
             </button>
           </p>
         </section>
+        @endguest
         <!-- Section: CTA -->
       </div>
       <!-- Grid container -->
