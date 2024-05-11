@@ -58,7 +58,7 @@
 .custom-alert-revisore{
   width: 100%;
   margin-top: -4vh;
-  /* margin-bottom: -15vh; */
+ 
 }
 
 .custom-drop-categorie {
@@ -71,11 +71,9 @@
 .custom-drop-item-categorie{
   margin-top: 3vh;
   margin-bottom: -2vh;
-  text-align: center;
+  
 }
-/* .dropdown-divider{
 
-} */
 /* fine customizzazione dell'inizio della pagina dopo la navbar fissa */
 
   .animated-text-from-right {

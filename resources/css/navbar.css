@@ -1,6 +1,7 @@
 :root {
     --verde_grigio: #186049;
-    --verde_chiaro: #D2B39B;
+    --beige: #D2B39B;
+    --verde_chiaro:  rgb(119, 189, 167)
 }
 
 .navbar{
@@ -33,7 +34,7 @@ footer {
     background-color: var(--verde_grigio);
 }
 body {
-    background-color: var(--verde_chiaro) ;
+    background-color: var(--beige) ;
 }
 .zona-revisore-custom{
     list-style-type: none;
@@ -41,7 +42,7 @@ body {
 }
 
 .navbar .dropdown-menu {
-    padding: 0;
+    padding-bottom: 2.8vh;
 }
 
 .navbar .dropdown-item {
@@ -57,7 +58,7 @@ body {
 }
 
 .bg-custom-categorie{
-    background: linear-gradient(90deg, rgba(36,113,88,1) 54%, rgba(106,178,155,1) 100%);
+    background: linear-gradient(90deg, rgba(36,113,88,1) 54%, rgb(119, 189, 167) 100%);
 }
 
 .zona-revisore-custom {
@@ -69,7 +70,18 @@ body {
     padding: 0.5rem 1rem;
 }
 
+/* bordo dinamico alle categorie */
+.category-border-custom{
+    border: none; 
+    cursor: pointer; /* Cambia il cursore al passaggio del mouse */
+     /* Stile del bordo al passaggio del mouse */
+     /* transition: border 0.3s; */
+   /* Effetto di transizione */
+}
 
+.category-border-custom:hover{
+    border-bottom:  2px solid  var(--verde_grigio);
+}
 /* .ul-dinamico{
     display:flex;
     gap:1rem;
