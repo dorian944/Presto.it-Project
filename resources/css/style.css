@@ -28,7 +28,41 @@
   padding: 0.6em 1.5em;
 }
 
- /* header */
+/* fine customizzazione dell'inizio della pagina dopo la navbar fissa */
+ /* index-annunci e categorie show accedi e altre view compresi i messaggi alert */
+
+ .custom-view{
+  width: 100%;
+  height: -50vh;
+  margin-top: 10vh;
+}
+
+.custom-accedi{
+  width: 100%;
+  margin-top: 30vh;
+  margin-bottom: 15vh;
+}
+
+.custom-register{
+  width: 100%;
+  margin-top: 30vh;
+  margin-bottom: 15vh;
+}
+
+.custom-alert{
+  width: 100%;
+  margin-top: 15vh;
+  margin-bottom: -15vh;
+}
+
+.custom-alert-revisore{
+  width: 100%;
+  margin-top: -4vh;
+  /* margin-bottom: -15vh; */
+}
+
+/* fine customizzazione dell'inizio della pagina dopo la navbar fissa */
+
   .animated-text-from-right {
       position: relative;
       right: -100%;

@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container-fluid h-index-custom">
+    <div class="container-fluid h-index-custom custom-view">
         <div class="row ">
             <div class="col-12 text-center mt-5 ">
                 <h1 class="mb-5">{{__('ui.titolo_revisore')}} </h1>
@@ -13,13 +13,13 @@
 
                     {{-- messaggio insuccesso invio mail --}}
                     @if (session('emailError'))
-                        <div class="alert alert-danger">
+                        <div class="alert alert-danger custom-alert">
                             {{ session('emailError') }}
                         </div>
                     @endif
                     {{-- messaggio successo invio mail --}}
                     @if (session('emailSent'))
-                        <div class="alert alert-success">
+                        <div class="alert alert-success custom-alert">
                             {{ session('emailSent') }}
                         </div>
                     @endif

@@ -1,6 +1,6 @@
 <x-layout>
 
-    <div class="container-fluid">
+    <div class="container-fluid custom-view">
         <div class="row">
             <div class="col-12">
                <h1 class="text-center mt-5">Benvenuto/a nella tua area personale : {{Auth::user()->name}}</h1> 

@@ -11,9 +11,10 @@
 </head>
 <body class="overflow-custom ">
     <x-navbar/>
+            
 
-        <div class="min-vh-100">
-            {{ $slot }}
+        <div class="min-vh-100 ">
+             {{ $slot }}
         </div>
     <x-footer/>
 </body>

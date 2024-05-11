@@ -39,7 +39,7 @@ Route::patch('/rifiuta/annuncio/{announcement}',[RevisorController::class, 'reje
 Route::patch('/annulla/revisione', [RevisorController::class, 'backStep'] )->name('back.step');
 
 
-//diventare revisori - middleware auth
+//diventare revisori - middleware auth - form mail
 Route::get('/richiesta/revisore', [RevisorController::class, 'becomeRevisor'])->name('become.revisor');
 
 //rendi utente revisore - senza middleware perchè cliccabile nella mail per diventare revisore

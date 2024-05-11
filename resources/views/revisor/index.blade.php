@@ -1,6 +1,6 @@
 <x-layout>
 
-    <div class="h-index-custom-revisor">
+    <div class="h-index-custom-revisor custom-view">
         <div class="container-fluid p-5  bg-custom-categorie shadow mb-4">
             <div class="row ">
                 <div class="col-12 p-3">
@@ -11,9 +11,15 @@
             </div>
         </div>
 
-        @if (session('message'))
-        <div class="alert alert-danger">
-        {{ session('message') }}
+        @if (session('messageAccetta'))
+        <div class="alert alert-success custom-alert-revisore">
+        {{ session('messageAccetta') }}
+        </div>
+        @endif
+
+        @if (session('messageRifiuta'))
+        <div class="alert alert-danger custom-alert-revisore">
+        {{ session('messageRifiuta') }}
         </div>
         @endif
 

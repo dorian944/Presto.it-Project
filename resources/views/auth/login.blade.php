@@ -1,7 +1,7 @@
 <x-layout>
 
-    <div class="container-fluid my-5">
-        <div class="row h-index-custom">
+    <div class="container-fluid custom-accedi ">
+        <div class="row ">
 
             <div class="col-12 d-flex justify-content-center align-items-center">
                 <div class="container-form">

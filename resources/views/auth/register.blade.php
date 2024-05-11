@@ -1,6 +1,6 @@
 <x-layout>
 
-    <div class="container-fluid my-4">
+    <div class="container-fluid custom-register">
         <div class="row h-index-custom">
 
             <div class="col-12 d-flex justify-content-center align-items-center">

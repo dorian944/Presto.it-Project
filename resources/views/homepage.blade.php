@@ -3,13 +3,13 @@
 
     {{-- messaggio per comunicare all'amministratore che un utente è diventato revisore dopo che l'amministratore ha cliccato sul link nella mail --}}
     @if (session('message'))
-    <div class="alert alert-success">
+    <div class="alert alert-success custom-alert">
     {{ session('message') }}
     </div>
     @endif
 
     @if (session('access.denied'))
-    <div class="alert alert-danger">
+    <div class="alert alert-danger custom-alert">
     {{ session('access.denied') }}
     </div>
     @endif

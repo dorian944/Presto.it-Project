@@ -29,12 +29,12 @@ class RevisorController extends Controller
     
     public function acceptAnnouncement(Announcement $announcement){
         $announcement->setAccepted(true);
-        return redirect()->back()->with('message', 'Complimenti hai accettato l\'annuncio');
+        return redirect()->back()->with('messageAccetta', 'Complimenti hai accettato l\'annuncio '. $announcement->returnTitle() );
     }
     
     public function rejectAnnouncement(Announcement $announcement){
         $announcement->setAccepted(false);
-        return redirect()->back()->with('message', 'Complimenti hai rifiutato l\'annuncio');
+        return redirect()->back()->with('messageRifiuta', 'Complimenti hai rifiutato l\'annuncio ' . $announcement->returnTitle());
     }
     
     
@@ -80,9 +80,11 @@ class RevisorController extends Controller
             // Annulla la revisione
             $lastRevision->setAccepted(null);
             
-            return redirect('/')->with('message', 'Ultima revisione '. $lastRevision->returnTitle() .' annullata con successo');
+            return redirect()->back()->with('messageAccetta', 'Ultima revisione '. $lastRevision->returnTitle() .' annullata con successo');
+           
         } else {
-            return redirect('/')->with('message', 'Nessuna revisione da annullare');
+            return redirect()->back()->with('messageAccetta', 'Nessuna revisione da annullare');
+            
         }
     }
     

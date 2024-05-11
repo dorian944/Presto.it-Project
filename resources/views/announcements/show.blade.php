@@ -7,7 +7,7 @@
         </div>
     </div>
 
-    <div class="container h-index-custom d-flex align-items-center ">
+    <div class="container custom-view h-index-custom d-flex align-items-center ">
         <div class="row ">
             <div class="col-12">
 

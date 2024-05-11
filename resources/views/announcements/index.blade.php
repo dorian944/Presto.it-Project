@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container-fluid">
+    <div class="container-fluid custom-view">
         <div class="row ">
             <div class="col-12 mt-5 mb-5">
                 <h1 class="text-center">{{__("ui.index_annunci")}}</h1>
