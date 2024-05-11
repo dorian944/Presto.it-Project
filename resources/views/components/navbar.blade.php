@@ -13,13 +13,13 @@
                         {{__("ui.Categorie")}} 
                     </a>
                     
-                    <ul class="dropdown-menu " aria-labelledby="categoriesDropdown">
+                    <ul class="dropdown-menu " aria-labelledby="categoriesDropdown custom-drop-categorie">
                         @foreach ($categories as $category)
-                            <li>
-                                <a href="{{ route('categoryShow', compact('category')) }}" class="dropdown-item">
+                            <li class="custom-drop-categorie">
+                                <a href="{{ route('categoryShow', compact('category')) }}" class="dropdown-item custom-drop-item-categorie">
                                     {{__("ui.".$category->name)}}
                                 </a>
-                                <hr class="dropdown-divider m-0">
+                                <hr class="dropdown-divider">
                             </li>
                         @endforeach
                     </ul>
