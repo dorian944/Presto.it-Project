@@ -34,6 +34,7 @@ return [
 "welcome_login" => "Welcome",
 "ricordami_login"=> 'Remember me',
 "login" => "Login",
+"Area personale" => "Personal area",
 // fine login e register
 
 // card annunci

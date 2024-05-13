@@ -66,7 +66,7 @@
                                 
                                 <a class="dropdown-item" href="{{route('area.personale')}}">
                                     <div class="category-border-custom"> 
-                                         Area personale
+                                         {{__('ui.Area personale')}}
                                     </div>
                                 </a>
                              
