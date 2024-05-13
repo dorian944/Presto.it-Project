@@ -58,22 +58,30 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li class="dropdown-item">
+                                <div class="category-border-custom"> 
                                 <a class="nav-link-custom" href="{{ route('announcements.create') }}">{{__('ui.button_header')}}</a>
+                                </div>
                             </li>
                             <li>
+                                
                                 <a class="dropdown-item" href="{{route('area.personale')}}">
-                                Area personale
+                                    <div class="category-border-custom"> 
+                                         Area personale
+                                    </div>
                                 </a>
+                             
 
-
-
+                                
                                 <a class="dropdown-item" href="#"
                                     onclick="event.preventDefault(); document.querySelector('#logout').submit();">
+                                    <div class="category-border-custom"> 
                                     Logout
+                                </div>
                                 </a>
                                 <form action="{{ route('logout') }}" method="POST" id="logout">
                                     @csrf
                                 </form>
+                                
                             </li>
                         </ul>
                     </li>

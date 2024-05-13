@@ -27,7 +27,7 @@
 
 .nav-link-custom{
     text-decoration: none;
-    color: black;
+    color: var(--verde_grigio);
 }
 
 footer {
@@ -73,7 +73,8 @@ body {
 /* bordo dinamico alle categorie */
 .category-border-custom{
     border: none; 
-    cursor: pointer; /* Cambia il cursore al passaggio del mouse */
+    cursor: pointer; 
+    /* Cambia il cursore al passaggio del mouse */
      /* Stile del bordo al passaggio del mouse */
      /* transition: border 0.3s; */
    /* Effetto di transizione */
@@ -82,29 +83,5 @@ body {
 .category-border-custom:hover{
     border-bottom:  2px solid  var(--verde_grigio);
 }
-/* .ul-dinamico{
-    display:flex;
-    gap:1rem;
-    list-style: none;
 
-}
 
-.li-dinamico{
-color:#186049;
-display:grid;
-place-content: center;
-margin:0;
-}
-.menu-dinamico::before{
-content:"";
-position:absolute;
-width: 100%;
-height: 2px;
-background-color: black;
-border-radius: 5px;
-transform:scaleX(0);
-transition: all .5s ease;
-bottom: 0;
-left: 0;
-
-} */
