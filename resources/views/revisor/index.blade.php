@@ -45,7 +45,43 @@
                                                                 class="img-fluid p-3 rounded dim_img_carousel"
                                                                 alt="img user">
                                                             {{-- <img src="{{$image->getUrl(400,300)}}" class="img-fluid p-3 rounded" alt=".."> --}}
+                                                           
+                                                            {{-- da qui in poi --}}
+                                                            <div class="container">
+                                                                <div class="row">
+                                                                    @if($announcement_to_check->images)
+                                                                        
+                                                                        <div class="col-md-3 border-end">
+                                                                            <h5 class="tc-accent mt-3">Tags</h5>
+                                                                            <div class="p-2">
+                                                                                @if ($image->labels)
+                                                                                    @foreach ($image->labels as $label)
+                                                                                        <p class="d-inline"> {{ $label }},</p>
+                                                                                    @endforeach
+                                                                                @endif
+                                                                            </div>
+                                                                        </div>
+                                                        
+                                                                        <div class="col-md-3">
+                                                                            <div class="card-body">
+                                                                                <h5 class="tc-accent">Revisione immagini</h5>
+                                                                                <p>Adulti: <span class="{{ $image->adult }}"></span></p>
+                                                                                <p>Satira: <span class="{{ $image->spoof }}"></span></p>
+                                                                                <p>Medicina: <span class="{{ $image->medical }}"></span>
+                                                                                </p>
+                                                                                <p>Violenza: <span
+                                                                                        class="{{ $image->violence }}"></span></p>
+                                                        
+                                                                                <p>Contenuto Ammiccante: <span
+                                                                                        class="{{ $image->racy }}"></span></p>
+                                                                            </div>
+                                                                        </div>
+                                                                        
+                                                                    @endif
+                                                                </div>
+                                                            </div>
                                                         </div>
+
 
                                                     
                                                     @endforeach
@@ -157,39 +193,7 @@
                     </div>
         @endif
 
-        <div class="container">
-            <div class="row">
-                @if($announcement_to_check->images)
-                     @foreach($announcement_to_check->images as $image)
-                    <div class="col-md-3 border-end">
-                        <h5 class="tc-accent mt-3">Tags</h5>
-                        <div class="p-2">
-                            @if ($image->labels)
-                                @foreach ($image->labels as $label)
-                                    <p class="d-inline"> {{ $label }},</p>
-                                @endforeach
-                            @endif
-                        </div>
-                    </div>
-    
-                    <div class="col-md-3">
-                        <div class="card-body">
-                            <h5 class="tc-accent">Revisione immagini</h5>
-                            <p>Adulti: <span class="{{ $image->adult }}"></span></p>
-                            <p>Satira: <span class="{{ $image->spoof }}"></span></p>
-                            <p>Medicina: <span class="{{ $image->medical }}"></span>
-                            </p>
-                            <p>Violenza: <span
-                                    class="{{ $image->violence }}"></span></p>
-    
-                            <p>Contenuto Ammiccante: <span
-                                    class="{{ $image->racy }}"></span></p>
-                        </div>
-                    </div>
-                    @endforeach
-                @endif
-            </div>
-        </div>
+      
     
        
     </div>
