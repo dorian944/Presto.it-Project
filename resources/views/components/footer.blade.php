@@ -83,7 +83,7 @@
           @if (!Auth::user()->is_revisor)
             <section >
               <p class="d-flex justify-content-center align-items-center ">
-                <span class="me-3 color-text">{{__("ui.diventa_revisore")}} </span>
+                <span class="me-3 text-black">{{__("ui.diventa_revisore")}} </span>
                 <button data-mdb-ripple-init type="button" class="btn btn-outline-light  btn-rounded">
                   <a class="btn-footer-custom" href="{{route('become.revisor')}}">{{__("ui.button_revisore")}}</a>
                 </button>
@@ -96,7 +96,7 @@
       <!-- Grid container -->
 
       <!-- Copyright -->
-      <div class="text-center p-3 back2-color color-text" >
+      <div class="text-center p-3 text-black" >
         © 2024 Copyright:
         <a class="text-white" href="#">Presto.it</a>
       </div>
