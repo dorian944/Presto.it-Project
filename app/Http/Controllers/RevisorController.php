@@ -16,8 +16,8 @@ class RevisorController extends Controller
     public function __construct(){
         // tutte le funzioni possono essere usate da utenti revisori tranne becomeRevisor che può essere usato da utenti autenticati
         $this->middleware('auth')->only('becomeRevisor','revisorSubmit');
-        $this->middleware('isRevisor')->except('revisorSubmit','makeRevisor');
-        $this->middleware('guest')->only('becomeRevisor');
+        $this->middleware('isRevisor')->except('becomeRevisor','revisorSubmit','makeRevisor');
+        // $this->middleware('guest')->only('becomeRevisor');
         
     }
     

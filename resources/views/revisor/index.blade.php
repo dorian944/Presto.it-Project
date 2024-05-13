@@ -4,7 +4,7 @@
         <div class="container-fluid p-5  bg-custom-categorie shadow mb-4">
             <div class="row ">
                 <div class="col-12 p-3">
-                    <h1 class="display-2 text-center">
+                    <h1 class="display-2 text-center text-white">
                         {{$announcement_to_check ? 'Da revisionare' : 'Non ci sono annunci da revisionare'}}
                     </h1>
                 </div>
