@@ -5,7 +5,8 @@
             <div class="row ">
                 <div class="col-12 p-3">
                     <h1 class="display-2 text-center text-white">
-                        {{ $announcement_to_check ? 'Da revisionare' : 'Non ci sono annunci da revisionare' }}
+                        {{ $announcement_to_check ? __("ui.Da_revisionare") : __("ui.no_annunci_da_revisionare") }}
+
                     </h1>
                 </div>
             </div>
@@ -64,15 +65,15 @@
                                                         
                                                                         <div class="col-md-3">
                                                                             <div class="card-body">
-                                                                                <h5 class="tc-accent">Revisione immagini</h5>
-                                                                                <p>Adulti: <span class="{{ $image->adult }}"></span></p>
-                                                                                <p>Satira: <span class="{{ $image->spoof }}"></span></p>
-                                                                                <p>Medicina: <span class="{{ $image->medical }}"></span>
+                                                                                <h5 class="tc-accent">{{__("ui.Revisione_immagini")}}</h5>
+                                                                                <p>{{__("ui.Adulti")}}: <span class="{{ $image->adult }}"></span></p>
+                                                                                <p>{{__("ui.Satira")}}: <span class="{{ $image->spoof }}"></span></p>
+                                                                                <p>{{__("ui.Medicina")}}: <span class="{{ $image->medical }}"></span>
                                                                                 </p>
-                                                                                <p>Violenza: <span
+                                                                                <p>{{__("ui.Violenza")}}: <span
                                                                                         class="{{ $image->violence }}"></span></p>
                                                         
-                                                                                <p>Contenuto Ammiccante: <span
+                                                                                <p>{{__("ui.Contenuto_ammiccante")}}: <span
                                                                                         class="{{ $image->racy }}"></span></p>
                                                                             </div>
                                                                         </div>

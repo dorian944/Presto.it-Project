@@ -50,6 +50,8 @@ return [
 //fine  form mail revisore
 
 // index revisore
+"Da_revisionare" =>"Da revisionare",
+"no_annunci_da_revisionare" => "Non ci sono annunci da revisionare",
 "accetta_annuncio" => "Accetta",
 "rifiuta_annuncio" => "Rifiuta",
 "annulla_revisione" => "Annulla ultima revisione",
@@ -71,5 +73,13 @@ return [
 "Sport" => "Sport",
 "Hi-tech" => "Hi-tech",
 "Motori" => "Motori",
-"Abbigliamento" => "Abbigliamento"
+"Abbigliamento" => "Abbigliamento",
+
+//revisione immagini
+"Revisione_immagini" => "Revisione immagini",
+"Adulti" => "Adulti",
+"Satira" => "Satira",
+"Medicina" => "Medicina",
+"Violenza" => "Violenza",
+"Contenuto_ammiccante" => "Contenuto ammiccante"
 ];
