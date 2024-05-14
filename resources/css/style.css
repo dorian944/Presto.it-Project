@@ -209,13 +209,7 @@
 }
 
 
-/* media query x schermi di 1920 x 1080 che sistema il margine nell'index degli annunci */
-@media screen and (min-width: 1800px) {
-
-  .margin-custom-card-width-1920{
-    margin-left: 65px;
-  }
-}
+/* media query x schermi 1500 px */
 
 @media screen and (min-width: 1450px) {
 
@@ -223,3 +217,11 @@
     margin-left: 30px;
   }
 }
+
+/* media query x schermi di 1920 x 1080 che sistema il margine nell'index degli annunci */
+@media screen and (min-width: 1800px) {
+  .margin-custom-card-width-1920{
+    margin-left: 65px;
+  }
+}
+
