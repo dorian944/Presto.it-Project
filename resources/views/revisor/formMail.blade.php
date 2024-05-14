@@ -13,13 +13,13 @@
 
                     {{-- messaggio insuccesso invio mail --}}
                     @if (session('emailError'))
-                        <div class="alert alert-danger custom-alert">
+                        <div class="alert alert-danger ">
                             {{ session('emailError') }}
                         </div>
                     @endif
                     {{-- messaggio successo invio mail --}}
                     @if (session('emailSent'))
-                        <div class="alert alert-success custom-alert">
+                        <div class="alert alert-success ">
                             {{ session('emailSent') }}
                         </div>
                     @endif
