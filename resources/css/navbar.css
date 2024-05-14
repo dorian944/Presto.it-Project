@@ -15,7 +15,34 @@
     background: linear-gradient(90deg, rgba(36,113,88,1) 54%, rgba(106,178,155,1) 100%);
     border-bottom: 1px solid black;
 
+
 }
+/* aggiunto per le sottolinee quando avvicini il cursore */
+.navbar-nav .nav-item .nav-link {
+    position: relative;
+}
+
+.navbar-nav .nav-item .nav-link::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -1px;
+    left: 0;
+    background-color: var(--beige);
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.navbar-nav .nav-item .nav-link:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+
+/* fine aggiunto per le sottolinee */
+
 
 .dropdown-item{
     color: black !important;
@@ -72,8 +99,8 @@ body {
 
 /* bordo dinamico alle categorie */
 .category-border-custom{
-    border: none; 
-    cursor: pointer; 
+    border: none;
+    cursor: pointer;
     /* Cambia il cursore al passaggio del mouse */
      /* Stile del bordo al passaggio del mouse */
      /* transition: border 0.3s; */
@@ -83,5 +110,3 @@ body {
 .category-border-custom:hover{
     border-bottom:  2px solid  var(--verde_grigio);
 }
-
-
