@@ -83,6 +83,11 @@ return [
 "Satira" => "Satira",
 "Medicina" => "Medicamento",
 "Violenza" => "Violencia",
-"Contenuto_ammiccante" => "contenido guiño"
+"Contenuto_ammiccante" => "contenido guiño",
+
+//barra di ricerca
+"cerca_un_annuncio" => "Buscar un anuncio..",
+"cerca" => "Buscar",
+"no_annunci" => "No hay anuncios para esta búsqueda. Intenta cambiar la palabra.."
 
 ];

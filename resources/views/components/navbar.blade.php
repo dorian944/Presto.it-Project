@@ -116,8 +116,8 @@
 
                 <li class="nav-item">
                     <form action="{{route('announcements.search')}}" method="GET" class="d-flex ms-4 mt-2">
-                        <input name="searched" class="form-control me-2 input-search-custom" type="search" placeholder="Cerca un annuncio.." aria-label="Search">
-                        <button class=" border rounded-2  btn-custom-search" type="submit">Cerca</button>
+                        <input name="searched" class="form-control me-2 input-search-custom" type="search" placeholder="{{__("ui.cerca_un_annuncio")}}" aria-label="Search">
+                        <button class=" border rounded-2  btn-custom-search" type="submit">{{__("ui.cerca")}}</button>
                     </form>
                 </li>
 

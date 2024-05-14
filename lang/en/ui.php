@@ -81,7 +81,12 @@ return [
 "Satira" => "Satire",
 "Medicina" => "Medicin",
 "Violenza" => "Vehicles",
-"Contenuto_ammiccante" => "winking content"
+"Contenuto_ammiccante" => "winking content",
+
+//barra di ricerca
+"cerca_un_annuncio" => "Search an adv",
+"cerca" => "Search",
+"no_annunci" => "There are no ads for this search. Try changing the word.."
 ];
 
 
