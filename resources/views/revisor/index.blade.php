@@ -27,16 +27,17 @@
         @if ($announcement_to_check)
             {{-- carosello --}}
             <div class="container">
+                {{-- container con una row divisa in due col una per il carosello e i tag e l'altro per il dettaglio --}}
                 <div class="row my-5 w-custom">
 
                     {{-- sezione immagini --}}
-                    <div class="col-6 col-md-6 ">
+                    <div class="col-8 col-md-6 ">
 
                        
-                        <div class="row align-items-center w-custom ">
+                        <div class="row align-items-center  ">
                             <div class="col-12 col-md-6  w-custom">
                                
-                                    <div id="gallery" class="bg-white  w-custom">
+                                    <div id="gallery" class="bg-white  ">
                                         {{-- carosello --}}
                                         <div id="carouselExample" class="carousel slide">
                                             @if ($announcement_to_check->images)
@@ -168,17 +169,22 @@
                     </div>
 
                     {{-- sezione  dettaglio --}}
-                    <div class="col-6 col-md-6 justify-center align-items-center text-center">
-                        <h5 class="card-title">{{ __('ui.titolo') }}:
-                            {{ $announcement_to_check->title }}</h5>
-                        <p class="card-text">{{ $announcement_to_check->body }}</p>
-                        <p class="card-footer">{{ __('ui.pubblicato_il') }}
-                            {{ $announcement_to_check->created_at->format('d/m/Y') }}</p>
-                        <p>{{ __('ui.Categorie') }}: {{ $announcement_to_check->category->name }}</p>
+                    
+                    <div class="col-4 col-md-6  d-flex justify-content-center">
+                        <div class="row h-100 align-content-center text-center">
+                            
+                            <h5 class="card-title">{{ __('ui.titolo') }}:
+                                {{ $announcement_to_check->title }}</h5>
+                            <p class="card-text">{{ $announcement_to_check->body }}</p>
+                            <p class="card-footer">{{ __('ui.pubblicato_il') }}
+                                {{ $announcement_to_check->created_at->format('d/m/Y') }}</p>
+                            <p>{{ __('ui.Categorie') }}: {{ $announcement_to_check->category->name }}</p>
 
-                    </div>
+                        </div>
+                     {{-- fine sezione sezione  dettaglio fine col--}}
+                    </div> 
                     {{-- fine row --}}
-                </div>
+                </div> 
 
             </div> {{-- fine container --}}
                 @else
