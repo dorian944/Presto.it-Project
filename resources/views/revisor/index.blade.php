@@ -37,24 +37,32 @@
                         <div class="row align-items-center  ">
                             <div class="col-12 col-md-6  w-custom">
                                
-                                    <div id="gallery" class="bg-white  ">
+                                    <div id="gallery" class="bg-white rounded-3  ">
                                         {{-- carosello --}}
                                         <div id="carouselExample" class="carousel slide">
                                             @if ($announcement_to_check->images)
                                                 <div class="carousel-inner">
                                                     @foreach ($announcement_to_check->images as $image)
+<<<<<<< HEAD
                                                         <div
                                                             class="carousel-item @if ($loop->first) active @endif">
                                                             {{-- <img src="{{ Storage::url($image->path) }}" class="img-fluid p-3 rounded dim_img_carousel " alt="img user"> --}}
                                                             {{-- immagine croppata --}}
                                                             <img src="{{$image->getUrl(400,300)}}" class="img-fluid p-3 rounded" alt="Immagine articolo">
+=======
+
+                                                        <div class="carousel-item text-center @if ($loop->first) active @endif">
+                                                            {{-- <img src="{{ Storage::url($image->path) }}" class="img-fluid p-3 rounded dim_img_carousel " alt="img user"> --}}
+                                                            {{-- immagine croppata --}}
+                                                             <img src="{{$image->getUrl(400,300)}}" class="rounded-3 img-fluid  p-3 " alt="Immagine articolo"> 
+>>>>>>> df9858a9196af18f9f5964f7be743cf70a702695
                                                            
                                                             {{-- sezione label e revisione immagine all'interno del carosello --}}
                                                             <div class="container">
-                                                                <div class="row">
+                                                                <div class="row mt-3 mb-3">
                                                                     @if($announcement_to_check->images)
                                                                         
-                                                                        <div class="col-md-5 border-end">
+                                                                        <div class="col-md-6 border-end">
                                                                             <h5 class="tc-accent mt-3">Tags</h5>
                                                                             <div class="p-2">
                                                                                 @if ($image->labels)
@@ -65,7 +73,7 @@
                                                                             </div>
                                                                         </div>
                                                         
-                                                                        <div class="col-md-5">
+                                                                        <div class="col-md-6">
                                                                             <div class="card-body">
                                                                                 <h5 class="tc-accent">{{__("ui.Revisione_immagini")}}</h5>
                                                                                 <p>{{__("ui.Adulti")}}: <span class="{{ $image->adult }}"></span></p>
@@ -118,9 +126,9 @@
                                         </div>
 
                                         {{-- sezione accetta --}}
-                                        <div class="row justify-content-between my-2">
+                                        <div class="row justify-content-between my-2 mx-1">
                                             {{-- pulsante accetta --}}
-                                            <div class="col-12 col-md-3">
+                                            <div class="col-12 col-md-3 mb-3 ">
                                                 <form
                                                     action="{{ route('revisor.accept_announcement', ['announcement' => $announcement_to_check]) }}"
                                                     method="POST">
@@ -174,15 +182,15 @@
                     {{-- sezione  dettaglio --}}
                     
                     <div class="col-4 col-md-6  d-flex justify-content-center">
-                        <div class="row h-100 align-content-center text-center">
+                        <div class="row h-100 align-content-center text-center ">
                             
-                            <h5 class="card-head">{{ __('ui.titolo') }}: {{ $announcement_to_check->title }}</h5>
+                            <h5 class="card-head grandezza-custom-dettaglio">{{ __('ui.titolo') }}: {{ $announcement_to_check->title }}</h5>
                            
-                            <p class="card-text">{{ __('ui.descrizione') }}: {{ $announcement_to_check->body }}</p>
-                            <p class="card-text">{{ __('ui.prezzo') }}: {{ $announcement_to_check->price }}</p>
-                            <p class="card-footer">{{ __('ui.pubblicato_il') }}
+                            <p class="card-text grandezza-custom-sottotitoli">{{ __('ui.descrizione') }}: {{ $announcement_to_check->body }}</p>
+                            <p class="card-text grandezza-custom-sottotitoli">{{ __('ui.prezzo') }}: {{ $announcement_to_check->price }}</p>
+                            <p class="card-footer grandezza-custom-sottotitoli">{{ __('ui.pubblicato_il') }}
                                  {{ $announcement_to_check->created_at->format('d/m/Y') }}</p>
-                            <p>{{ __('ui.Categorie') }}: {{ $announcement_to_check->category->name }}</p>
+                            <p class="grandezza-custom-sottotitoli">{{ __('ui.Categorie') }}: {{ $announcement_to_check->category->name }}</p>
 
                         </div>
                      {{-- fine sezione sezione  dettaglio fine col--}}
