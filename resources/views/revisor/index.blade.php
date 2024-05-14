@@ -1,11 +1,12 @@
 <x-layout>
 
-    <div class="h-index-custom-revisor custom-view">
+    <div class="h-index-custom-revisor custom-view w-custom">
         <div class="container-fluid p-5  bg-custom-categorie shadow mb-4">
             <div class="row ">
                 <div class="col-12 p-3">
                     <h1 class="display-2 text-center text-white">
-                        {{ $announcement_to_check ? 'Da revisionare' : 'Non ci sono annunci da revisionare' }}
+                        {{ $announcement_to_check ? __("ui.Da_revisionare") : __("ui.no_annunci_da_revisionare") }}
+
                     </h1>
                 </div>
             </div>
@@ -25,15 +26,18 @@
 
         @if ($announcement_to_check)
             {{-- carosello --}}
-            <div class="container  ">
-                <div class="row  my-5">
-                    <div class="col-12">
+            <div class="container">
+                {{-- container con una row divisa in due col una per il carosello e i tag e l'altro per il dettaglio --}}
+                <div class="row my-5 w-custom">
 
-                        {{-- carosello dettaglio --}}
-                        <div class="row align-items-center ">
-                            <div class="col-12 col-md-6">
-                                <div class="col-12">
-                                    <div id="gallery" class="bg-white">
+                    {{-- sezione immagini --}}
+                    <div class="col-8 col-md-6 ">
+
+                       
+                        <div class="row align-items-center  ">
+                            <div class="col-12 col-md-6  w-custom">
+                               
+                                    <div id="gallery" class="bg-white  ">
                                         {{-- carosello --}}
                                         <div id="carouselExample" class="carousel slide">
                                             @if ($announcement_to_check->images)
@@ -41,11 +45,46 @@
                                                     @foreach ($announcement_to_check->images as $image)
                                                         <div
                                                             class="carousel-item @if ($loop->first) active @endif">
-                                                            <img src="{{ Storage::url($image->path) }}"
-                                                                class="img-fluid p-3 rounded dim_img_carousel"
-                                                                alt="img user">
-                                                            {{-- <img src="{{$image->getUrl(400,300)}}" class="img-fluid p-3 rounded" alt=".."> --}}
+                                                            <img src="{{ Storage::url($image->path) }}" class="img-fluid p-3 rounded dim_img_carousel " alt="img user">
+                                                            {{-- immagine croppata --}}
+                                                            {{-- <img src="{{$image->getUrl(400,300)}}" class="img-fluid p-3 rounded" alt="Immagine articolo"> --}}
+                                                           
+                                                            {{-- sezione label e revisione immagine all'interno del carosello --}}
+                                                            <div class="container">
+                                                                <div class="row">
+                                                                    @if($announcement_to_check->images)
+                                                                        
+                                                                        <div class="col-md-5 border-end">
+                                                                            <h5 class="tc-accent mt-3">Tags</h5>
+                                                                            <div class="p-2">
+                                                                                @if ($image->labels)
+                                                                                    @foreach ($image->labels as $label)
+                                                                                        <p class="d-inline"> {{ $label }},</p>
+                                                                                    @endforeach
+                                                                                @endif
+                                                                            </div>
+                                                                        </div>
+                                                        
+                                                                        <div class="col-md-5">
+                                                                            <div class="card-body">
+                                                                                <h5 class="tc-accent">{{__("ui.Revisione_immagini")}}</h5>
+                                                                                <p>{{__("ui.Adulti")}}: <span class="{{ $image->adult }}"></span></p>
+                                                                                <p>{{__("ui.Satira")}}: <span class="{{ $image->spoof }}"></span></p>
+                                                                                <p>{{__("ui.Medicina")}}: <span class="{{ $image->medical }}"></span>
+                                                                                </p>
+                                                                                <p>{{__("ui.Violenza")}}: <span
+                                                                                        class="{{ $image->violence }}"></span></p>
+                                                        
+                                                                                <p>{{__("ui.Contenuto_ammiccante")}}: <span
+                                                                                        class="{{ $image->racy }}"></span></p>
+                                                                            </div>
+                                                                        </div>
+                                                                        
+                                                                    @endif
+                                                                </div>
+                                                            </div>
                                                         </div>
+
 
                                                     
                                                     @endforeach
@@ -117,21 +156,10 @@
                                                 </form>
                                             </div>
 
-                                            {{-- chiusura row e col --}}
-                                        </div>
+                                        
 
                                     </div>
-                                    {{-- fine carosello --}}
-                                    {{-- dettagli --}}
-                                    <div class="col-12 col-md-6 text-center">
-                                        <h5 class="card-title">{{ __('ui.titolo') }}:
-                                            {{ $announcement_to_check->title }}</h5>
-                                        <p class="card-text">{{ $announcement_to_check->body }}</p>
-                                        <p class="card-footer">{{ __('ui.pubblicato_il') }}
-                                            {{ $announcement_to_check->created_at->format('d/m/Y') }}</p>
-                                        <p>{{ __('ui.Categorie') }}: {{ $announcement_to_check->category->name }}</p>
-
-                                    </div>
+                               
                                 </div>
 
                             </div>
@@ -143,11 +171,28 @@
                         
                     </div>
 
-                </div>
+                    {{-- sezione  dettaglio --}}
+                    
+                    <div class="col-4 col-md-6  d-flex justify-content-center">
+                        <div class="row h-100 align-content-center text-center">
+                            
+                            <h5 class="card-head">{{ __('ui.titolo') }}: {{ $announcement_to_check->title }}</h5>
+                           
+                            <p class="card-text">{{ __('ui.descrizione') }}: {{ $announcement_to_check->body }}</p>
+                            <p class="card-text">{{ __('ui.prezzo') }}: {{ $announcement_to_check->price }}</p>
+                            <p class="card-footer">{{ __('ui.pubblicato_il') }}
+                                 {{ $announcement_to_check->created_at->format('d/m/Y') }}</p>
+                            <p>{{ __('ui.Categorie') }}: {{ $announcement_to_check->category->name }}</p>
 
-                    </div> {{-- fine container --}}
+                        </div>
+                     {{-- fine sezione sezione  dettaglio fine col--}}
+                    </div> 
+                    {{-- fine row --}}
+                </div> 
+
+            </div> {{-- fine container --}}
                 @else
-                    {{-- pulsante annulla ultima revisione --}}
+                    {{--altrimenti se non ci sono annunci da revisionare cmq devi far visualizare il pulsante annulla ultima revisione, per annullare l'ultima revisione  --}}
                     <div class="row my-3 justify-content-center">
                         <div class="col-12 col-md-5 text-center ">
                             <form action="{{ route('back.step') }}" method="POST">
@@ -160,41 +205,8 @@
                     </div>
         @endif
 
-         {{-- <div class="container">
-            <div class="row">
-                @if($announcement_to_check->images)
-                     @foreach($announcement_to_check->images as $image)
-                    <div class="col-md-3 border-end">
-                        <h5 class="tc-accent mt-3">Tags</h5>
-                        <div class="p-2">
-                            @if ($image->labels)
-                                @foreach ($image->labels as $label)
-                                    <p class="d-inline"> {{ $label }},</p>
-                                @endforeach
-                            @endif
-                        </div>
-                    </div>
+      
     
-                    <div class="col-md-3">
-                        <div class="card-body">
-                            <h5 class="tc-accent">Revisione immagini</h5>
-                            <p>Adulti: <span class="{{ $image->adult }}"></span></p>
-                            <p>Satira: <span class="{{ $image->spoof }}"></span></p>
-                            <p>Medicina: <span class="{{ $image->medical }}"></span>
-                            </p>
-                            <p>Violenza: <span
-                                    class="{{ $image->violence }}"></span></p>
-    
-                            <p>Contenuto Ammiccante: <span
-                                    class="{{ $image->racy }}"></span></p>
-                        </div>
-                    </div>
-                    @endforeach
-                @endif
-            </div>
-        </div>  --}}
-
-       
        
     </div>
 

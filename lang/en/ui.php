@@ -34,6 +34,7 @@ return [
 "welcome_login" => "Welcome",
 "ricordami_login"=> 'Remember me',
 "login" => "Login",
+"Area personale" => "Personal area",
 // fine login e register
 
 // card annunci
@@ -49,6 +50,8 @@ return [
 //fine  form mail revisore
 
 // index revisore
+"Da_revisionare" =>"To be revised",
+"no_annunci_da_revisionare" => "There are no ads to review",
 "accetta_annuncio" => "Accept",
 "rifiuta_annuncio" => "Reject",
 "annulla_revisione" => "Cancel the last review",
@@ -70,5 +73,15 @@ return [
 "Sport" => "Sport",
 "Hi-tech" => "Hi-tech",
 "Motori" => "Vehicles",
-"Abbigliamento" => "Clothing"
+"Abbigliamento" => "Clothing",
+
+//revisione immagini
+"Revisione_immagini" => "image review",
+"Adulti" => "Adults",
+"Satira" => "Satire",
+"Medicina" => "Medicin",
+"Violenza" => "Vehicles",
+"Contenuto_ammiccante" => "winking content"
 ];
+
+

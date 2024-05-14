@@ -34,6 +34,7 @@ return [
 "welcome_login" => "Bienvenido",
 "ricordami_login"=> "Recuérdame",
 "login" => "Acceder",
+"Area personale" => "área personal",
 // fine login e register
 
 // card annunci
@@ -49,6 +50,8 @@ return [
 //fine  form mail revisore
 
 // index revisore
+"Da_revisionare" =>"Para ser revisado",
+"no_annunci_da_revisionare" => "No hay anuncios para revisar",
 "accetta_annuncio" => "Acceptar",
 "rifiuta_annuncio" => "Rechazar",
 "annulla_revisione" => "Cancelar la última revisión",
@@ -72,6 +75,14 @@ return [
 "Sport" => "Sport",
 "Hi-tech" => "Hi-tech",
 "Motori" => "Motores",
-"Abbigliamento" => "Ropa"
+"Abbigliamento" => "Ropa",
+
+//revisione immagini
+"Revisione_immagini" => "Revisione immagini",
+"Adulti" => "Adultos",
+"Satira" => "Satira",
+"Medicina" => "Medicamento",
+"Violenza" => "Violencia",
+"Contenuto_ammiccante" => "contenido guiño"
 
 ];
