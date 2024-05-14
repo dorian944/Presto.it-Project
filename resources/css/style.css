@@ -40,9 +40,14 @@
  .custom-view{
   width: 100%;
   height: -50vh;
-  margin-top: 7vh;
+  margin-top: 10vh;
 }
-
+/* x dispositivi grandi */
+@media screen and (min-width: 1800px) {
+ .custom-view{
+  margin-top: 7vh;
+ }
+}
 
 
 .custom-accedi{
