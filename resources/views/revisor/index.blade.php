@@ -136,8 +136,11 @@
 
                             </div>
 
+                            
 
                         </div>
+
+                        
                     </div>
 
                 </div>
@@ -157,7 +160,7 @@
                     </div>
         @endif
 
-        <div class="container">
+         {{-- <div class="container">
             <div class="row">
                 @if($announcement_to_check->images)
                      @foreach($announcement_to_check->images as $image)
@@ -189,8 +192,9 @@
                     @endforeach
                 @endif
             </div>
-        </div>
-    
+        </div>  --}}
+
+       
        
     </div>
 
