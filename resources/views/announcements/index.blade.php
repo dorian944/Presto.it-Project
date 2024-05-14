@@ -7,16 +7,25 @@
         </div>
 
         <div class="row justify-content-center ">
-            @foreach($announcements as $announcement)
-            <div class="col-12 col-md-3">
+            @forelse ($announcements as $announcement)
+           
+            <div class="col-12 col-md-3 ">
                     <x-card :announcement="$announcement" />
             </div>
-            @endforeach
+
+            @empty
+
+            <div class="col-12">
+                <div class="alert alert-warning py-3 shadow">
+                    <p class="lead">Non ci sono annunci per questa ricerca. Prova a cambiare parola.. </p>
+                </div>
+            </div>
+
+            @endforelse
 
             {{-- aggiunge la barra di navigazione tra le pagine es: <|1|2|3|> --}}
         </div>
 
-       
     </div>
 
     <div class="d-flex justify-content-around mt-4 mb-4">

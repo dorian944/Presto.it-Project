@@ -164,8 +164,11 @@
 
                             </div>
 
+                            
 
                         </div>
+
+                        
                     </div>
 
                     {{-- sezione  dettaglio --}}

@@ -41,12 +41,22 @@
                             <li><a class="dropdown-item" href="{{ route('register') }}">{{__('ui.registrati')}}</a></li>
                         </ul>
                     </li>
+
                 @endguest
 
                
             </ul>
 
             <ul class="navbar-nav">
+
+                {{-- ricerca annuncio --}}
+                <li>
+                    <form action="{{route('announcements.search')}}" method="GET" class="d-flex">
+                        <input name="searched" class="form-control me-2" type="search" placeholder="Cerca un annuncio.." aria-label="Search">
+                        <button class="btn btn-primary" type="submit">Cerca</button>
+                    </form>
+                </li>
+
                 @auth
 
                     {{-- qua andrà il bottone search --}}
@@ -110,6 +120,8 @@
                         <x-_locale lang="es" />
                     </div>
                 </li>
+
+              
             </ul>
         </div>
     </div>

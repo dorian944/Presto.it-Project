@@ -59,3 +59,7 @@ Route::post('/lingua/{lang}', [PublicController::class, 'setLanguage'])->name('s
 
 
 Route::get('/area/personale', [PublicController::class, 'personalArea'])->name('area.personale');
+
+//rotta per tntsearch 
+
+Route::get('/ricerca/annuncio', [PublicController::class, 'searchAnnouncements'])->name('announcements.search');
