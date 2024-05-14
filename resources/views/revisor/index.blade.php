@@ -1,6 +1,6 @@
 <x-layout>
 
-    <div class="h-index-custom-revisor custom-view">
+    <div class="h-index-custom-revisor custom-view w-custom">
         <div class="container-fluid p-5  bg-custom-categorie shadow mb-4">
             <div class="row ">
                 <div class="col-12 p-3">
@@ -26,15 +26,17 @@
 
         @if ($announcement_to_check)
             {{-- carosello --}}
-            <div class="container  ">
-                <div class="row  my-5">
-                    <div class="col-12">
+            <div class="container">
+                <div class="row my-5 w-custom">
 
-                        {{-- carosello dettaglio --}}
-                        <div class="row align-items-center ">
-                            <div class="col-12 col-md-6">
-                                <div class="col-12">
-                                    <div id="gallery" class="bg-white">
+                    {{-- sezione immagini --}}
+                    <div class="col-6 col-md-6 ">
+
+                       
+                        <div class="row align-items-center w-custom ">
+                            <div class="col-12 col-md-6  w-custom">
+                               
+                                    <div id="gallery" class="bg-white  w-custom">
                                         {{-- carosello --}}
                                         <div id="carouselExample" class="carousel slide">
                                             @if ($announcement_to_check->images)
@@ -46,12 +48,12 @@
                                                             {{-- immagine croppata --}}
                                                             {{-- <img src="{{$image->getUrl(400,300)}}" class="img-fluid p-3 rounded" alt="Immagine articolo"> --}}
                                                            
-                                                            {{-- da qui in poi --}}
+                                                            {{-- sezione label e revisione immagine all'interno del carosello --}}
                                                             <div class="container">
                                                                 <div class="row">
                                                                     @if($announcement_to_check->images)
                                                                         
-                                                                        <div class="col-md-3 border-end">
+                                                                        <div class="col-md-5 border-end">
                                                                             <h5 class="tc-accent mt-3">Tags</h5>
                                                                             <div class="p-2">
                                                                                 @if ($image->labels)
@@ -62,7 +64,7 @@
                                                                             </div>
                                                                         </div>
                                                         
-                                                                        <div class="col-md-3">
+                                                                        <div class="col-md-5">
                                                                             <div class="card-body">
                                                                                 <h5 class="tc-accent">{{__("ui.Revisione_immagini")}}</h5>
                                                                                 <p>{{__("ui.Adulti")}}: <span class="{{ $image->adult }}"></span></p>
@@ -153,21 +155,10 @@
                                                 </form>
                                             </div>
 
-                                            {{-- chiusura row e col --}}
-                                        </div>
+                                        
 
                                     </div>
-                                    {{-- fine carosello --}}
-                                    {{-- dettagli --}}
-                                    <div class="col-12 col-md-6 text-center">
-                                        <h5 class="card-title">{{ __('ui.titolo') }}:
-                                            {{ $announcement_to_check->title }}</h5>
-                                        <p class="card-text">{{ $announcement_to_check->body }}</p>
-                                        <p class="card-footer">{{ __('ui.pubblicato_il') }}
-                                            {{ $announcement_to_check->created_at->format('d/m/Y') }}</p>
-                                        <p>{{ __('ui.Categorie') }}: {{ $announcement_to_check->category->name }}</p>
-
-                                    </div>
+                               
                                 </div>
 
                             </div>
@@ -176,11 +167,22 @@
                         </div>
                     </div>
 
+                    {{-- sezione  dettaglio --}}
+                    <div class="col-6 col-md-6 justify-center align-items-center text-center">
+                        <h5 class="card-title">{{ __('ui.titolo') }}:
+                            {{ $announcement_to_check->title }}</h5>
+                        <p class="card-text">{{ $announcement_to_check->body }}</p>
+                        <p class="card-footer">{{ __('ui.pubblicato_il') }}
+                            {{ $announcement_to_check->created_at->format('d/m/Y') }}</p>
+                        <p>{{ __('ui.Categorie') }}: {{ $announcement_to_check->category->name }}</p>
+
+                    </div>
+                    {{-- fine row --}}
                 </div>
 
-                    </div> {{-- fine container --}}
+            </div> {{-- fine container --}}
                 @else
-                    {{-- pulsante annulla ultima revisione --}}
+                    {{--altrimenti se non ci sono annunci da revisionare cmq devi far visualizare il pulsante annulla ultima revisione, per annullare l'ultima revisione  --}}
                     <div class="row my-3 justify-content-center">
                         <div class="col-12 col-md-5 text-center ">
                             <form action="{{ route('back.step') }}" method="POST">
