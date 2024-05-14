@@ -1,3 +1,9 @@
+:root {
+  --verde_grigio: #186049;
+  --beige: #e6cdba;
+  --verde_chiaro:  rgb(119, 189, 167)
+}
+
 
 /* bottone costumizzato */
 .button-custom {
@@ -34,8 +40,10 @@
  .custom-view{
   width: 100%;
   height: -50vh;
-  margin-top: 10vh;
+  margin-top: 7vh;
 }
+
+
 
 .custom-accedi{
   width: 100%;
@@ -225,3 +233,24 @@
   }
 }
 
+.input-search-custom{
+  height: 30px;
+  width: 180px;
+}
+
+.btn-custom-search{
+  height: 30px;
+  width: 56px;
+  display: flex;
+  align-items: center;
+  background-color: var(--beige);
+  color: var(--verde_grigio);
+}
+
+.grandezza-custom-dettaglio{
+  font-size: 55px;
+}
+
+.grandezza-custom-sottotitoli{
+  font-size: 20px;
+}
