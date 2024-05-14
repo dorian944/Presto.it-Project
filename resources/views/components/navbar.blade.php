@@ -50,13 +50,7 @@
             <ul class="navbar-nav">
 
                 {{-- ricerca annuncio --}}
-                <li>
-                    <form action="{{route('announcements.search')}}" method="GET" class="d-flex">
-                        <input name="searched" class="form-control me-2" type="search" placeholder="Cerca un annuncio.." aria-label="Search">
-                        <button class="btn btn-primary" type="submit">Cerca</button>
-                    </form>
-                </li>
-
+               
                 @auth
 
                     {{-- qua andrà il bottone search --}}
@@ -112,13 +106,19 @@
                     @endif
                 @endauth
 
-              
                 <li class="nav-item">
                     <div class="d-flex align-items-center ms-2">
                         <x-_locale lang="it" />
                         <x-_locale lang="en" />
                         <x-_locale lang="es" />
                     </div>
+                </li>
+
+                <li>
+                    <form action="{{route('announcements.search')}}" method="GET" class="d-flex ms-4">
+                        <input name="searched" class="form-control me-2" type="search" placeholder="Cerca un annuncio.." aria-label="Search">
+                        <button class="btn btn-primary" type="submit">Cerca</button>
+                    </form>
                 </li>
 
               
