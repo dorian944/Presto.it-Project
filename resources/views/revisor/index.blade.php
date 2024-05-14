@@ -173,11 +173,12 @@
                     <div class="col-4 col-md-6  d-flex justify-content-center">
                         <div class="row h-100 align-content-center text-center">
                             
-                            <h5 class="card-title">{{ __('ui.titolo') }}:
-                                {{ $announcement_to_check->title }}</h5>
-                            <p class="card-text">{{ $announcement_to_check->body }}</p>
+                            <h5 class="card-head">{{ __('ui.titolo') }}: {{ $announcement_to_check->title }}</h5>
+                           
+                            <p class="card-text">{{ __('ui.descrizione') }}: {{ $announcement_to_check->body }}</p>
+                            <p class="card-text">{{ __('ui.prezzo') }}: {{ $announcement_to_check->price }}</p>
                             <p class="card-footer">{{ __('ui.pubblicato_il') }}
-                                {{ $announcement_to_check->created_at->format('d/m/Y') }}</p>
+                                 {{ $announcement_to_check->created_at->format('d/m/Y') }}</p>
                             <p>{{ __('ui.Categorie') }}: {{ $announcement_to_check->category->name }}</p>
 
                         </div>

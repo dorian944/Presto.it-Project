@@ -55,12 +55,12 @@
                     </div> --}}
                     {{-- fine carosello --}}
 
-                    <div class="col-12 col-md-6 text-center">
-                        <h2>{{$announcement->title}}</h2>
-                        <p>{{$announcement->body}}</p>
-                        <p>{{$announcement->price}}</p>
-                        <p>{{__('ui.categoria')}}:{{$announcement->category->name}}</p>
-                        <p>{{__('ui.pubblicato_il')}}{{$announcement->created_at->format('d/m/Y')}}</p>
+                    <div class="col-12 col-md-6 text-center ">
+                        <h2 class="card-head">{{ __('ui.titolo') }}: {{$announcement->title}}</h2>
+                        <p class="card-text">{{ __('ui.descrizione') }}: {{$announcement->body}}</p>
+                        <p class="card-text">{{ __('ui.prezzo') }}: {{$announcement->price}}</p>
+                        <p>{{__('ui.categoria')}}: {{$announcement->category->name}}</p>
+                        <p>{{__('ui.pubblicato_il')}} {{$announcement->created_at->format('d/m/Y')}}</p>
                     </div>
                 </div>
             </div>
