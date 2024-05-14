@@ -1,4 +1,4 @@
-<div class="card-container">
+<div class="card-container margin-custom-card-width-1920">
   <div class="card mb-4 rounded-5" style="width: 20rem; ">
       <img src="{{!$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(400,300) : 'https://picsum.photos/200'}}" class="card-img-top p-3 img-fluid " alt="Immagine articolo">
       <div class="card-body">

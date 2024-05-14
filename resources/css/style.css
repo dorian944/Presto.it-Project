@@ -207,3 +207,12 @@
 .w-custom{
   width: 100%;
 }
+
+
+/* media query x schermi di 1920 x 1080 che sistema il margine nell'index degli annunci */
+@media screen and (min-width: 1800px) {
+
+  .margin-custom-card-width-1920{
+    margin-left: 65px;
+  }
+}

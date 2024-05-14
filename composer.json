@@ -11,10 +11,12 @@
         "laravel/fortify": "^1.21",
         "laravel/framework": "^10.10",
         "laravel/sanctum": "^3.3",
+        "laravel/scout": "^10.9",
         "laravel/tinker": "^2.8",
         "livewire/livewire": "^3.4",
         "outhebox/blade-flags": "^1.5",
-        "spatie/image": "*"
+        "spatie/image": "*",
+        "teamtnt/laravel-scout-tntsearch-driver": "*"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",

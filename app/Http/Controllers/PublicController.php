@@ -30,4 +30,10 @@ class PublicController extends Controller
     public function personalArea(){
         return view('area-personale');
     }
+
+    public function searchAnnouncements(Request $request){
+        $announcements = Announcement::search($request->searched)->where('is_accepted', true)->paginate(10);
+
+        return view('announcements.index', compact('announcements'));
+    }
 }
