@@ -8,7 +8,7 @@
 
         <div class="row justify-content-center ">
             @forelse ($announcements as $announcement)
-           
+
             <div class="col-12 col-md-3 ">
                     <x-card :announcement="$announcement" />
             </div>
@@ -18,7 +18,7 @@
             <div class="col-12">
                 <div class="alert alert-warning py-3 shadow">
                     {{-- __(ui.no_annunci) = Non ci sono annunci per questa ricerca. Prova a cambiare parola..  --}}
-                    <p class="lead">{{__(ui.no_annunci)}} </p>
+                    <p class="lead">{{__("ui.no_annunci")}} </p>
                 </div>
             </div>
 

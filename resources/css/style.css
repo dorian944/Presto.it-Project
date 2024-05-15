@@ -12,7 +12,7 @@
     color: #fff;
     background-image: linear-gradient(30deg, #247158, #6ab29b);
     border-radius: 20px;
-   
+
     background-size: 100% auto;
     font-family: inherit;
 
@@ -71,20 +71,20 @@
 .custom-alert-revisore{
   width: 100%;
   margin-top: -4vh;
- 
+
 }
 
 .custom-drop-categorie {
   margin-top: -4vh;
   margin-bottom: -4vh;
   text-align: center;
-  
+
 }
 
 .custom-drop-item-categorie{
   margin-top: 3vh;
   margin-bottom: -2vh;
-  
+
 }
 
 /* fine customizzazione dell'inizio della pagina dopo la navbar fissa */
@@ -147,7 +147,7 @@
   height: 100%;
   background-attachment: fixed;
   background-image: url('/public/img/sfondo3.jpg');
-  
+
   background-position: center;
   opacity: 0.5;
   z-index: -1;
@@ -238,7 +238,7 @@
   }
 }
 
-.input-search-custom{
+/* .input-search-custom{
   height: 30px;
   width: 180px;
 }
@@ -250,7 +250,7 @@
   align-items: center;
   background-color: var(--beige);
   color: var(--verde_grigio);
-}
+} */
 
 .grandezza-custom-dettaglio{
   font-size: 55px;
