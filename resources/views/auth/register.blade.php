@@ -1,11 +1,11 @@
 <x-layout>
 
     <div class="container-fluid custom-register">
-        <div class="row h-index-custom">
+        <div class="row">
 
             <div class="col-12 d-flex justify-content-center align-items-center">
                 <div class="container-form">
-                  <img src="{{ asset('svg/signup.svg') }}" width="240" height="130" alt="login logo">
+                  <img src="{{ asset('svg/signup.svg') }}" width="280" height="150" alt="login logo">
 
                     <div class="heading">{{__('ui.registrati')}} </div>
                     <form action="{{route('register')}}"  method="POST" class="form">
@@ -18,6 +18,7 @@
                       <input class="login-button" type="submit" value="Registrati">
 
                     </form>
+                </div>
             </div>
         </div>
     </div>
