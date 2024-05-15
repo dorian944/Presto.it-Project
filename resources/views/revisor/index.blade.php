@@ -44,17 +44,10 @@
                                                 <div class="carousel-inner">
                                                     @foreach ($announcement_to_check->images as $image)
 
-                                                        <div
-                                                            class="carousel-item @if ($loop->first) active @endif">
-                                                            {{-- <img src="{{ Storage::url($image->path) }}" class="img-fluid p-3 rounded dim_img_carousel " alt="img user"> --}}
-                                                            {{-- immagine croppata --}}
-                                                            <img src="{{$image->getUrl(400,300)}}" class="img-fluid p-3 rounded" alt="Immagine articolo">
-
-
                                                         <div class="carousel-item text-center @if ($loop->first) active @endif">
                                                             {{-- <img src="{{ Storage::url($image->path) }}" class="img-fluid p-3 rounded dim_img_carousel " alt="img user"> --}}
                                                             {{-- immagine croppata --}}
-                                                             <img src="{{$image->getUrl(400,300)}}" class="rounded-3 img-fluid  p-3 " alt="Immagine articolo"> 
+                                                             <img src="{{$image->getUrl(400,300)}}" class="bordo-smussato-foto-revisor img-fluid  p-3 " alt="Immagine articolo"> 
 
                                                            
                                                             {{-- sezione label e revisione immagine all'interno del carosello --}}
@@ -181,24 +174,25 @@
 
                     {{-- sezione  dettaglio --}}
                     
+                    <div class="col-4 col-md-6  d-flex justify-content-center">
+                        <div class="row h-100 align-content-center text-center ">
+                            
+                            <h5 class="card-head grandezza-custom-dettaglio"> {{ $announcement_to_check->title }}</h5>
+                           
+                            <p class="card-text grandezza-custom-sottotitoli"> {{ $announcement_to_check->body }}</p>
+                            <p class="card-text grandezza-custom-sottotitoli"> {{ $announcement_to_check->price }} &euro;</p>
+                            <p class="grandezza-custom-sottotitoli">{{ __('ui.Categorie') }}: {{ $announcement_to_check->category->name }}</p>
+                            <p class="card-footer grandezza-custom-sottotitoli">{{ __('ui.pubblicato_il') }}
+                                 {{ $announcement_to_check->created_at->format('d/m/Y') }}</p>
+                           
+    
+                        </div>
+                     {{-- fine sezione sezione  dettaglio fine col--}}
+                    </div> 
                    
-                    {{-- fine row --}}
                 </div> 
 
-                <div class="col-4 col-md-6  d-flex justify-content-center">
-                    <div class="row h-100 align-content-center text-center ">
-                        
-                        <h5 class="card-head grandezza-custom-dettaglio">{{ __('ui.titolo') }}: {{ $announcement_to_check->title }}</h5>
-                       
-                        <p class="card-text grandezza-custom-sottotitoli">{{ __('ui.descrizione') }}: {{ $announcement_to_check->body }}</p>
-                        <p class="card-text grandezza-custom-sottotitoli">{{ __('ui.prezzo') }}: {{ $announcement_to_check->price }}</p>
-                        <p class="card-footer grandezza-custom-sottotitoli">{{ __('ui.pubblicato_il') }}
-                             {{ $announcement_to_check->created_at->format('d/m/Y') }}</p>
-                        <p class="grandezza-custom-sottotitoli">{{ __('ui.Categorie') }}: {{ $announcement_to_check->category->name }}</p>
-
-                    </div>
-                 {{-- fine sezione sezione  dettaglio fine col--}}
-                </div> 
+                
 
             </div> {{-- fine container --}}
                 @else
@@ -214,14 +208,8 @@
                         </div>
                     </div>
         @endif
-
-      
-    
        
     </div>
-
-   
-
 
 
 </x-layout>

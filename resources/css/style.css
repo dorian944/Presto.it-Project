@@ -253,9 +253,31 @@
 } */
 
 .grandezza-custom-dettaglio{
-  font-size: 55px;
+  font-size: 45px;
 }
 
 .grandezza-custom-sottotitoli{
   font-size: 20px;
+}
+
+.bordo-smussato-foto-revisor{
+  border-radius: 25px;
+}
+
+.link-show{
+  text-decoration: none;
+  color: var(--verde_grigio);
+}
+
+.link-show:hover{
+  
+  color: var(--verde_chiaro);
+}
+
+.titolo-custom-show{
+  font-size: 70px;
+}
+
+.sottotitolo-custom-show{
+  font-size: 18px;
 }

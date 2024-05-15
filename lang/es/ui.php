@@ -2,7 +2,7 @@
 // la chiave rimane uguale
 return [
 "allAnnouncements"=>'Aquí están todos nuestros anuncios.!',
-"dettaglio_relativo" => "Detalle relacionado con :",
+"dettaglio_relativo" => "Detalle relacionado con:",
 "Categorie" => "Categorias",
 "categoria" => "Categoria",
 "lista_annunci" => "Lista de anuncios",

@@ -2,7 +2,7 @@
 
 return [
 "allAnnouncements"=>'Here\'s all our announcements!',
-"dettaglio_relativo" => "Detail related to :",
+"dettaglio_relativo" => "Detail related to:",
 "Categorie" => "Categories",
 "categoria" => "Category",
 "lista_annunci" => "Announcements list",

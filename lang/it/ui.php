@@ -2,7 +2,7 @@
 
 return [
 "allAnnouncements"=>'Qui ci sono tutti gli annunci!',
-"dettaglio_relativo" => "Dettaglio relativo a :",
+"dettaglio_relativo" => "Dettaglio relativo a:",
 "Categorie" => "Categorie",
 "categoria" => "Categoria",
 "lista_annunci" => "Lista annunci",
