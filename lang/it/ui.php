@@ -87,5 +87,8 @@ return [
 //barra di ricerca
 "cerca_un_annuncio" => "Cerca un annuncio..",
 "cerca" => "Cerca",
-"no_annunci" => "Non ci sono annunci per questa ricerca. Prova a cambiare parola.."
+"no_annunci" => "Non ci sono annunci per questa ricerca. Prova a cambiare parola..",
+
+//area personale
+"benvenuto" =>"Benvenuto/a nella tua area personale"
 ];

@@ -88,6 +88,8 @@ return [
 //barra di ricerca
 "cerca_un_annuncio" => "Buscar un anuncio..",
 "cerca" => "Buscar",
-"no_annunci" => "No hay anuncios para esta búsqueda. Intenta cambiar la palabra.."
+"no_annunci" => "No hay anuncios para esta búsqueda. Intenta cambiar la palabra..",
 
+//area personale
+"benvenuto" =>"Bienvenido/a tu área personal"
 ];
