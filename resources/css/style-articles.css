@@ -1,3 +1,7 @@
+
+
+
+
 .card {
    
     position: relative; 
@@ -31,8 +35,8 @@
     position: absolute;
     width: 100px;
     height: 130%;
-    background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
-    animation: rotBGimg 3s linear infinite;
+    background-image: linear-gradient(180deg, #F1675F 54%, rgb(28, 175, 129));
+    animation: rotBGimg 5s linear infinite;
     transition: all 0.2s linear;
   }
   
@@ -47,8 +51,8 @@
 
 
    .card:hover:before {
-    background-image: linear-gradient(180deg, rgb(81, 255, 0), purple);
-    animation: rotBGimg 3.5s linear infinite;
+    background-image: linear-gradient(180deg, #F1675F 54%, rgb(28, 175, 129));
+    animation: rotBGimg 5s linear infinite;
   } 
   
   
