@@ -42,6 +42,11 @@
   height: -50vh;
   margin-top: 10vh;
 }
+
+.custom-view-profilo{
+  margin-top: 27vh;
+}
+
 /* x dispositivi grandi */
 @media screen and (min-width: 1800px) {
  .custom-view{
