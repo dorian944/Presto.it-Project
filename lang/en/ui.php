@@ -76,7 +76,7 @@ return [
 "Abbigliamento" => "Clothing",
 
 //revisione immagini
-"Revisione_immagini" => "image review",
+"Revisione_immagini" => "Image review",
 "Adulti" => "Adults",
 "Satira" => "Satire",
 "Medicina" => "Medicin",
@@ -89,7 +89,11 @@ return [
 "no_annunci" => "There are no ads for this search. Try changing the word..",
 
 //area personale
-"benvenuto" =>"Welcome to your personal area"
+"benvenuto" =>"Welcome to your personal area",
+"nomeUtente" => "Username ",
+"sono_revisore" => "I'm a reviewer",
+"no_revisore"=> "I'm not a reviewer"
+
 ];
 
 

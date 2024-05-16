@@ -90,5 +90,8 @@ return [
 "no_annunci" => "Non ci sono annunci per questa ricerca. Prova a cambiare parola..",
 
 //area personale
-"benvenuto" =>"Benvenuto/a nella tua area personale"
+"benvenuto" =>" Benvenuto/a nella tua area personale ",
+"nomeUtente" => "Nome utente ",
+"sono_revisore" => "Sono revisore",
+"no_revisore"=> "Non sono revisore"
 ];

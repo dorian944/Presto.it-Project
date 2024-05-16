@@ -91,5 +91,8 @@ return [
 "no_annunci" => "No hay anuncios para esta búsqueda. Intenta cambiar la palabra..",
 
 //area personale
-"benvenuto" =>"Bienvenido/a tu área personal"
+"benvenuto" =>"Bienvenido/a tu área personal",
+"nomeUtente" => "Nombre de usuario",
+"sono_revisore" => "Soy revisor",
+"no_revisore"=> "No soy un revisor"
 ];
