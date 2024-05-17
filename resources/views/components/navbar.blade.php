@@ -8,6 +8,8 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
                 <li class="nav-item dropdown ">
+
+                    {{-- categorie --}}
                     <a class="nav-link dropdown-toggle " href="#" id="categoriesDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         {{__("ui.Categorie")}}
@@ -25,31 +27,37 @@
                     </ul>
                 </li>
 
+                    {{-- lista annunci --}}
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('announcements.index') }}">{{__("ui.lista_annunci")}}</a>
                 </li>
 
-                @guest
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            {{__('ui.guest')}}
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="{{ route('login') }}">{{__('ui.login')}}</a></li>
-                            <hr>
-                            <li><a class="dropdown-item" href="{{ route('register') }}">{{__('ui.registrati')}}</a></li>
-                        </ul>
-                    </li>
 
-                @endguest
 
 
             </ul>
 
             <ul class="navbar-nav">
 
-                {{-- ricerca annuncio --}}
+                                {{-- login registrati --}}
+                                @guest
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        {{-- ciao ospite --}}
+                                        {{__('ui.guest')}}
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            
+                                            <a class="dropdown-item " href="{{ route('login') }}">{{__('ui.login')}}</a></li>
+                                        <hr>
+                                        <li>
+                                            <a class="dropdown-item " href="{{ route('register') }}">{{__('ui.registrati')}}</a></li>
+                                    </ul>
+                                </li>
+            
+                            @endguest
 
                 @auth
 
