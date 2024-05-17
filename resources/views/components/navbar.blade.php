@@ -49,11 +49,11 @@
                                     </a>
                                     <ul class="dropdown-menu">
                                         <li>
-                                            
-                                            <a class="dropdown-item " href="{{ route('login') }}">{{__('ui.login')}}</a></li>
+    
+                                            <a class="dropdown-item p-0 ps-4" href="{{ route('login') }}">{{__('ui.login')}}</a></li>
                                         <hr>
                                         <li>
-                                            <a class="dropdown-item " href="{{ route('register') }}">{{__('ui.registrati')}}</a></li>
+                                            <a class="dropdown-item p-0 ps-4" href="{{ route('register') }}">{{__('ui.registrati')}}</a></li>
                                     </ul>
                                 </li>
             

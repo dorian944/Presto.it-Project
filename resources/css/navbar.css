@@ -76,6 +76,13 @@ body {
     padding: 1rem 1rem;
 }
 
+.dropdown-item-login{
+    color: black;
+    text-decoration: none;
+    padding-left: 2px;
+}
+
+
 .p-custom-title-presto{
     padding-left: 130px;
 }
