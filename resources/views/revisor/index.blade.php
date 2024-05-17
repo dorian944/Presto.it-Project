@@ -118,31 +118,8 @@
                                             </button>
                                         </div>
 
-                                        {{-- sezione accetta --}}
+                                        {{-- sezione pulsanti --}}
                                         <div class="row justify-content-between my-2 mx-1">
-                                            {{-- pulsante accetta --}}
-                                            <div class="col-12 col-md-3 mb-3 ">
-                                                <form
-                                                    action="{{ route('revisor.accept_announcement', ['announcement' => $announcement_to_check]) }}"
-                                                    method="POST">
-                                                    @csrf
-                                                    @method('PATCH')
-                                                    <button type="submit"
-                                                        class="btn btn-success shadow">{{ __('ui.accetta_annuncio') }}
-                                                    </button>
-                                                </form>
-                                            </div>
-
-                                            {{-- pulsante annulla ultima revisione --}}
-                                            <div class="col-12 col-md-5 text-end">
-                                                <form action="{{ route('back.step') }}" method="POST">
-                                                    @csrf
-                                                    @method('PATCH')
-                                                    <button type="submit"
-                                                        class="btn btn-warning me-4 shadow ">{{ __('ui.annulla_revisione') }}
-                                                    </button>
-                                                </form>
-                                            </div>
 
                                             {{-- pulsante rifiuta --}}
                                             <div class="col-12 col-md-3 text-end">
@@ -156,6 +133,32 @@
                                                     </button>
                                                 </form>
                                             </div>
+                                           
+
+                                            {{-- pulsante annulla ultima revisione --}}
+                                            <div class="col-12 col-md-5 text-end">
+                                                <form action="{{ route('back.step') }}" method="POST">
+                                                    @csrf
+                                                    @method('PATCH')
+                                                    <button type="submit"
+                                                        class="btn btn-warning me-4 shadow ">{{ __('ui.annulla_revisione') }}
+                                                    </button>
+                                                </form>
+                                            </div>
+
+                                             {{-- pulsante accetta --}}
+                                             <div class="col-12 col-md-3 mb-3 ">
+                                                <form
+                                                    action="{{ route('revisor.accept_announcement', ['announcement' => $announcement_to_check]) }}"
+                                                    method="POST">
+                                                    @csrf
+                                                    @method('PATCH')
+                                                    <button type="submit"
+                                                        class="btn btn-success shadow">{{ __('ui.accetta_annuncio') }}
+                                                    </button>
+                                                </form>
+                                            </div>
+                                            
 
                                         
 
