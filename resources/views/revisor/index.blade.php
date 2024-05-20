@@ -31,7 +31,7 @@
                 <div class="row my-5 w-custom">
 
                     {{-- sezione immagini --}}
-                    <div class="col-6 col-md-6 ">
+                    <div class="col-12 col-md-6 ">
 
                        
                         <div class="row align-items-center  ">
@@ -122,7 +122,7 @@
                                         <div class="row justify-content-between my-2 mx-1">
 
                                             {{-- pulsante rifiuta --}}
-                                            <div class="col-12 col-md-3 text-end">
+                                            <div class="col-4 col-md-3 text-end">
                                                 <form
                                                     action="{{ route('revisor.reject_announcement', ['announcement' => $announcement_to_check]) }}"
                                                     method="POST">
@@ -136,7 +136,7 @@
                                            
 
                                             {{-- pulsante annulla ultima revisione --}}
-                                            <div class="col-12 col-md-5 text-end">
+                                            <div class="col-4 col-md-5 text-end">
                                                 <form action="{{ route('back.step') }}" method="POST">
                                                     @csrf
                                                     @method('PATCH')
@@ -147,7 +147,7 @@
                                             </div>
 
                                              {{-- pulsante accetta --}}
-                                             <div class="col-12 col-md-3 mb-3 ">
+                                             <div class="col-4 col-md-3 mb-3 ">
                                                 <form
                                                     action="{{ route('revisor.accept_announcement', ['announcement' => $announcement_to_check]) }}"
                                                     method="POST">
@@ -177,7 +177,7 @@
 
                     {{-- sezione  dettaglio --}}
                     
-                    <div class="col-4 col-md-6  d-flex justify-content-center">
+                    <div class="col-12 col-md-6  d-flex justify-content-center">
                         <div class="row h-100 align-content-center text-center ">
                             
                             <h5 class="card-head grandezza-custom-dettaglio"> {{ $announcement_to_check->title }}</h5>
