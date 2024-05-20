@@ -286,3 +286,12 @@
 .sottotitolo-custom-show{
   font-size: 18px;
 }
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 50px; /* Imposta la larghezza desiderata */
+    height: 50px; /* Imposta l'altezza desiderata */
+    background-color:var(--verde_grigio); /* Imposta il colore desiderato */
+    /* background-size: 50px 50px; */
+     /* Mantieni la dimensione delle icone */
+}
