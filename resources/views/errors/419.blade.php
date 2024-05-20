@@ -1,6 +1,12 @@
 <x-layout>
-    <x-slot name='title'> Error 404 Presto.it </x-slot>
+    <x-slot name='title'> Error 419 Presto.it </x-slot>
 <x-header />
 
-Pagina non trovata
+<div class="container">
+    <div class="row ">
+        <div class="col-12">
+            <h1 class="display-1 text-center">{{__('ui.419')}}</h1>
+        </div>
+    </div>
+</div>
 </x-layout>

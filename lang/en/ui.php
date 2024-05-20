@@ -39,7 +39,8 @@ return [
 
 // card annunci
 "dettaglio" => "Detail",
-"pubblicato_il"=> "Publicated at:",
+"pubblicato_il"=> "Publicated at :",
+"pubblicato_da"=> "Publicated from :",
 //fine card annunci
 
 // form mail revisore
@@ -95,7 +96,10 @@ return [
 "no_revisore"=> "I'm not a reviewer",
 "nome"=>"User Name" ,
 "ripeti_password"=>"Repeated password",
-"no_annunci_personali"=>"You haven't posted any ads"
+"no_annunci_personali"=>"You haven't posted any ads",
+"i_tuoi_annunci"=>"Your ads",
+"419"=>"Page expired",
+"404"=>"Page not found"
 
 ];
 

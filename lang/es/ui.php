@@ -39,7 +39,8 @@ return [
 
 // card annunci
 "dettaglio" => "Detalle",
-"pubblicato_il"=>"Publicado el:",
+"pubblicato_il"=>"Publicado el :",
+"pubblicato_da"=> "Publicado por :",
 //fine card annunci
 
 // form mail revisore
@@ -97,5 +98,8 @@ return [
 "no_revisore"=> "No soy un revisor",
 "nome"=>"Nombre de pila" ,
 "ripeti_password"=>"Contraseña repetida",
-"no_annunci_personali"=>"No has publicado ningún anuncio."
+"no_annunci_personali"=>"No has publicado ningún anuncio.",
+"i_tuoi_annunci"=>"Tus anuncios",
+"419"=>"Página caducada",
+"404"=>"Página no encontrada"
 ];

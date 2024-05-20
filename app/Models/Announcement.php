@@ -21,6 +21,7 @@ class Announcement extends Model
             'title' => $this->title,
             'body' => $this->body,
             'category' => $category,
+            
         ];
 
         return $array;

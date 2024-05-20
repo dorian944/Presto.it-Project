@@ -19,6 +19,7 @@ use App\Http\Controllers\RevisorController;
 
 Route::get('/',[PublicController::class, 'homepage'])->name('homepage');
 Route::get('/area/personale', [PublicController::class, 'personalArea'])->name('area.personale');
+
 Route::get('/categoria/{category}',[PublicController::class, 'categoryShow'])->name('categoryShow');
 
 

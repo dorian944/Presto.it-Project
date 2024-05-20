@@ -186,7 +186,10 @@
                             <p class="card-text grandezza-custom-sottotitoli"> {{ $announcement_to_check->price }} &euro;</p>
                             <p class="grandezza-custom-sottotitoli">{{ __('ui.Categorie') }}: {{ $announcement_to_check->category->name }}</p>
                             <p class="card-footer grandezza-custom-sottotitoli">{{ __('ui.pubblicato_il') }}
-                                 {{ $announcement_to_check->created_at->format('d/m/Y') }}</p>
+                                 {{ $announcement_to_check->created_at->format('d/m/Y') }}
+                            </p>
+                            <p class="card-footer grandezza-custom-sottotitoli">{{__('ui.pubblicato_da')}} {{$announcement_to_check->user->name}}</p>
+
                            
     
                         </div>

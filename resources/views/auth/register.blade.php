@@ -9,6 +9,7 @@
 
                     <div class="heading">{{__('ui.registrati')}} </div>
                     <form action="{{route('register')}}"  method="POST" class="form">
+                        
                      @csrf
                       <input required="" class="input" type="text" name="name" id="name" placeholder="{{__('ui.nome')}}">
                       @error('name')
@@ -23,7 +24,6 @@
                       <input required="" class="input" type="password" name="password" id="password" placeholder="Password">
                       @error('password')
                       <p>{{$message}}</p>
-                      
                       @enderror
 
                       <input required="" class="input" type="password" name="password_confirmation" id="password_confirmation" placeholder="{{__('ui.ripeti_password')}}">

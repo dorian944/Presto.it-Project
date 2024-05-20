@@ -40,7 +40,8 @@ return [
 
 // card annunci
 "dettaglio" => "Dettaglio",
-"pubblicato_il"=> "Pubblicato il:",
+"pubblicato_il"=> "Pubblicato il :",
+"pubblicato_da"=> "Pubblicato da :",
 //fine card annunci
 
 // form mail revisore
@@ -96,5 +97,8 @@ return [
 "no_revisore"=> "Non sono revisore",
 "nome"=>"Nome",
 "ripeti_password"=>"Ripeti password",
-"no_annunci_personali"=>"Non hai pubblicato annunci"
+"no_annunci_personali"=>"Non hai pubblicato annunci",
+"i_tuoi_annunci"=>"I tuoi annunci",
+"419"=>"Pagina scaduta",
+"404"=>"Pagina non trovata"
 ];

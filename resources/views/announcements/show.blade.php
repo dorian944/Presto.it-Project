@@ -50,7 +50,8 @@
                     <p class="card-text ms-5 sottotitolo-custom-show"> {{$announcement->body}}</p>
                     <p class="card-text ms-5 sottotitolo-custom-show"> {{$announcement->price}} &euro;</p>
                     <p class="ms-5 sottotitolo-custom-show">{{__('ui.categoria')}}: <a class="link-show" href="{{route('categoryShow' , ['category' => $announcement->category->id])}}">{{$announcement->category->name}}</a></p>
-                    <p class="ms-5 ">{{__('ui.pubblicato_il')}} {{$announcement->created_at->format('d/m/Y')}}</p>
+                    <p class="card-text ms-5 sottotitolo-custom-show ">{{__('ui.pubblicato_il')}} {{$announcement->created_at->format('d/m/Y')}}</p>
+                    <p class="card-text ms-5 sottotitolo-custom-show">{{__('ui.pubblicato_da')}} {{$announcement->user->name}}</p>
                 </div>
             
 

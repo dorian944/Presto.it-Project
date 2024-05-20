@@ -10,6 +10,7 @@
 
                     <div class="heading">{{__('ui.login')}} </div>
                     <form action="{{ route('login') }}" method="POST" class="form">
+                        
                         @csrf
                         <input required="" class="input" type="email" name="email" id="email"
                             placeholder="E-mail">
