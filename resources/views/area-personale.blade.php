@@ -4,7 +4,7 @@
     <div class="row ">
       <div class="col-12 d-flex  justify-content-center">
         
-        <div class="card mt-5" style="width: 20rem;">
+        <div class="card mt-5 ms-4" style="width: 20rem;">
           <img src="https://cdn.icon-icons.com/icons2/1154/PNG/512/1486564400-account_81513.png" class="card-img-top img-fluid z-3 p-5 " alt="foto utente">
           <div class="card-body z-3">
             <h5 class="card-title text-center">{{__("ui.benvenuto")}}</h5>
@@ -20,7 +20,7 @@
 
       {{-- container annunci pubblicati dall'utente --}}
       <div class="container mt-5 mb-5" >
-        <div class="row justify-content-center">
+        <div class="row ">
           <div class="col-12 my-4">
             <p class="h1 text-center mt-5 "> {{__("ui.i_tuoi_annunci")}} </p>
           </div>
