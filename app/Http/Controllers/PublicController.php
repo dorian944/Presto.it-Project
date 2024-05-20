@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Models\Announcement;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PublicController extends Controller
 {
@@ -28,7 +29,7 @@ class PublicController extends Controller
     }
 
     public function personalArea(){
-        $announcements = Announcement::where('is_accepted', true)->orderBy('created_at','desc')->get();
+        $announcements = Auth::user()->announcements()->where('is_accepted', true)->orderBy('created_at','desc')->get();
         return view('area-personale',compact('announcements'));
        
     }

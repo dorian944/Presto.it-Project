@@ -25,8 +25,8 @@
             <p class="h1 text-center mt-5 "> {{__("ui.i_tuoi_annunci")}} </p>
           </div>
               
-          @forelse (Auth::user()->announcements as $announcement)
-          {{-- @forelse ($announcements as $announcement) --}}
+         
+          @forelse ($announcements as $announcement)
             <div class="col-12 col-md-4 ">
                 <x-card :announcement="$announcement" />
             </div>
