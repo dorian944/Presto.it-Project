@@ -142,3 +142,8 @@
     color: #013c08;
     font-size: 9px;
   }
+
+  .btn-custom-accedi{
+    text-decoration: none;
+    color: #F8F9FD !important;
+  }

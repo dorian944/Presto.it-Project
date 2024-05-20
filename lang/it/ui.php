@@ -93,5 +93,7 @@ return [
 "benvenuto" =>" Benvenuto/a nella tua area personale ",
 "nomeUtente" => "Nome utente ",
 "sono_revisore" => "Sono revisore",
-"no_revisore"=> "Non sono revisore"
+"no_revisore"=> "Non sono revisore",
+"nome"=>"Nome",
+"ripeti_password"=>"Ripeti password"
 ];

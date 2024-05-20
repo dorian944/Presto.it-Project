@@ -94,5 +94,7 @@ return [
 "benvenuto" =>"Bienvenido/a tu área personal",
 "nomeUtente" => "Nombre de usuario",
 "sono_revisore" => "Soy revisor",
-"no_revisore"=> "No soy un revisor"
+"no_revisore"=> "No soy un revisor",
+"nome"=>"Nombre de pila" ,
+"ripeti_password"=>"Contraseña repetida"
 ];

@@ -21,8 +21,12 @@
                             <label class="form-check-label" for="exampleCheck1">{{__('ui.ricordami_login')}} </label>
 
                         </div>
-                        <input class="login-button" type="submit" value="Accedi">
+                        <input class="login-button" type="submit" value="{{__('ui.login')}}">
 
+                        <button class=" login-button"  value="{{__('ui.registrati')}}">
+                         <a class="btn-custom-accedi" href="{{route('register')}}">{{__('ui.registrati')}}</a>
+                        </button>
+                        
                     </form>
 
                 </div>
