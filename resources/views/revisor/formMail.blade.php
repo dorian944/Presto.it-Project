@@ -27,7 +27,7 @@
                     @csrf
                     <div class="mb-3">
                         <label for="name" class="form-label">{{__('ui.nome_utente')}} </label>
-                        <input name="name" type="text" class="form-control" id="name"
+                        <input name="name" type="text" readonly="text" class="form-control" id="name"
                             value="{{ Auth::user()->name }}">
                     </div>
                     <div class="mb-3">
