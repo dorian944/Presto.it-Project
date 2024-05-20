@@ -13,8 +13,18 @@
                         @csrf
                         <input required="" class="input" type="email" name="email" id="email"
                             placeholder="E-mail">
+
+                            @error('email')
+                            <p>{{$message}}</p>
+                            @enderror
+                            
                         <input required="" class="input" type="password" name="password" id="password"
                             placeholder="Password">
+
+                            @error('password')
+                            <p>{{$message}}</p>
+                            @enderror
+
                         <span class="forgot-password"><a href="#">{{__('ui.password_dimenticato')}} </a></span>
                         <div class="mb-3 mt-2 ms-2 form-check">
                             <input type="checkbox" name="remember" class="form-check-input" id="exampleCheck1">

@@ -11,10 +11,26 @@
                     <form action="{{route('register')}}"  method="POST" class="form">
                      @csrf
                       <input required="" class="input" type="text" name="name" id="name" placeholder="{{__('ui.nome')}}">
-                      <input required="" class="input" type="email" name="email" id="email" placeholder="E-mail">
-                      <input required="" class="input" type="password" name="password" id="password" placeholder="Password">
-                      <input required="" class="input" type="password" name="password_confirmation" id="password_confirmation" placeholder="{{__('ui.ripeti_password')}}">
+                      @error('name')
+                            <p>{{$message}}</p>
+                      @enderror
 
+                      <input required="" class="input" type="email" name="email" id="email" placeholder="E-mail">
+                      @error('email')
+                      <p>{{$message}}</p>
+                      @enderror
+
+                      <input required="" class="input" type="password" name="password" id="password" placeholder="Password">
+                      @error('password')
+                      <p>{{$message}}</p>
+                      
+                      @enderror
+
+                      <input required="" class="input" type="password" name="password_confirmation" id="password_confirmation" placeholder="{{__('ui.ripeti_password')}}">
+                        {{-- se la password non coincide l'errore viene visualizzato sotto alla password quindi il controllo seguente risulta inutile --}}
+                            {{-- @error('password_confirmation')
+                            <span class="text-danger alert-danger">{{$message}}</span>
+                            @enderror --}}
                       <input class="login-button" type="submit" value="{{__('ui.registrati')}}">
 
                     </form>
