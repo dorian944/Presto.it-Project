@@ -21,12 +21,23 @@
       {{-- container annunci pubblicati dall'utente --}}
       <div class="container mt-5 mb-5" >
         <div class="row justify-content-around">
-          {{-- @foreach (Auth::user()->announcements as $announcement) --}}
-          @foreach ($announcements as $announcement)
+          @forelse (Auth::user()->announcements as $announcement)
+          {{-- @forelse ($announcements as $announcement) --}}
             <div class="col-12 col-md-4 ">
                 <x-card :announcement="$announcement" />
             </div>
-            @endforeach
+
+            @empty
+            <div class="col-12">
+                <p class="h1 text-center mt-5">{{__("ui.no_annunci_personali")}}</p>
+                <p class="h2 text-center"> {{__('ui.pubblica_annuncio')}}
+                    <a href="{{route('announcements.create')}}" class="btn btn-success shadow">
+                     {{__('ui.btn_nuovo_annuncio')}}
+                    </a>
+                </p>
+            </div>
+        @endforelse
+            
         </div>
     </div>
     {{-- fine annunci pubblicati dall'utente --}}

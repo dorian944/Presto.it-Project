@@ -95,5 +95,6 @@ return [
 "sono_revisore" => "Sono revisore",
 "no_revisore"=> "Non sono revisore",
 "nome"=>"Nome",
-"ripeti_password"=>"Ripeti password"
+"ripeti_password"=>"Ripeti password",
+"no_annunci_personali"=>"Non hai pubblicato annunci"
 ];

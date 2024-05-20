@@ -8,7 +8,7 @@
           <p class="card-text">
             <a class= "color-categoria-card" href="{{route('categoryShow', ['category' => $announcement->category->id])}}" > {{$announcement->category->name}}</a>
           </p>
-          {{-- <p class="card-text">Pubblicato da {{$announcement->user->email}}</p> --}}
+          {{-- <p class="card-text">Pubblicato da {{$announcement->user->name}}</p> --}}
           <p class="card-text">
           <a  href="{{route('announcements.show', compact('announcement'))}}" class="btn button-custom  ">{{__('ui.dettaglio')}}</a> <br>
           </p>

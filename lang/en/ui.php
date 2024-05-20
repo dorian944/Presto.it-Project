@@ -94,7 +94,8 @@ return [
 "sono_revisore" => "I'm a reviewer",
 "no_revisore"=> "I'm not a reviewer",
 "nome"=>"User Name" ,
-"ripeti_password"=>"Repeated password"
+"ripeti_password"=>"Repeated password",
+"no_annunci_personali"=>"You haven't posted any ads"
 
 ];
 
