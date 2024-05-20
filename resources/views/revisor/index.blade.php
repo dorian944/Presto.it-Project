@@ -136,7 +136,7 @@
                                            
 
                                             {{-- pulsante annulla ultima revisione --}}
-                                            <div class="col-4 col-md-5 text-end">
+                                            <div class="col-4 col-md-5 mb-2 text-end">
                                                 <form action="{{ route('back.step') }}" method="POST">
                                                     @csrf
                                                     @method('PATCH')
