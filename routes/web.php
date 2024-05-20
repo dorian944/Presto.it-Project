@@ -18,11 +18,17 @@ use App\Http\Controllers\RevisorController;
 */
 
 Route::get('/',[PublicController::class, 'homepage'])->name('homepage');
+Route::get('/area/personale', [PublicController::class, 'personalArea'])->name('area.personale');
 Route::get('/categoria/{category}',[PublicController::class, 'categoryShow'])->name('categoryShow');
 
 
 Route::get('/nuovo/annuncio',[AnnouncementController::class, 'createAnnouncement'])->name('announcements.create');
 Route::get('/annuncio/dettaglio/{announcement}', [AnnouncementController::class, 'showAnnouncement'])->name('announcements.show');
+
+//Cambio lingua
+Route::post('/lingua/{lang}', [PublicController::class, 'setLanguage'])->name('setLocale');
+
+
 
 
 // sezione revisore
@@ -54,11 +60,7 @@ Route::post('/richiesta/revisore/mail', [RevisorController::class, 'revisorSubmi
 Route::get('/lista/annunci', [AnnouncementController::class, 'indexAnnouncement'])->name('announcements.index');
 
 
-//Cambio lingua
-Route::post('/lingua/{lang}', [PublicController::class, 'setLanguage'])->name('setLocale');
 
-
-Route::get('/area/personale', [PublicController::class, 'personalArea'])->name('area.personale');
 
 //rotta per tntsearch 
 

@@ -28,7 +28,9 @@ class PublicController extends Controller
     }
 
     public function personalArea(){
-        return view('area-personale');
+        $announcements = Announcement::where('is_accepted', true)->orderBy('created_at','desc')->get();
+        return view('area-personale',compact('announcements'));
+       
     }
 
     public function searchAnnouncements(Request $request){
