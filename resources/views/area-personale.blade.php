@@ -10,7 +10,7 @@
             <h5 class="card-title text-center">{{__("ui.benvenuto")}}</h5>
             <h5 class="text-center">{{__("ui.nomeUtente")}} : {{Auth::user()->name}}</h5>
             <p class="card-text text-center">Email : {{Auth::user()->email}}</p>
-            <p class="card-text text-center"> {{ Auth::user()->is_revisor ? __("ui.sono_revisore") : __("ui.nomeUtente") }} </p>
+            <p class="card-text text-center"> {{ Auth::user()->is_revisor ? __("ui.sono_revisore") : __("ui.no_revisore") }} </p>
           </div>
         </div>
         
