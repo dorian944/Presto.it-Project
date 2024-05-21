@@ -26,7 +26,7 @@
                             <p>{{$message}}</p>
                             @enderror
 
-                        <span class="forgot-password"><a href="#">{{__('ui.password_dimenticato')}} </a></span>
+                        {{-- <span class="forgot-password"><a href="#">{{__('ui.password_dimenticato')}} </a></span> --}}
                         <div class="mb-3 mt-2 ms-2 form-check">
                             <input type="checkbox" name="remember" class="form-check-input" id="exampleCheck1">
                             <label class="form-check-label" for="exampleCheck1">{{__('ui.ricordami_login')}} </label>
