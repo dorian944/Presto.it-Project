@@ -99,7 +99,8 @@ return [
 "no_annunci_personali"=>"You haven't posted any ads",
 "i_tuoi_annunci"=>"Your ads",
 "419"=>"Page expired",
-"404"=>"Page not found"
+"404"=>"Page not found",
+"cancella"=>"Delete"
 
 ];
 

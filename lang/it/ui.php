@@ -100,5 +100,6 @@ return [
 "no_annunci_personali"=>"Non hai pubblicato annunci",
 "i_tuoi_annunci"=>"I tuoi annunci",
 "419"=>"Pagina scaduta",
-"404"=>"Pagina non trovata"
+"404"=>"Pagina non trovata",
+"cancella"=>"Cancella"
 ];

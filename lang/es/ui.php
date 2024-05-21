@@ -101,5 +101,6 @@ return [
 "no_annunci_personali"=>"No has publicado ningún anuncio.",
 "i_tuoi_annunci"=>"Tus anuncios",
 "419"=>"Página caducada",
-"404"=>"Página no encontrada"
+"404"=>"Página no encontrada",
+"cancella"=>"Borrar"
 ];
