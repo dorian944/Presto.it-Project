@@ -50,9 +50,9 @@ class CreateAnnouncement extends Component
         'numeric'=>'Il campo deve essere numerico con massimo due decimali',
         'temporary_images.required' => 'L\'immagine è richiesta',
         'temporary_images.*.image' => 'I file devono essere immagini',
-        'temporary_images.*.max' => 'L\'immagine dev\'essere massimo di 5mb',
+        'temporary_images.*.max' => 'L\'immagine dev\'essere massimo di 1mb',
         'images.image' => 'L\'immagine dev\'essere massimo un\'immagine',
-        'images.max' => 'L\'immagine dev\'essere massimo di 5mb',
+        'images.max' => 'L\'immagine dev\'essere massimo di 1mb',
         ];
 
     public function store(){
