@@ -21,7 +21,7 @@ class CreateAnnouncement extends Component
     #[Validate('required|min:3|max:50')]
     public $title;
 
-    #[Validate('required|min:10|max:50')]
+    #[Validate('required|min:10|max:80')]
     public $body;
 
     #[Validate('required|numeric')]
@@ -35,7 +35,8 @@ class CreateAnnouncement extends Component
     public $temporary_images;
 
 
-
+    // image: Il file deve essere un'immagine. Laravel accetta file con estensioni JPEG, PNG, BMP, GIF o SVG.
+    // max:1024: La dimensione massima del file deve essere di 1024 kilobyte (1 megabyte)
     protected $rules = [
         'images.*'=>'image|max:1024',
         'temporary_images.*'=> 'image|max:1024',
